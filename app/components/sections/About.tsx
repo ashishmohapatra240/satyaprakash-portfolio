@@ -1,4 +1,5 @@
 import ProjectCard from "../ProjectCard";
+import Marquee from "./Marquee";
 
 const PROJECTS = [
   {
@@ -36,23 +37,36 @@ const PROJECTS = [
 export default function About() {
   return (
     <section className="relative min-h-screen w-full">
-      {/* Dark top section */}
-      <div className="h-[100vh] sm:h-[130vh] bg-[#0E0F16] relative">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-36 py-10 sm:py-20">
-          <h2 className="text-white text-xl sm:text-2xl lg:text-4xl text-center max-w-2xl mx-auto mt-12 sm:mt-24">
-            I love challenges may it be a<br className="hidden sm:block" />
-            sport or Design
+      {/* Dark section */}
+      <div className="h-screen bg-[#0E0F16] relative flex flex-col justify-center items-center text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-36 space-y-32">
+          {/* First text block */}
+          <h2 className="text-white text-xl sm:text-2xl lg:text-4xl max-w-2xl mx-auto">
+            I love challenges may it be
+            <br className="hidden sm:block" />
+            a sport or Design
           </h2>
+
+          {/* Second text block */}
+          <p className="text-white/80 text-lg sm:text-xl lg:text-2xl max-w-2xl mx-auto">
+            It&apos;s the adrenaline that keeps me up. May it be
+            <br className="hidden sm:block" />
+            riding my bike, cherishing basketball or Creating
+            <br className="hidden sm:block" />
+            solution which helps thousands of people
+          </p>
         </div>
 
-        <div className="absolute -bottom-32 left-0 right-0 h-32 bg-gradient-to-b from-[#0E0F16] to-transparent z-10" />
+        {/* Gradient overlay at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-[#0E0F16] to-transparent" />
       </div>
+      <Marquee />
 
-      {/* White bottom section */}
+      {/* White section */}
       <div className="min-h-[70vh] bg-white relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-36 py-10 sm:py-20">
           <div className="text-center space-y-2">
-            <h2 className="text-xl sm:text-2xl lg:text-4xl font-medium text-[#0E0F16] mt-32 sm:mt-64">
+            <h2 className="text-xl sm:text-2xl lg:text-4xl font-medium text-[#0E0F16] mt-8 sm:mt-16">
               Crafting experience
               <br className="hidden sm:block" />
               Creating Impact
