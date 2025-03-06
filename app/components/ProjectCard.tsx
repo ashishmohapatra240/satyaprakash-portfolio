@@ -1,35 +1,30 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface ProjectCardProps {
   title: string;
   description: string;
-  image?: string;
+  image: string;
+  href?: string;
 }
 
-export default function ProjectCard({
-  title,
-  description,
-  image,
-}: ProjectCardProps) {
+export default function ProjectCard({ title, description, image, href = "#" }: ProjectCardProps) {
   return (
-    <div
-      className={`rounded-2xl px-4 sm:px-6 py-2 aspect-square flex flex-col items-start justify-start transition-transform hover:scale-105`}
-    >
-      <div className="flex-1 flex items-center justify-center w-full py-2 md:py-4">
-        {image && (
+    <Link href={href}>
+      <div className="group bg-white rounded-lg p-6 transition-all duration-300 cursor-pointer">
+        <div className="relative w-full h-96 mb-4 overflow-hidden rounded-lg">
           <Image
             src={image}
             alt={title}
-            width={440}
-            height={440}
-            className="w-full h-auto object-contain"
+            fill
+            className="object-cover h-full w-full group-hover:scale-105 transition-transform duration-300"
           />
-        )}
+        </div>
+        <h3 className="text-lg font-medium text-[#20233D] mb-2 group-hover:text-blue-600 transition-colors">
+          {title}
+        </h3>
+        <p className="text-[#9099A5]">{description}</p>
       </div>
-      <div className={`text-white mt-2 text-left w-full`}>
-        <h3 className="text-lg sm:text-xl lg:text-2xl font-medium mb-1 sm:mb-2 text-[#20233D] line-clamp-2">{title}</h3>
-        <p className={`text-sm sm:text-base lg:text-lg opacity-80 text-[#8F919E] line-clamp-2`}>{description}</p>
-      </div>
-    </div>
+    </Link>
   );
 }

@@ -6,6 +6,7 @@ const PROJECTS = [
     title: "Simplifying Hut Rewards",
     description: "Creating loyal and happy customers",
     image: "/images/projects/hut-rewards.png",
+    href: "/projects/pizza-hut",
   },
   {
     title: "Meta design system",
@@ -43,8 +44,7 @@ export default function About() {
           {/* First text block */}
           <h2 className="text-white text-xl sm:text-2xl lg:text-4xl max-w-2xl mx-auto">
             I love challenges may it be
-            <br className="hidden sm:block" />
-            a sport or Design
+            <br className="hidden sm:block" />a sport or Design
           </h2>
 
           {/* Second text block */}
