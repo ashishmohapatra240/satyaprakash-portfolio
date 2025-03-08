@@ -8,15 +8,15 @@ export default function RaptorXProject() {
       title: "Meta design system",
       bgColor: "#222222",
       logoChar: "M",
-      accentColor: "#FFCC00"
+      accentColor: "#FFCC00",
     },
     {
       href: "/projects/pizza-hut",
       title: "Pizza Hut",
       bgColor: "#E31837",
       logoChar: "P",
-      accentColor: "#FFFFFF"
-    }
+      accentColor: "#FFFFFF",
+    },
   ];
 
   return (
@@ -199,16 +199,16 @@ export default function RaptorXProject() {
                     Structuring Flows for Clarity
                   </h2>
                 </div>
-                <div className="flex justify-start items-start gap-12">
+                <div className="flex flex-col lg:flex-row justify-start items-start gap-12">
                   <Image
                     src="/images/projects/raptor-x/flow-refining.png"
                     alt="Flow Refining Dashboard"
                     width={412}
                     height={362}
-                    className="w-96"
+                    className="w-full lg:w-96 h-auto"
                   />
                   <div className="flex flex-col justify-start items-start gap-6">
-                    <div className="w-[740px]">
+                    <div className="w-full lg:w-[740px]">
                       <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
                         We structured the screens into clearly distinguished
                         sections, ensuring that each part served a specific
@@ -223,7 +223,7 @@ export default function RaptorXProject() {
                         similar reasons &quot;
                       </span>
                     </div>
-                    <div className="w-[740px]">
+                    <div className="w-full lg:w-[740px]">
                       <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
                         To assess this situation, the Analyst needed to check:
                         <br />
@@ -242,12 +242,12 @@ export default function RaptorXProject() {
                     </div>
                   </div>
                 </div>
-                <div className="w-[740px] text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                <div className="w-full lg:w-[740px] text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
                   To streamline the process, we organized the information with
                   key sections, including:
                 </div>
-                <div className="flex justify-start items-start gap-12">
-                  <div className="flex-1 flex flex-col justify-start items-start">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                  <div className="flex flex-col justify-start items-start">
                     <div className="self-stretch py-0.5 flex justify-center items-center gap-2">
                       <div className="flex-1 text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
                         Overview
@@ -258,7 +258,7 @@ export default function RaptorXProject() {
                       core users involved
                     </div>
                   </div>
-                  <div className="flex-1 flex flex-col justify-start items-start">
+                  <div className="flex flex-col justify-start items-start">
                     <div className="self-stretch py-0.5 flex justify-center items-center gap-2">
                       <div className="flex-1 text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
                         Graph
@@ -269,7 +269,7 @@ export default function RaptorXProject() {
                       entities and also all the entities involved
                     </div>
                   </div>
-                  <div className="flex-1 flex flex-col justify-start items-start">
+                  <div className="flex flex-col justify-start items-start">
                     <div className="self-stretch py-0.5 flex justify-center items-center gap-2">
                       <div className="flex-1 text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
                         Behavioral Analysis
@@ -281,7 +281,7 @@ export default function RaptorXProject() {
                     </div>
                   </div>
                 </div>
-                <div className="w-[740px] text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                <div className="w-full lg:w-[740px] text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
                   Additional tabs were incorporated to maintain consistency with
                   the existing UI while refining the overall user experience.
                 </div>
@@ -308,41 +308,32 @@ export default function RaptorXProject() {
                     Did we actually solve the problem?
                   </div>
                 </div>
-                <div className="self-stretch flex flex-col justify-start items-start gap-6">
-                  <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                    <div className="self-stretch relative justify-start text-indigo-500 text-base font-bold font-['Product_Sans'] tracking-wider">
-                      Early validation
-                    </div>
-                    <div className="relative justify-start text-slate-800 text-5xl font-medium font-['Product_Sans_Medium']">
-                      The Reality Check – <br />
-                      Testing, Failing & Learning
-                    </div>
+                <div className="inline-flex flex-col lg:flex-row justify-start items-start gap-12">
+                  <div className="w-full lg:w-96 h-auto lg:h-96 rounded-xl flex justify-end items-center overflow-hidden">
+                    <Image
+                      className="w-full h-auto relative rounded"
+                      src="/images/projects/raptor-x/testing.png"
+                      alt="Early Validation"
+                      width={659}
+                      height={475}
+                    />
                   </div>
-                  <div className="inline-flex justify-start items-start gap-12">
-                    <div className="w-96 h-96 rounded-xl flex justify-end items-center overflow-hidden">
-                      <Image
-                        className="w-[659px] h-[475px] relative rounded border-4 border-black"
-                        src="/images/projects/raptor-x/early-validation.png"
-                        alt="Early Validation"
-                        width={659}
-                        height={475}
-                      />
-                    </div>
-                    <div className="inline-flex flex-col justify-start items-start gap-6">
-                      <div className="w-[740px] relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                  <div className="inline-flex flex-col justify-start items-start gap-6">
+                    <div className="w-full lg:w-[740px]">
+                      <div className="self-stretch relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
                         Initially, we were rolling out iterations without
                         validation. I raised concerns with our manager—without
                         proper testing, we were essentially shooting in the
                         dark.
                       </div>
-                      <div className="w-[740px] relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                      <div className="self-stretch relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
                         Weeks passed without any feedback. Our focus gradually
                         shifted to other features. But then, an opportunity
                         arose—one of our team representatives was able to
                         observe real users in action, noting the problems they
                         encountered firsthand.
                       </div>
-                      <div className="w-[740px] relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                      <div className="self-stretch relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
                         This phase was tough—sleepless nights, endless
                         iterations, and constant refining of the feature. But
                         the feedback revealed a harsh truth: we hadn&apos;t
@@ -355,21 +346,21 @@ export default function RaptorXProject() {
                       </div>
                     </div>
                   </div>
-                  <div className="w-[740px] relative justify-start">
-                    <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
-                      The issue boiled down to the
-                    </span>
-                    <span className="text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
-                      sequence of data consumption
-                    </span>
-                  </div>
-                  <div className="w-[740px] relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
-                    To resolve this, we explored alternative layouts, tested
-                    them internally, and ultimately landed on a version that
-                    reduced upfront information. Instead of overwhelming the
-                    user, the interface encouraged them to dive deeper into
-                    details only when necessary.
-                  </div>
+                </div>
+                <div className="w-full lg:w-[740px] relative justify-start">
+                  <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                    The issue boiled down to the
+                  </span>
+                  <span className="text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                    sequence of data consumption
+                  </span>
+                </div>
+                <div className="w-full lg:w-[740px] relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                  To resolve this, we explored alternative layouts, tested them
+                  internally, and ultimately landed on a version that reduced
+                  upfront information. Instead of overwhelming the user, the
+                  interface encouraged them to dive deeper into details only
+                  when necessary.
                 </div>
               </div>
             </section>
@@ -386,9 +377,9 @@ export default function RaptorXProject() {
                     Polishing with UI & Visuals
                   </div>
                 </div>
-                <div className="self-stretch inline-flex justify-start items-start gap-12">
+                <div className="flex flex-col lg:flex-row justify-start items-start gap-12">
                   <div className="inline-flex flex-col justify-start items-start gap-6">
-                    <div className="w-[740px] relative justify-start">
+                    <div className="w-full lg:w-[740px]">
                       <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
                         We leveraged hierarchy and visual elements to make the
                         interface more intuitive and engaging. A{" "}
@@ -424,9 +415,9 @@ export default function RaptorXProject() {
                   How We Made an Impact
                 </div>
               </div>
-              <div className="self-stretch inline-flex justify-start items-start gap-12">
+              <div className="flex flex-col lg:flex-row justify-start items-start gap-12">
                 <div className="inline-flex flex-col justify-start items-start gap-6">
-                  <div className="w-[740px] relative justify-start">
+                  <div className="w-full lg:w-[740px]">
                     <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
                       With these refinements, the product became more robust,
                       and its core features were now fully functional and
@@ -448,7 +439,7 @@ export default function RaptorXProject() {
           </div>
         </div>
       </section>
-      
+
       {/* Next Projects Section - Moved outside the container */}
       <NextProjects projects={otherProjects} />
     </main>
