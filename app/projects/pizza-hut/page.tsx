@@ -1,6 +1,24 @@
 import Image from "next/image";
+import NextProjects from "@/app/components/NextProjects";
 
 export default function PizzaHutProject() {
+  const otherProjects = [
+    {
+      href: "/projects/meta-design",
+      title: "Meta design system",
+      bgColor: "#222222",
+      logoChar: "M",
+      accentColor: "#FFCC00"
+    },
+    {
+      href: "/projects/raptor-x",
+      title: "Raptor X",
+      bgColor: "#1E40AF",
+      logoChar: "R",
+      accentColor: "#FFFFFF"
+    }
+  ];
+
   return (
     <main className="bg-white">
       {/* Hero Section */}
@@ -323,29 +341,7 @@ export default function PizzaHutProject() {
       </section>
 
       {/* Next Projects */}
-      <section className="bg-gray-50 py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-36">
-          <h2 className="text-2xl font-medium text-[#20233D] mb-8">
-            Check out more projects
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <a href="/projects/meta-design" className="group">
-              <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                <Image
-                  src="/images/projects/meta-design.png"
-                  alt="Meta Design System"
-                  width={300}
-                  height={200}
-                  className="w-full rounded-lg mb-4"
-                />
-                <h3 className="font-medium group-hover:text-blue-600 transition-colors">
-                  Meta design system →
-                </h3>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
+      <NextProjects projects={otherProjects} />
     </main>
   );
 }
