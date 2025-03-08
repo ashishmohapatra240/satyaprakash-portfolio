@@ -1,3 +1,4 @@
+import Love3D from "../Experience";
 import ProjectCard from "../ProjectCard";
 import Marquee from "./Marquee";
 
@@ -61,7 +62,7 @@ export default function About() {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-[#0E0F16] to-transparent" />
       </div>
       <Marquee />
-
+      <Love3D />
       {/* White section */}
       <div className="min-h-[70vh] bg-white relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-36 py-10 sm:py-20">
