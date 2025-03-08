@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { label: 'Resume', href: '/resume' },
-    { label: 'About me', href: '/about' },
-    { label: 'Explore my realm', href: '/explore' },
+    { label: "Resume", href: "/Satya-Resume.pdf", target: "_blank" },
+    { label: "About me", href: "/about" },
+    { label: "Explore my realm", href: "/explore" },
   ];
 
   return (
@@ -35,6 +35,7 @@ const Navbar = () => {
               <Link
                 key={item.label}
                 href={item.href}
+                target={item.target}
                 className="text-gray-800 hover:text-gray-600 transition-colors duration-200"
               >
                 {item.label}
@@ -113,4 +114,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; 
+export default Navbar;
