@@ -23,12 +23,14 @@ export default function Design() {
     <section className="min-h-screen bg-white py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-36">
         <div className="text-center space-y-4 mb-8">
-          <h2 className="text-xl sm:text-2xl lg:text-4xl font-medium text-[#0E0F16]">
+          <h2 className="text-2xl sm:text-5xl font-medium text-[#0E0F16]">
             Exploring and living
             <br className="hidden sm:block" />
             design realm
           </h2>
-          <p className="text-[#9099A5]">Just awesome stuff away from figma</p>
+          <p className="text-[#9099A5] text-lg sm:text-xl">
+            Just awesome stuff away from figma
+          </p>
         </div>
 
         <p className="text-center text-gray-600 max-w-2xl mx-auto mb-16">

@@ -1,11 +1,41 @@
 "use client";
+import { useEffect } from "react";
 import Image from "next/image";
 
 export default function Hero() {
+  useEffect(() => {
+    // Set initial background color
+    document.body.style.backgroundColor = "rgb(255, 255, 255)";
+
+    // Add transition to all elements that will be animated
+    const heroTexts = document.querySelectorAll(
+      "section:first-of-type p, section:first-of-type h1"
+    );
+    heroTexts.forEach((el) => {
+      (el as HTMLElement).style.transition =
+        "opacity 0.3s ease, transform 0.3s ease, color 0.3s ease";
+    });
+
+    const heroImage = document.querySelector("section:first-of-type img");
+    if (heroImage) {
+      (heroImage as HTMLElement).style.transition =
+        "transform 0.4s ease, opacity 0.4s ease";
+    }
+
+    // Add smooth transition to body background
+    document.body.style.transition = "background-color 0.3s ease";
+
+    return () => {
+      // Clean up when component unmounts
+      document.body.style.backgroundColor = "";
+      document.body.style.transition = "";
+    };
+  }, []);
+
   const scrollToNextSection = () => {
     window.scrollTo({
       top: window.innerHeight,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
@@ -50,9 +80,9 @@ export default function Hero() {
         {/* Bottom Left Scroll Button */}
         <div className="absolute bottom-8 left-0">
           <div className="flex items-center space-x-2 text-sm">
-            <button 
+            <button
               onClick={scrollToNextSection}
-              className="group flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-200 hover:border-gray-300 transition-colors"
+              className="group flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-200 hover:border-gray-300 transition-colors text-gray-500"
             >
               <span className="transform group-hover:translate-y-1 transition-transform">
                 ↓
