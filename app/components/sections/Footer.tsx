@@ -19,17 +19,6 @@ export default function Footer() {
             Lets talk
           </Link>
         </div>
-
-        {/* Image */}
-        <div className="w-1/2 md:w-1/3">
-          <Image
-            src="/images/footer-image.png"
-            alt="Footer Image"
-            width={300}
-            height={300}
-            className="w-full h-auto"
-          />
-        </div>
       </div>
     </section>
   );
