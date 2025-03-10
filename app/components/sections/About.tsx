@@ -185,7 +185,7 @@ export default function About() {
       {/* Dark section */}
       <div className="min-h-screen bg-transparent relative flex flex-col justify-center items-center text-center pt-20 pb-32 widescreenConstraint">
         <motion.div
-          className="container mx-auto px-4 sm:px-6 lg:px-36 space-y-16 sm:space-y-24 dark-section-content"
+          className="mx-auto px-4 sm:px-6 lg:px-36 space-y-16 sm:space-y-24 dark-section-content"
           initial="hidden"
           animate="visible"
           variants={staggerContainer}
@@ -223,7 +223,7 @@ export default function About() {
         className="min-h-[70vh] bg-white relative py-16 sm:py-24"
         ref={projectsRef}
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-36 widescreenConstraint">
+        <div className="widescreenConstraint">
           <motion.div
             className="text-center space-y-6"
             initial={{ opacity: 0, y: 30 }}
@@ -236,12 +236,12 @@ export default function About() {
               <br className="hidden sm:block" />
               Creating Impact
             </h2>
-            <p className="text-[#9099A5] text-lg sm:text-xl">that matters...</p>
+            <p className="text-gray text-lg sm:text-xl">that matters...</p>
           </motion.div>
 
           {/* Project Grid */}
           <motion.div
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mt-20 sm:mt-32 max-w-6xl mx-auto"
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mt-20 sm:mt-32 max-w-6xl mx-auto"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}

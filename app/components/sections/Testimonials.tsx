@@ -77,7 +77,7 @@ export default function Testimonials() {
             <br className="hidden sm:block" />
             journey more enjoyable
           </h2>
-          <p className="text-[#9099A5] text-lg sm:text-xl">
+          <p className="text-gray text-lg sm:text-xl">
             Believe me, I didn&apos;t bribe them
           </p>
         </div>
