@@ -70,14 +70,14 @@ function TestimonialCard({
 export default function Testimonials() {
   return (
     <section className="py-20 bg-white overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-36 mb-16">
+      <div className="mx-auto mb-16 widescreenConstraint">
         <div className="text-center space-y-4">
           <h2 className="text-xl sm:text-5xl font-medium text-[#0E0F16]">
             People make the
             <br className="hidden sm:block" />
             journey more enjoyable
           </h2>
-          <p className="text-[#9099A5] text-lg sm:text-xl">
+          <p className="text-gray text-lg sm:text-xl">
             Believe me, I didn&apos;t bribe them
           </p>
         </div>

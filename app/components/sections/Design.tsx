@@ -21,14 +21,13 @@ const DESIGN_ACTIVITIES = [
 export default function Design() {
   return (
     <section className="min-h-screen bg-white py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-36">
+      <div className=" mx-auto widescreenConstraint">
         <div className="text-center space-y-4 mb-8">
           <h2 className="text-2xl sm:text-5xl font-medium text-[#0E0F16]">
             Exploring and living
-            <br className="hidden sm:block" />
-            design realm
+            <br className="hidden sm:block" /> design realm
           </h2>
-          <p className="text-[#9099A5] text-lg sm:text-xl">
+          <p className="text-gray text-lg sm:text-xl">
             Just awesome stuff away from figma
           </p>
         </div>
@@ -38,11 +37,11 @@ export default function Design() {
           crazy stuff, and it have always been great fun.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto place-items-center">
           {DESIGN_ACTIVITIES.map((activity, index) => (
             <div
               key={index}
-              className={`${activity.bgColor} rounded-2xl p-6 text-white relative overflow-hidden min-h-[300px] flex flex-col justify-between`}
+              className={`${activity.bgColor} rounded-2xl p-6 text-white relative overflow-hidden flex flex-col justify-between h-80 max-w-80 w-full`}
             >
               <div className="absolute h-full w-full top-0 left-0">
                 <Image

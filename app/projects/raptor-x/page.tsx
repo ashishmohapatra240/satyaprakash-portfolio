@@ -21,8 +21,8 @@ export default function RaptorXProject() {
 
   return (
     <main className="bg-white">
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-36 py-12">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-12">
+        <div className="mx-auto widescreenConstraint">
           {/* Project Category */}
           <div className="text-blue-600 text-base font-bold tracking-wider mt-8 sm:mt-12 md:mt-24">
             RAPTOR X
