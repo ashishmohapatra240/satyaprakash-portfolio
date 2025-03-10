@@ -40,7 +40,7 @@ function TestimonialCard({
   avatar: string;
 }) {
   return (
-    <div className="w-96 h-44 p-1 bg-white rounded-xl shadow-[4px_4px_24px_0px_rgba(111,111,111,0.05)] border border-gray-200 inline-flex flex-col justify-center items-start mx-4">
+    <div className="w-96 h-42 p-1 bg-white rounded-xl shadow-[4px_4px_24px_0px_rgba(111,111,111,0.05)] border border-gray-200 inline-flex flex-col justify-center items-start mx-4">
       <div className="self-stretch h-28 p-8 bg-white rounded-xl shadow-[0px_1px_3px_1px_rgba(0,0,0,0.15)] shadow-[inset_0px_1px_24px_0px_rgba(0,0,0,0.05)] flex flex-col justify-center items-start gap-4">
         <div className="relative justify-center text-slate-800 text-base font-normal font-['Product_Sans'] leading-normal tracking-wide">
           {text}

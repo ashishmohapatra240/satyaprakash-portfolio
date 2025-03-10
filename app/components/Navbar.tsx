@@ -12,7 +12,7 @@ const Navbar = () => {
   const menuItems = [
     { label: "Resume", href: "/Satya-Resume.pdf", target: "_blank" },
     { label: "About me", href: "/about" },
-    { label: "Explore my realm", href: "/explore" },
+    // { label: "Explore my realm", href: "/explore" },
   ];
 
   return (

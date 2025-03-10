@@ -84,7 +84,7 @@ export default function SpringDesignProject() {
                   </h2>
                 </div>
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-                  <div className="space-y-6 lg:max-w-[740px]">
+                  <div className="space-y-6 lg:max-w-full lg:w-2/3">
                     <p className="text-slate-800 text-lg sm:text-xl leading-relaxed">
                       But, as we began to dig deeper into the challenge, we
                       quickly realized that we were facing a set of significant
@@ -129,7 +129,7 @@ export default function SpringDesignProject() {
                   </h2>
                 </div>
                 <div className="flex flex-col lg:flex-row gap-12">
-                  <div className="space-y-6 lg:max-w-[740px]">
+                  <div className="space-y-6 lg:max-w-full lg:w-2/3">
                     <p className="text-slate-800 text-lg sm:text-xl leading-relaxed">
                       We knew we had to rethink the way we approached design
                       systems. Rather than starting with an overcomplicated
@@ -175,7 +175,7 @@ export default function SpringDesignProject() {
                           like an intimidating, high-maintenance structure. We
                           wanted ease of use to be at the heart of everything.
                         </div>
-                        <div className="w-full lg:w-[740px] text-slate-800 text-lg sm:text-xl leading-relaxed">
+                        <div className="w-full lg:w-full lg:w-2/3 text-slate-800 text-lg sm:text-xl leading-relaxed">
                           So, we got started into it
                         </div>
                       </div>
@@ -218,7 +218,7 @@ export default function SpringDesignProject() {
                     className="w-full lg:w-96 h-auto"
                   />
                   <div className="flex flex-col justify-start items-start gap-6">
-                    <div className="w-full lg:w-[740px]">
+                    <div className="w-full lg:w-full lg:w-2/3">
                       <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
                         As we began building, we took an iterative approach.
                         Instead of trying to get everything perfect from the
@@ -238,7 +238,7 @@ export default function SpringDesignProject() {
                     </div>
                   </div>
                 </div>
-                <div className="w-full lg:w-[740px] text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                <div className="w-full lg:w-full lg:w-2/3 text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
                   After a few rounds of testing with different teams, we finally
                   began to see the results of our work. We had built something
                   that allowed the team to seamlessly switch between themes,
@@ -267,7 +267,7 @@ export default function SpringDesignProject() {
                         </div>
                       </div>
                       <div className="flex flex-col gap-6">
-                        <div className="w-full lg:w-[740px]">
+                        <div className="w-full lg:w-full lg:w-2/3">
                           <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
                             The impact was clear.{" "}
                           </span>
