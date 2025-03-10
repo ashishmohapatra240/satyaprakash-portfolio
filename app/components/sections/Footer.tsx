@@ -1,8 +1,8 @@
 import Link from "next/link";
 export default function Footer() {
   return (
-    <section className="min-h-5/6 bg-[#0E0F16] flex flex-col items-start justify-center px-4 md:px-36 py-10">
-      <div className="w-full max-w-7xl flex flex-row justify-between">
+    <section className="min-h-5/6 bg-[#0E0F16] flex flex-col items-start justify-center">
+      <div className="w-full flex flex-row justify-between widescreenConstraint">
         {/* Main Content */}
         <div className="space-y-6 text-left mb-16">
           <h2 className="text-4xl md:text-7xl text-white font-medium leading-tight mt-24">

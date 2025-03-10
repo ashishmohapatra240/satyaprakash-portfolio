@@ -21,8 +21,8 @@ export default function PizzaHutProject() {
 
   return (
     <main className="bg-white">
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-36 py-12">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-12">
+        <div className="mx-auto widescreenConstraint">
           {/* Project Category */}
           <div className="text-rose-700 text-base font-bold tracking-wider mt-12 sm:mt-24">
             PIZZA HUT
@@ -84,7 +84,7 @@ export default function PizzaHutProject() {
                   </h2>
                 </div>
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-                  <div className="space-y-6 lg:max-w-[740px]">
+                  <div className="space-y-6 lg:max-w-full lg:w-2/3">
                     <p className="text-slate-800 text-lg sm:text-xl leading-relaxed">
                       After diving deep into the issue, I identified two major
                       pain points:
@@ -133,7 +133,7 @@ export default function PizzaHutProject() {
                   </h2>
                 </div>
                 <div className="flex flex-col lg:flex-row gap-12">
-                  <div className="space-y-6 lg:max-w-[740px]">
+                  <div className="space-y-6 lg:max-w-full lg:w-2/3">
                     <p className="text-slate-800 text-lg sm:text-xl leading-relaxed">
                       I began by analyzing the existing visual language of the
                       website&apos;s reward system. It felt uninspiring and
@@ -205,7 +205,7 @@ export default function PizzaHutProject() {
                   </h2>
                 </div>
                 <div className="flex flex-col lg:flex-row gap-12">
-                  <div className="space-y-6 lg:max-w-[740px]">
+                  <div className="space-y-6 lg:max-w-full lg:w-2/3">
                     <p className="text-slate-800 text-lg sm:text-xl leading-relaxed">
                       Instead of being discouraged, I focused on refining the
                       flow and usability.
@@ -256,7 +256,7 @@ export default function PizzaHutProject() {
                   </h2>
                 </div>
                 <div className="flex flex-col lg:flex-row gap-12">
-                  <div className="space-y-6 lg:max-w-[740px]">
+                  <div className="space-y-6 lg:max-w-full lg:w-2/3">
                     <p className="text-slate-800 text-lg sm:text-xl leading-relaxed">
                       With a clear direction set, UI execution was smooth and
                       efficient. Since we had already explored multiple visual
@@ -296,7 +296,7 @@ export default function PizzaHutProject() {
                   </h2>
                 </div>
                 <div className="flex flex-col lg:flex-row gap-12">
-                  <div className="space-y-6 lg:max-w-[740px]">
+                  <div className="space-y-6 lg:max-w-full lg:w-2/3">
                     <div className="space-y-2">
                       <span className="text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
                         The redesigned loyalty system

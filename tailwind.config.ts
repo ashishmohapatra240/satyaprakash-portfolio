@@ -7,13 +7,23 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
     extend: {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#0019FF",
+        dark: "#20233D",
+        gray: "#9099A5",
       },
       fontFamily: {
-        sans: ['var(--font-product-sans)'],
+        sans: ["var(--font-product-sans)"],
       },
     },
   },

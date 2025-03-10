@@ -33,7 +33,7 @@ const marqueeItems = [
 
 export default function Marquee() {
   return (
-    <div className="bg-[#0019FF] py-4 overflow-hidden">
+    <div className="bg-primary py-4 overflow-hidden">
       <FastMarquee
         gradient={false}
         speed={50}

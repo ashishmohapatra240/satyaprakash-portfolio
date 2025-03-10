@@ -1,6 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import Image from "next/image";
+import clsx from "clsx";
 
 export default function Hero() {
   useEffect(() => {
@@ -40,14 +41,19 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col relative px-4 sm:px-8 md:px-16 lg:px-36">
+    <section
+      className={clsx(
+        "min-h-screen flex flex-col relative",
+        "widescreenConstraint"
+      )}
+    >
       {/* Main content wrapper */}
       <div className="flex-1 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 pt-20 md:pt-0">
         {/* Left content */}
         <div className="space-y-4 md:space-y-6 w-full md:w-1/2 text-center md:text-left">
           <div className="space-y-3 md:space-y-4">
             <p className="text-base sm:text-lg">Hey I&apos;m Satya</p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-medium leading-tight text-[#20233D] mx-auto md:mx-0 max-w-[90%] md:max-w-none">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-medium leading-tight text-dark mx-auto md:mx-0 max-w-[90%] md:max-w-none">
               building
               <br />
               products &<br />
@@ -69,7 +75,7 @@ export default function Hero() {
             />
           </div>
 
-          <p className="text-[#9099A5] text-base sm:text-lg text-center mt-4 md:mt-6">
+          <p className="text-gray text-base sm:text-lg text-center mt-4 md:mt-6">
             Getting lost in realm of design is what i ❤️
           </p>
         </div>
