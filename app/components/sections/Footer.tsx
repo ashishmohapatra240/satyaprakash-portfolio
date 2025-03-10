@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 export default function Footer() {
   return (
     <section className="min-h-5/6 bg-[#0E0F16] flex flex-col items-start justify-center px-4 md:px-36 py-10">
