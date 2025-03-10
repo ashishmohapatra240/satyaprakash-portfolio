@@ -24,17 +24,17 @@ export default function RaptorXProject() {
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-36 py-12">
         <div className="max-w-5xl mx-auto">
           {/* Project Category */}
-          <div className="text-blue-600 text-base font-bold tracking-wider mt-12 sm:mt-24">
+          <div className="text-blue-600 text-base font-bold tracking-wider mt-8 sm:mt-12 md:mt-24">
             RAPTOR X
           </div>
 
           {/* Project Title */}
-          <h1 className="text-slate-800 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight sm:leading-snug md:leading-normal mt-4">
+          <h1 className="text-slate-800 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mt-4">
             Designing the next-gen fraud detection system
           </h1>
 
           {/* Hero Image */}
-          <div className="mt-8 sm:mt-12 mb-16 sm:mb-24">
+          <div className="mt-8 sm:mt-12 mb-12 sm:mb-24">
             <Image
               src="/images/projects/raptor-x/hero.png"
               alt="RaptorX Dashboard"
@@ -46,30 +46,52 @@ export default function RaptorXProject() {
           </div>
 
           {/* Project Info */}
-          <div className="py-12 sm:py-20 flex flex-col sm:flex-row gap-8 sm:gap-24">
-            <div className="text-slate-800 text-xl sm:text-2xl lg:text-3xl leading-relaxed">
-              TeamX was developing a AI product to detect fraudulent activities,
-              helping businesses reduce losses and take preventive measures for
-              the future. They were refining their core features while
-              brainstorming ideas for features that users would love and find
-              engaging. We took on the challenge of improving the user flows to
-              enhance accessibility and make the product more delightful and
-              user-friendly.
+          <div className="py-8 sm:py-12 md:py-20 flex flex-col sm:flex-row gap-8 sm:gap-24">
+            <div className="text-slate-800 text-lg sm:text-xl lg:text-2xl xl:text-3xl leading-relaxed">
+              TeamX was building an AI-driven fraud detection system to help
+              businesses minimize losses. Their core feature assigned risk
+              scores to entities while generating alerts based on patterns. We
+              explored how alerts were triggered, what actions users could take,
+              and refined the rule-based system to enhance fraud detection and
+              prevention.
             </div>
-            <div className="flex flex-col gap-8 sm:min-w-[250px]">
+            <div className="flex flex-col gap-8 sm:min-w-[200px] lg:min-w-[250px]">
               <div className="space-y-2">
                 <h2 className="text-blue-600 text-xl font-medium leading-7">
                   My Role
                 </h2>
-                <p className="text-gray-400 text-xl">Product Designer</p>
+                <p className="text-gray-400 text-xl">Lead UI UX Designer</p>
               </div>
               <div className="space-y-2">
                 <h2 className="text-blue-600 text-xl font-medium leading-7">
                   Timeline
                 </h2>
-                <p className="text-gray-400 text-xl">3 Months</p>
+                <p className="text-gray-400 text-xl">4 Months</p>
               </div>
             </div>
+          </div>
+
+          <div className="space-y-12 sm:space-y-24">
+            <section>
+              <div className="space-y-2">
+                <div className="text-blue-600 text-base font-bold tracking-wider">
+                  Analysis
+                </div>
+                <h2 className="text-slate-800 text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight">
+                  Context
+                </h2>
+              </div>
+              <div className="inline-flex flex-col justify-start items-start mt-8 mb-4">
+                <div className="w-full max-w-[740px] text-slate-800 text-xl sm:text-2xl lg:text-3xl font-normal leading-relaxed">
+                  Fraud detection systems struggle with complex rule creation
+                  and overwhelming alert data, making it hard for analysts to
+                  act quickly.
+                </div>
+                <div className="w-[740px] relative justify-start text-slate-800 text-5xl font-bold font-['Product_Sans'] leading-[67.20px]">
+                  &quot;
+                </div>
+              </div>
+            </section>
           </div>
 
           {/* Content Sections - Using consistent spacing and responsive classes */}
@@ -79,325 +101,462 @@ export default function RaptorXProject() {
               <div className="space-y-6">
                 <div className="space-y-2">
                   <div className="text-blue-600 text-base font-bold tracking-wider">
-                    Case study focused on
+                    Research
                   </div>
                   <h2 className="text-slate-800 text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight">
-                    Shifting Our Focus – Understanding the Analyst&apos;s Role
+                    Decoding the Analyst Experience: Insights from Research
                   </h2>
                 </div>
                 <div className="flex flex-col lg:flex-row gap-12">
-                  <div className="space-y-6 lg:max-w-[740px]">
-                    <p className="text-slate-800 text-lg sm:text-xl leading-relaxed">
-                      Throughout the development process, we tackled various
-                      aspects sprint after sprint, adhering to the agile
-                      methodology to ensure rapid iterations and faster
-                      shipping. However, for now, I want to focus on one core
-                      feature that specifically catered to a particular user
-                      type.
-                    </p>
-                    <p className="text-slate-800 text-lg sm:text-xl leading-relaxed">
-                      The system supported multiple user types—some predefined,
-                      while others could be created by the admin. However, the
-                      primary hands-on user, the one interacting with the
-                      product the most, was the Analyst. Their role involved
-                      meticulously analyzing each generated alert, determining
-                      whether it was indeed fraudulent, and taking the necessary
-                      actions accordingly.
-                    </p>
+                  <div className="inline-flex flex-col justify-start items-start gap-6">
+                    <div className="w-[740px] relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                      Entering this domain was entirely new for me, and I
+                      wasn&apos;t sure where to begin or how to approach the
+                      problem. I had many questions:
+                    </div>
+                    <div className="w-[740px] relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                      How is an alert defined?
+                      <br />
+                      Should users spend more time on an alert for thorough
+                      analysis, or is speed the priority?
+                      <br />
+                      What is the average time an analyst takes to resolve an
+                      alert?
+                      <br />
+                      What other responsibilities do analysts have beyond
+                      handling alerts?
+                      <br />
+                      What exactly are we solving and building?
+                    </div>
+                    <div className="flex flex-col justify-start items-start gap-3">
+                      <div className="w-[740px] relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                        Who is the User?
+                      </div>
+                      <div className="w-[740px] relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                        Our users are analysts in the eCommerce and banking
+                        sectors who are assigned fraud cases to investigate,
+                        assess, and take action on the associated entities.
+                      </div>
+                    </div>
+                    <div className="flex flex-col justify-start items-start gap-3">
+                      <div className="w-[740px] relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                        We conducted Primary and Secondary Research
+                      </div>
+                      <div className="w-[740px] relative justify-start">
+                        <span className="text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
+                          Primary research :<br />
+                        </span>
+                        <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                          stake holder Interview
+                          <br />
+                        </span>
+                        <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                          <br />
+                        </span>
+                        <span className="text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
+                          Secondary research :<br />
+                        </span>
+                        <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                          Competitor analysis
+                          <br />
+                          Product reviews & Docs
+                          <br />
+                          Market Research & Industry standards
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                  <Image
-                    src="/images/projects/raptor-x/select-role.png"
-                    alt="Select Role"
-                    width={384}
-                    height={224}
-                    className="w-full lg:w-96 h-auto"
-                  />
+                </div>
+                <div className="self-stretch inline-flex justify-start items-start gap-6">
+                  <div className="inline-flex flex-col justify-center items-start gap-3">
+                    <div className="w-[740px] relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                      Understanding the Market, Product & competitors
+                    </div>
+                    <div className="w-[740px] relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                      After analyzing the fraud detection industry landscape, I
+                      examined various competing solutions to understand the
+                      market dynamics. I studied their feature sets—identifying
+                      strengths and shortcomings—while focusing on user pain
+                      points that persist despite the abundance of available
+                      products.
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>
+            <Image
+              src="/images/projects/raptor-x/about-industry.png"
+              alt="Flow Refining Dashboard"
+              width={1000}
+              height={1000}
+              className="w-full h-auto"
+            />
+            <div className="w-[740px] relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+              After thorough research, we focused specifically on the alert
+              resolution workflow within the product. We began by creating
+              journey maps to understand this critical process in detail.
+            </div>
+            <Image
+              src="/images/projects/raptor-x/solving-alert.png"
+              alt="Flow Refining Dashboard"
+              width={1000}
+              height={1000}
+              className="w-full h-auto px-40"
+            />
+            <div className="inline-flex flex-col justify-start items-start gap-6">
+              <div className="flex flex-col justify-start items-start gap-3">
+                <div className="w-[740px] relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                  Findings
+                </div>
+                <div className="w-[740px] relative justify-start">
+                  <span className="text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
+                    Lack of Clarity
+                  </span>
+                  <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                    {" "}
+                    – Alert information is presented in a cluttered manner,
+                    making it difficult to extract key insights.
+                    <br />
+                  </span>
+                  <span className="text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
+                    Unstructured Data Segmentation
+                  </span>
+                  <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                    {" "}
+                    – Critical data points are not well-organized, leading to
+                    confusion in prioritizing alerts.
+                    <br />
+                  </span>
+                  <span className="text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
+                    Insufficient Guidance
+                  </span>
+                  <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                    {" "}
+                    – Users struggle to interpret alerts due to the absence of
+                    contextual explanations or actionable insights.
+                    <br />
+                  </span>
+                  <span className="text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
+                    Information Overload
+                  </span>
+                  <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                    {" "}
+                    – Excessive, irrelevant data makes it hard for analysts to
+                    focus on what truly matters.
+                    <br />
+                  </span>
+                  <span className="text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
+                    Ambiguity in Decision-Making
+                  </span>
+                  <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                    {" "}
+                    – Unclear risk indicators and lack of recommendations hinder
+                    quick and confident actions.
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-col justify-start items-start gap-3">
+                <div className="w-[740px] relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                  Problem statement{" "}
+                </div>
+                <div className="w-[740px] relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                  Design a streamlined workflow for analysts that enhances their
+                  ability to understand and resolve alerts with confidence. The
+                  solution should provide clear guidance, actionable insights,
+                  and intuitive navigation, enabling them to efficiently assess
+                  alerts, take necessary actions, and seamlessly transition to
+                  the next alert.
+                </div>
+              </div>
+            </div>
 
             {/* Identifying Key Problems */}
             <section>
               <div className="space-y-6">
                 <div className="space-y-2">
                   <div className="text-blue-600 text-base font-bold tracking-wider">
-                    Analysis
+                    User Flow & Wireframing
                   </div>
                   <h2 className="text-slate-800 text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight">
-                    Scratching the Surface & Digging Deeper – Identifying the
-                    Problems
+                    Design Experiments: From Insights to Wireframes
                   </h2>
                 </div>
                 <div className="space-y-4">
-                  <p className="text-slate-800 text-lg sm:text-xl leading-relaxed">
-                    Our focus turned to the core feature—alert details. The
-                    system was generating a high volume of alerts, leaving
-                    Analysts overwhelmed with critical questions. Without clear
-                    answers, resolving alerts became a challenge.
-                  </p>
-                  <ul className="space-y-3 text-xl font-bold text-slate-800 font-['Product_Sans']">
-                    <li>• Why was this alert triggered?</li>
-                    <li>• Who is involved?</li>
-                    <li>• What key factors should I examine?</li>
-                    <li>• What actions should I take?</li>
-                  </ul>
+                  <div className="inline-flex flex-col justify-start items-start gap-3">
+                    <div className="w-[740px] relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                      Fixing the Flow
+                    </div>
+                    <div className="w-[740px] relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                      We mapped the user flow for the Alert Details page to
+                      identify obstacles and streamline the design, making the
+                      alert resolution process faster and more intuitive.
+                    </div>
+                  </div>
                 </div>
-                <p className="text-slate-800 text-lg sm:text-xl leading-relaxed">
-                  And many more. However, the existing panel was overloaded with
-                  excessive information, creating cognitive overload for the
-                  user.
-                </p>
               </div>
             </section>
+            <Image
+              src="/images/projects/raptor-x/user-flow.png"
+              alt="Flow Refining Dashboard"
+              width={1000}
+              height={1000}
+              className="w-full h-auto px-40"
+            />
+            <div className="inline-flex flex-col justify-start items-start gap-3">
+              <div className="w-[740px] relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                Sketching Ideas & Design
+              </div>
+              <div className="w-[739px] relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                Through discussions and brainstorming with developers and
+                stakeholders, we realized that minimizing data wasn&apos;t an
+                option, as every detail was crucial. However, the development
+                team was working on an algorithm that could consolidate multiple
+                scores into a single compounded score, helping the system
+                determine which information to prioritize and display.
+              </div>
+            </div>
+
+            <Image
+              src="/images/projects/raptor-x/sketch.png"
+              alt="Flow Refining Dashboard"
+              width={1000}
+              height={1000}
+              className="w-full h-auto"
+            />
+            <div className="w-[739px] relative justify-start">
+              <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                After exploring multiple layouts, I worked closely with the
+                team, iterating daily and gathering continuous feedback. The key
+                questions driving our design decisions were:
+                <br />
+                <br />
+              </span>
+              <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                Will analysts be able to find the data easily?
+                <br />
+                Will this help them resolve alerts faster?
+                <br />
+                What are the key insights analysts need to understand the data?
+                <br />
+              </span>
+              <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                <br />
+                During these weeks of iteration, we also had to account for data
+                variability—each case differed in complexity and size.
+                Collaborating with developers to test promising designs was
+                crucial to ensure scalability and effectiveness.
+              </span>
+            </div>
+
+            {/* Options Display - Restructured for better responsiveness */}
+            <div className="flex flex-col gap-12">
+              <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+                <div className="flex flex-col gap-3">
+                  <Image
+                    className="w-full lg:w-96 h-[800px] rounded-lg"
+                    src="/images/projects/raptor-x/option-a.png"
+                    width={400}
+                    height={400}
+                    alt="Option 1"
+                  />
+                  <div className="text-slate-800 text-base sm:text-lg lg:text-xl leading-relaxed">
+                    ✅ Everything is accessible on scroll <br />
+                    ✅ Right panel is for actions
+                    <br />❌ Lot of data without segregation
+                  </div>
+                </div>
+                <div className="flex flex-col gap-3">
+                  <Image
+                    className="w-full h-auto rounded-lg"
+                    src="/images/projects/raptor-x/option-b.png"
+                    width={400}
+                    height={400}
+                    alt="Option 2"
+                  />
+                  <div className="text-slate-800 text-base sm:text-lg lg:text-xl leading-relaxed">
+                    ✅ Everything Segregated under tabs and sub-tabs Different
+                    groupings(based on relation) have different tabs <br />
+                    ✅ Important datapoints on top
+                    <br />
+                    ✅ Organised Panels
+                    <br />❌ Might get confused from the information
+                    architecture
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-3">
+                <Image
+                  className="w-full h-auto rounded-lg"
+                  src="/images/projects/raptor-x/option-c.png"
+                  width={600}
+                  height={600}
+                  alt="Option 3"
+                />
+                <div className="text-slate-800 text-base sm:text-lg lg:text-xl leading-relaxed">
+                  ✅ One navigation tab having clear structure of information
+                  <br />
+                  ✅ Each tab has different motive and different data, avoiding
+                  ambiguity
+                  <br />❌ Each tab still has lot of data without prioritisation
+                </div>
+              </div>
+            </div>
 
             {/* Solution Approach */}
             <section>
               <div className="space-y-6">
                 <div className="space-y-2">
                   <div className="text-blue-600 text-base font-bold tracking-wider">
-                    Approach
+                    Post-Design
                   </div>
                   <h2 className="text-slate-800 text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight">
-                    Cracking the Code – Our Approach to Solving It
+                    Analyzing the solution and implementing feedback
                   </h2>
                 </div>
                 <div className="space-y-4">
-                  <p className="text-slate-800 text-lg sm:text-xl leading-relaxed">
-                    We iterated. LOL
-                  </p>
-                  <p className="text-slate-800 text-lg sm:text-xl leading-relaxed">
-                    This was an entirely new domain for us, an intriguing
-                    problem where an immense amount of data needed to be
-                    presented—yet it varied from case to case.
-                  </p>
-                  <ul className="space-y-3 text-xl text-slate-800 font-['Product_Sans']">
-                    <li>• Analyzed the data and categorized it meaningfully</li>
-                    <li>
-                      • Identified the core issues Analysts faced with the
-                      current panel
-                    </li>
-                    <li>
-                      • Documented the key needs and pain points of the Analyst
-                    </li>
-                  </ul>
+                  <div className="inline-flex flex-col justify-start items-start gap-3">
+                    <div className="w-[740px] relative justify-start">
+                      <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                        While testing internally, we found Option B more
+                        intuitive. We developed it, tested it on our database,
+                        and shipped it for our beta launch. The design improved
+                        user efficiency by{" "}
+                      </span>
+                      <span className="text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
+                        10%,
+                      </span>
+                      <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                        {" "}
+                        but it still wasn&apos;t enough.
+                      </span>
+                    </div>
+                    <div className="w-[740px] relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                      Beyond this, we received mixed feedback from both users
+                      and team members—some aspects worked well, while others
+                      needed improvement. To align everyone&apos;s understanding
+                      and address concerns, we conducted whiteboarding sessions
+                      to brainstorm solutions and refine our approach
+                      collaboratively.
+                    </div>
+                  </div>
                 </div>
-                <p className="text-slate-800 text-lg sm:text-xl leading-relaxed">
-                  After all this groundwork, we began designing our first draft.
-                </p>
               </div>
             </section>
 
-            {/* Flow Refining and Brainstorming */}
-            <section>
-              <div className="space-y-6">
-                <div className="space-y-2">
-                  <div className="text-indigo-500 text-base font-bold tracking-wider">
-                    Flow refining and Brainstorming
-                  </div>
-                  <h2 className="text-slate-800 text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight">
-                    Refining the Core – <br />
-                    Structuring Flows for Clarity
-                  </h2>
-                </div>
-                <div className="flex flex-col lg:flex-row justify-start items-start gap-12">
-                  <Image
-                    src="/images/projects/raptor-x/flow-refining.png"
-                    alt="Flow Refining Dashboard"
-                    width={412}
-                    height={362}
-                    className="w-full lg:w-96 h-auto"
-                  />
-                  <div className="flex flex-col justify-start items-start gap-6">
-                    <div className="w-full lg:w-[740px]">
-                      <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
-                        We structured the screens into clearly distinguished
-                        sections, ensuring that each part served a specific
-                        purpose. Tabs were introduced, each dedicated to a
-                        focused aspect of the investigation. For instance,
-                        consider this scenario:
-                        <br />
-                        <br />
-                      </span>
-                      <span className="text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
-                        &quot; 3 users using same address to return orders with
-                        similar reasons &quot;
-                      </span>
-                    </div>
-                    <div className="w-full lg:w-[740px]">
-                      <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
-                        To assess this situation, the Analyst needed to check:
-                        <br />
-                        Users and their past order history
-                        <br />
-                        The relationship between the users
-                        <br />
-                        Associated risk scores
-                        <br />
-                        Identifiable patterns
-                        <br />
-                        Potential financial loss
-                        <br />
-                        Appropriate actions to mitigate risk
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full lg:w-[740px] text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
-                  To streamline the process, we organized the information with
-                  key sections, including:
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                  <div className="flex flex-col justify-start items-start">
-                    <div className="self-stretch py-0.5 flex justify-center items-center gap-2">
-                      <div className="flex-1 text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
-                        Overview
-                      </div>
-                    </div>
-                    <div className="self-stretch text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
-                      Understanding what the alert is and basic details with
-                      core users involved
-                    </div>
-                  </div>
-                  <div className="flex flex-col justify-start items-start">
-                    <div className="self-stretch py-0.5 flex justify-center items-center gap-2">
-                      <div className="flex-1 text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
-                        Graph
-                      </div>
-                    </div>
-                    <div className="self-stretch text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
-                      A visual way to understand the relation between different
-                      entities and also all the entities involved
-                    </div>
-                  </div>
-                  <div className="flex flex-col justify-start items-start">
-                    <div className="self-stretch py-0.5 flex justify-center items-center gap-2">
-                      <div className="flex-1 text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
-                        Behavioral Analysis
-                      </div>
-                    </div>
-                    <div className="self-stretch text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
-                      A Visual way of showing how the account and user behavior
-                      deviated from usual one.
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full lg:w-[740px] text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
-                  Additional tabs were incorporated to maintain consistency with
-                  the existing UI while refining the overall user experience.
-                </div>
-              </div>
-            </section>
             <Image
-              src="/images/projects/raptor-x/solving.png"
+              src="/images/projects/raptor-x/listing-problems.png"
               alt="Flow Refining Dashboard"
-              width={1200}
-              height={600}
-              className="w-full bg-sky-50 rounded-xl overflow-hidden relative mt-12 mb-12"
+              width={1000}
+              height={1000}
+              className="w-full h-auto"
             />
-
-            {/* Early Validation Section */}
-            <section>
-              <div className="space-y-6">
-                <div className="space-y-2">
-                  <div className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
-                    And then… we shipped! 🚀 But there was one major problem—we
-                    had no access to users to validate our solution. This left
-                    us with a burning question--
-                  </div>
-                  <div className="text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
-                    Did we actually solve the problem?
-                  </div>
-                </div>
-                <div className="inline-flex flex-col lg:flex-row justify-start items-start gap-12">
-                  <div className="w-full lg:w-96 h-auto lg:h-96 rounded-xl flex justify-end items-center overflow-hidden">
-                    <Image
-                      className="w-full h-auto relative rounded"
-                      src="/images/projects/raptor-x/testing.png"
-                      alt="Early Validation"
-                      width={659}
-                      height={475}
-                    />
-                  </div>
-                  <div className="inline-flex flex-col justify-start items-start gap-6">
-                    <div className="w-full lg:w-[740px]">
-                      <div className="self-stretch relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
-                        Initially, we were rolling out iterations without
-                        validation. I raised concerns with our manager—without
-                        proper testing, we were essentially shooting in the
-                        dark.
-                      </div>
-                      <div className="self-stretch relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
-                        Weeks passed without any feedback. Our focus gradually
-                        shifted to other features. But then, an opportunity
-                        arose—one of our team representatives was able to
-                        observe real users in action, noting the problems they
-                        encountered firsthand.
-                      </div>
-                      <div className="self-stretch relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
-                        This phase was tough—sleepless nights, endless
-                        iterations, and constant refining of the feature. But
-                        the feedback revealed a harsh truth: we hadn&apos;t
-                        simplified things enough. Analysts were still facing the
-                        same struggles.
-                        <br />
-                        <br />
-                        The root cause?
-                        <br /> The lack of clarity on what to do next.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full lg:w-[740px] relative justify-start">
-                  <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
-                    The issue boiled down to the
-                  </span>
-                  <span className="text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
-                    sequence of data consumption
-                  </span>
-                </div>
-                <div className="w-full lg:w-[740px] relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
-                  To resolve this, we explored alternative layouts, tested them
-                  internally, and ultimately landed on a version that reduced
-                  upfront information. Instead of overwhelming the user, the
-                  interface encouraged them to dive deeper into details only
-                  when necessary.
+            <div className="self-stretch pt-12 inline-flex flex-col justify-start items-start gap-6">
+              <div className="flex flex-col justify-start items-start gap-3">
+                <div className="w-[740px] relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                  Given our timeline for the next release, we prioritized key
+                  problems to address and focused our ideation efforts on
+                  solving them effectively.
                 </div>
               </div>
-            </section>
-
-            {/* UI Design Section */}
-            <section>
-              <div className="space-y-6">
-                <div className="space-y-2">
-                  <div className="self-stretch relative justify-start text-indigo-500 text-base font-bold font-['Product_Sans'] tracking-wider">
-                    UI Design
+              <div className="flex flex-col justify-start items-start gap-3">
+                <div className="w-[740px] relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                  Focused Idnetified problems
+                </div>
+                <div className="w-[740px] relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                  Users struggled with complex cases due to the overwhelming
+                  amount of data to analyze.
+                  <br />
+                  Alert resolution was still time-consuming, impacting
+                  efficiency.
+                  <br />
+                  The available actions were too generic, providing little
+                  guidance for effective decision-making.
+                </div>
+              </div>
+              <div className="flex flex-col justify-start items-start gap-3">
+                <div className="w-[740px] relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                  Breakthrough in Tech, helping better Ideation
+                </div>
+                <div className="w-[740px] relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                  AI-driven insights for alerts are now more optimized,
+                  providing users with valuable guidance.
+                  <br />
+                  The risk score is now determined using a complex algorithm
+                  that identifies key patterns in alerts, helping prioritize and
+                  display the most critical data efficiently.
+                </div>
+              </div>
+              <div className="flex flex-col justify-start items-start gap-3">
+                <div className="w-[740px] relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                  With major technological breakthroughs, new opportunities
+                  emerged for more tech-driven solutions, enabling us to address
+                  user feedback more effectively and refine our problem-solving
+                  approach.
+                </div>
+              </div>
+              <div className="self-stretch pt-6 flex flex-col justify-start items-start gap-8">
+                <div className="self-stretch inline-flex justify-start items-start gap-20">
+                  <div className="flex-1 relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                    Problem
                   </div>
-                  <div className="relative justify-start text-slate-800 text-5xl font-medium font-['Product_Sans_Medium'] leading-[67.20px]">
-                    Adding the Final Touch – <br />
-                    Polishing with UI & Visuals
+                  <div className="flex-1 relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                    Solution
                   </div>
                 </div>
-                <div className="flex flex-col lg:flex-row justify-start items-start gap-12">
-                  <div className="inline-flex flex-col justify-start items-start gap-6">
-                    <div className="w-full lg:w-[740px]">
-                      <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
-                        We leveraged hierarchy and visual elements to make the
-                        interface more intuitive and engaging. A{" "}
-                      </span>
-                      <span className="text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
-                        slight brand refresh{" "}
-                      </span>
-                      <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
-                        further enhanced the product&apos;s appeal. <br />
-                        <br />
-                        The feedback? <br />
-                        Positive. Fewer pain points. A clearer experience.
-                      </span>
-                    </div>
+                <div className="self-stretch inline-flex justify-start items-start gap-20">
+                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                    A lot of data and Tabs
+                  </div>
+                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                    Improved risk scoring to enhance alert prioritization.
+                    <br />
+                    Reduced and restructured tabs for a more intuitive data
+                    organization.
+                    <br />
+                    Optimized data presentation for clearer and faster analysis.
+                  </div>
+                </div>
+                <div className="self-stretch inline-flex justify-start items-start gap-20">
+                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                    Always need to generate AI Insights
+                  </div>
+                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                    Backend optimizations allow us to surface generated insights
+                    upfront.
+                    <br />
+                    For lengthy insights, key data points are highlighted and
+                    linked to relevant patterns for better clarity and
+                    usability.
+                  </div>
+                </div>
+                <div className="self-stretch inline-flex justify-start items-start gap-20">
+                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                    Generic Action panel
+                  </div>
+                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                    Introduced specific action suggestions based on AI-generated
+                    insights.
+                    <br />
+                    Implemented a way for users to take corrective actions if an
+                    alert was deemed inaccurate.
+                  </div>
+                </div>
+                <div className="self-stretch inline-flex justify-start items-start gap-20">
+                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                    Guidance
+                  </div>
+                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                    Integrated a chat interface for seamless document uploads
+                    and collaboration.
+                    <br />
+                    Enabled analysts to discuss and resolve alerts together in
+                    real time.
                   </div>
                 </div>
               </div>
-            </section>
+            </div>
+
             <Image
               src="/images/projects/raptor-x/graph-analytics.png"
               alt="Polishing"
@@ -405,37 +564,32 @@ export default function RaptorXProject() {
               height={600}
               className="w-full bg-sky-50 rounded-xl overflow-hidden relative mt-12 mb-12"
             />
-            <div className="space-y-6">
-              <div className="space-y-2">
-                <div className="self-stretch relative justify-start text-indigo-500 text-base font-bold font-['Product_Sans'] tracking-wider">
-                  Impact
+            <section>
+              <div className="space-y-6">
+                <div className="space-y-2">
+                  <div className="text-blue-600 text-base font-bold tracking-wider">
+                    Impact
+                  </div>
+                  <h2 className="text-slate-800 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-medium leading-tight">
+                    The Results Are In – How We Made an Impact
+                  </h2>
                 </div>
-                <div className="relative justify-start text-slate-800 text-5xl font-medium font-['Product_Sans_Medium'] leading-[67.20px]">
-                  The Results Are In – <br />
-                  How We Made an Impact
-                </div>
-              </div>
-              <div className="flex flex-col lg:flex-row justify-start items-start gap-12">
-                <div className="inline-flex flex-col justify-start items-start gap-6">
-                  <div className="w-full lg:w-[740px]">
-                    <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
-                      With these refinements, the product became more robust,
-                      and its core features were now fully functional and
-                      intuitive. The result? Analysts could{" "}
-                    </span>
-                    <span className="text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
-                      solve 80% more fraud scenarios than before! <br />
-                    </span>
-                    <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
-                      <br />
-                      Meanwhile, our dev team continued to refine AI-generated
-                      insights, making them even more accurate and valuable to
-                      users.
-                    </span>
+                <div className="space-y-4">
+                  <div className="inline-flex flex-col justify-start items-start gap-3">
+                    <div className="w-[740px] relative justify-start">
+                      <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                        With these refinements, the product became more robust,
+                        and its core features were now more intuitive. The
+                        result? Analysts could solve 60% more fraud scenarios
+                        than before! Meanwhile, our dev team continued to refine
+                        AI-generated insights, making them even more accurate
+                        and valuable to users.
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </section>
           </div>
         </div>
       </section>
