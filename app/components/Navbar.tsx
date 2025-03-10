@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import clsx from "clsx";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,8 +16,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav
+      className={clsx(
+        "fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md"
+        // "px-4 md:px-0 md:max-w-[90%] lg:max-w-[80%] md:mx-auto"
+      )}
+    >
+      <div className="mx-auto widescreenConstraint">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">

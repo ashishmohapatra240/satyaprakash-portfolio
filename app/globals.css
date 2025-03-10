@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.widescreenConstraint {
+   @apply max-w-[90%] lg:max-w-[80%] mx-auto;
+}

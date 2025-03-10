@@ -70,7 +70,7 @@ function TestimonialCard({
 export default function Testimonials() {
   return (
     <section className="py-20 bg-white overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-36 mb-16">
+      <div className="container mx-auto mb-16 widescreenConstraint">
         <div className="text-center space-y-4">
           <h2 className="text-xl sm:text-5xl font-medium text-[#0E0F16]">
             People make the

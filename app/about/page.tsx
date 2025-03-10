@@ -5,29 +5,29 @@ import { motion } from "framer-motion";
 const fadeInUp = {
   initial: { y: 20, opacity: 0 },
   animate: { y: 0, opacity: 1 },
-  transition: { duration: 0.5 }
+  transition: { duration: 0.5 },
 };
 
 const staggerContainer = {
   animate: {
     transition: {
-      staggerChildren: 0.2
-    }
-  }
+      staggerChildren: 0.2,
+    },
+  },
 };
 
 export default function About() {
   return (
     <main className="pt-16 pb-0">
       {/* Hero Section */}
-      <motion.section 
+      <motion.section
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
         variants={staggerContainer}
-        className="container mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex items-center"
+        className="mx-auto min-h-screen flex items-center"
       >
-        <div className="max-w-7xl mx-auto w-full">
+        <div className="w-full widescreenConstraint">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
             {/* Text Content */}
             <motion.div variants={fadeInUp} className="lg:w-3/5">
@@ -41,10 +41,7 @@ export default function About() {
             </motion.div>
 
             {/* Image Grid */}
-            <motion.div 
-              variants={fadeInUp}
-              className="lg:w-2/5 relative"
-            >
+            <motion.div variants={fadeInUp} className="lg:w-2/5 relative">
               <div className="grid grid-cols-6 gap-4">
                 <div className="col-span-4 col-start-2">
                   <div className="relative w-64 h-96 rounded-xl overflow-hidden">
@@ -63,14 +60,14 @@ export default function About() {
       </motion.section>
 
       {/* Philosophy Section */}
-      <motion.section 
+      <motion.section
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
         variants={staggerContainer}
-        className="container mx-auto px-4 sm:px-6 lg:px-8 py-16"
+        className="mx-auto py-16"
       >
-        <div className="max-w-7xl mx-auto">
+        <div className="mx-auto widescreenConstraint">
           <motion.div variants={fadeInUp} className="mb-20">
             <p className="text-3xl sm:text-4xl md:text-6xl text-slate-800 font-normal leading-relaxed">
               Design isn&apos;t just what I do—it&apos;s what I keep falling
@@ -79,7 +76,7 @@ export default function About() {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             variants={fadeInUp}
             className="flex flex-col md:flex-row gap-12 md:gap-20 mb-20 mt-48"
           >
@@ -104,7 +101,7 @@ export default function About() {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             variants={fadeInUp}
             className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-20"
           >
@@ -131,15 +128,15 @@ export default function About() {
       </motion.section>
 
       {/* Connect Section */}
-      <motion.section 
+      <motion.section
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
         variants={staggerContainer}
         className="bg-gray-100 py-28"
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div variants={fadeInUp} className="max-w-7xl mx-auto">
+        <div className="mx-auto">
+          <motion.div variants={fadeInUp} className="widescreenConstraint">
             <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-neutral-900 font-normal leading-tight">
               If any of this sounds even a little interesting, just drop a
               hello!

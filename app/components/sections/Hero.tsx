@@ -1,6 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import Image from "next/image";
+import clsx from "clsx";
 
 export default function Hero() {
   useEffect(() => {
@@ -40,7 +41,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col relative px-4 sm:px-8 md:px-16 lg:px-36">
+    <section className={clsx("min-h-screen flex flex-col relative", "widescreenConstraint")}>
       {/* Main content wrapper */}
       <div className="flex-1 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 pt-20 md:pt-0">
         {/* Left content */}

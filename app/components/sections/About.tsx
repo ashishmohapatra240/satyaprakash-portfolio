@@ -98,7 +98,8 @@ export default function About() {
         const b = Math.round(255 - (255 - 22) * progress);
 
         document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-        document.body.style.willChange = progress > 0 && progress < 1 ? "background-color" : "auto";
+        document.body.style.willChange =
+          progress > 0 && progress < 1 ? "background-color" : "auto";
 
         // Apply text color transitions to hero elements with faster animations
         const heroTexts = hero.querySelectorAll("p, h1");
@@ -110,7 +111,8 @@ export default function About() {
           el.style.transform = `translateY(${-progress * 40}px) scale(${
             1 - progress * 0.08
           })`;
-          el.style.willChange = progress > 0 && progress < 1 ? "opacity, transform" : "auto";
+          el.style.willChange =
+            progress > 0 && progress < 1 ? "opacity, transform" : "auto";
           // Faster color transition
           el.style.color = `rgb(
             ${Math.round(32 + (0 - 32) * progress)},
@@ -128,7 +130,8 @@ export default function About() {
             1 - progress * 0.35
           }) rotate(${progress * -6}deg)`;
           heroImage.style.opacity = `${1 - progress * 1.2}`;
-          heroImage.style.willChange = progress > 0 && progress < 1 ? "transform, opacity" : "auto";
+          heroImage.style.willChange =
+            progress > 0 && progress < 1 ? "transform, opacity" : "auto";
         }
 
         // New animation for About section text - subtle reveal effect
@@ -149,10 +152,15 @@ export default function About() {
           el.style.transform = `scale(${0.95 + adjustedProgress * 0.05}) 
                                rotate(${(1 - adjustedProgress) * 0.5}deg)`;
           // Add text shadow for depth effect that fades in
-          el.style.textShadow = `0 ${(1 - adjustedProgress) * 8}px ${adjustedProgress * 12}px rgba(0,0,0,${adjustedProgress * 0.2})`;
+          el.style.textShadow = `0 ${(1 - adjustedProgress) * 8}px ${
+            adjustedProgress * 12
+          }px rgba(0,0,0,${adjustedProgress * 0.2})`;
           // Add filter for subtle blur effect that clears as scrolled
           el.style.filter = `blur(${(1 - adjustedProgress) * 3}px)`;
-          el.style.willChange = adjustedProgress > 0 && adjustedProgress < 1 ? "opacity, transform, filter" : "auto";
+          el.style.willChange =
+            adjustedProgress > 0 && adjustedProgress < 1
+              ? "opacity, transform, filter"
+              : "auto";
         });
 
         // Animate the scroll button in hero section
@@ -160,7 +168,8 @@ export default function About() {
         if (scrollButton) {
           scrollButton.style.opacity = `${1 - progress * 2}`;
           scrollButton.style.transform = `translateY(${progress * 25}px)`;
-          scrollButton.style.willChange = progress > 0 && progress < 1 ? "opacity, transform" : "auto";
+          scrollButton.style.willChange =
+            progress > 0 && progress < 1 ? "opacity, transform" : "auto";
         }
       }
     };
@@ -174,7 +183,7 @@ export default function About() {
   return (
     <section className="relative w-full overflow-hidden" ref={sectionRef}>
       {/* Dark section */}
-      <div className="min-h-screen bg-transparent relative flex flex-col justify-center items-center text-center pt-20 pb-32">
+      <div className="min-h-screen bg-transparent relative flex flex-col justify-center items-center text-center pt-20 pb-32 widescreenConstraint">
         <motion.div
           className="container mx-auto px-4 sm:px-6 lg:px-36 space-y-16 sm:space-y-24 dark-section-content"
           initial="hidden"
@@ -214,7 +223,7 @@ export default function About() {
         className="min-h-[70vh] bg-white relative py-16 sm:py-24"
         ref={projectsRef}
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-36">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-36 widescreenConstraint">
           <motion.div
             className="text-center space-y-6"
             initial={{ opacity: 0, y: 30 }}
