@@ -21,8 +21,8 @@ export default function SpringDesignProject() {
 
   return (
     <main className="bg-white">
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-36 py-12">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-12">
+        <div className="widescreenConstraint">
           {/* Project Category */}
           <div className="text-indigo-600 text-base font-bold tracking-wider mt-24">
             SPRING DESIGN SYSTEM
@@ -100,11 +100,11 @@ export default function SpringDesignProject() {
                       challenge of creating a reusable{" "}
                       <span className="font-bold">architecture of tokens</span>.
                       We needed something that would be easy to understand and
-                      work with, something that wouldn&apos;t become overwhelming as
-                      projects grew in complexity. Finally, the components
-                      themselves were often inconsistent. What worked for one
-                      project might not fit the needs of another, leading to
-                      confusion and unnecessary back-and-forth.
+                      work with, something that wouldn&apos;t become
+                      overwhelming as projects grew in complexity. Finally, the
+                      components themselves were often inconsistent. What worked
+                      for one project might not fit the needs of another,
+                      leading to confusion and unnecessary back-and-forth.
                     </p>
                   </div>
                 </div>
@@ -171,9 +171,9 @@ export default function SpringDesignProject() {
                           <br />
                           Our aim was to create a system anyone could
                           understand, even someone who had no prior experience
-                          with design systems. We didn&apos;t want it to feel like an
-                          intimidating, high-maintenance structure. We wanted
-                          ease of use to be at the heart of everything.
+                          with design systems. We didn&apos;t want it to feel
+                          like an intimidating, high-maintenance structure. We
+                          wanted ease of use to be at the heart of everything.
                         </div>
                         <div className="w-full lg:w-[740px] text-slate-800 text-lg sm:text-xl leading-relaxed">
                           So, we got started into it
@@ -254,8 +254,8 @@ export default function SpringDesignProject() {
 
             {/* Impact Section */}
             <section className="bg-white">
-              <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-36 py-8 sm:py-12">
-                <div className="max-w-5xl mx-auto">
+              <div className="mx-auto py-8 sm:py-12">
+                <div className="w-full">
                   <div className="flex flex-col gap-12 sm:gap-20">
                     <div className="flex flex-col gap-4 sm:gap-6">
                       <div className="self-stretch flex flex-col justify-start items-start gap-6">
@@ -272,15 +272,16 @@ export default function SpringDesignProject() {
                             The impact was clear.{" "}
                           </span>
                           <span className="text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
-                            What used to take weeks of work was now done in a fraction
-                            of the time
+                            What used to take weeks of work was now done in a
+                            fraction of the time
                           </span>
                           <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
-                            . The efficiency boost was noticeable across the board,
-                            and the team felt empowered by the new system. What had
-                            been a source of frustration and delay before became a
-                            tool that streamlined our process and gave us more time to
-                            focus on the bigger picture.
+                            . The efficiency boost was noticeable across the
+                            board, and the team felt empowered by the new
+                            system. What had been a source of frustration and
+                            delay before became a tool that streamlined our
+                            process and gave us more time to focus on the bigger
+                            picture.
                           </span>
                         </div>
                       </div>
