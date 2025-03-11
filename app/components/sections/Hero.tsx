@@ -1,6 +1,5 @@
 "use client";
 import { useEffect } from "react";
-import Image from "next/image";
 import clsx from "clsx";
 
 export default function Hero() {
@@ -50,20 +49,21 @@ export default function Hero() {
       {/* Main content wrapper */}
       <div className="flex-1 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 pt-20 md:pt-0">
         {/* Left content */}
-        <div className="space-y-4 md:space-y-6 w-full md:w-1/2 text-center md:text-left">
+        <div className="space-y-4 md:space-y-6 w-full text-center md:text-left">
           <div className="space-y-3 md:space-y-4">
             <p className="text-base sm:text-lg">Hey I&apos;m Satya</p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-medium leading-tight text-dark mx-auto md:mx-0 max-w-[90%] md:max-w-none">
-              building
-              <br />
-              products &<br />
+            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-normal leading-tight text-dark mx-auto md:mx-0 max-w-[90%] md:max-w-none">
+              building products &<br />
               design systems
             </h1>
           </div>
         </div>
 
-        {/* Right Section with Image */}
-        <div className="w-full md:w-1/2 flex flex-col items-center">
+        {/* Right Section - Empty div to maintain layout */}
+        {/* <div className="w-full md:w-1/3"></div> */}
+
+        {/* Original Right Section (Commented out)
+        <div className="w-full md:w-1/3 flex flex-col items-center">
           <div className="rounded-3xl relative flex items-center justify-center">
             <Image
               src="/images/hero.png"
@@ -79,6 +79,7 @@ export default function Hero() {
             Getting lost in realm of design is what i ❤️
           </p>
         </div>
+        */}
       </div>
 
       {/* Bottom section */}

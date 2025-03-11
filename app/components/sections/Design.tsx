@@ -1,26 +1,36 @@
-import Image from "next/image";
+import DesignCard from "../DesignCard";
 
-const DESIGN_ACTIVITIES = [
+export type DesignCardProps = {
+  title: string;
+  description: string;
+  image: string;
+  bgColor: string;
+};
+
+export const DESIGN_ACTIVITIES = [
   {
     title: "Mentoring",
-    image: "/images/design/mentoring.png",
+    description: "Giving back to the community",
+    image: "/images/design/mentor.png",
     bgColor: "bg-[#7B6EF6]",
   },
   {
     title: "3D & Motion",
-    image: "/images/design/3d-motion.png",
+    description: "Molding and flowing",
+    image: "/images/design/motion.png",
     bgColor: "bg-[#FF9F6A]",
   },
   {
     title: "Sketching",
-    image: "/images/design/sketching.png",
+    description: "Scribbling imperfections",
+    image: "/images/design/sketch.png",
     bgColor: "bg-[#8B7FE8]",
   },
 ];
 
 export default function Design() {
   return (
-    <section className="min-h-screen bg-white py-20">
+    <section className="min-h-screen bg-white py-20 flex items-center">
       <div className=" mx-auto widescreenConstraint">
         <div className="text-center space-y-4 mb-8">
           <h2 className="text-2xl sm:text-5xl font-medium text-[#0E0F16]">
@@ -39,19 +49,7 @@ export default function Design() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto place-items-center">
           {DESIGN_ACTIVITIES.map((activity, index) => (
-            <div
-              key={index}
-              className={`${activity.bgColor} rounded-2xl p-6 text-white relative overflow-hidden flex flex-col justify-between h-80 max-w-80 w-full`}
-            >
-              <div className="absolute h-full w-full top-0 left-0">
-                <Image
-                  src={activity.image}
-                  fill
-                  className="object-cover"
-                  alt={activity.title}
-                />
-              </div>
-            </div>
+            <DesignCard key={index} {...activity} />
           ))}
         </div>
       </div>

@@ -20,7 +20,7 @@ export default function SpringDesignProject() {
   ];
 
   return (
-    <main className="bg-white">
+    <main className="bg-white blogConstraint">
       <section className="py-12">
         <div className="widescreenConstraint">
           {/* Project Category */}
@@ -151,10 +151,10 @@ export default function SpringDesignProject() {
                 <div className="space-y-2">
                   <div className="inline-flex flex-col justify-start items-start gap-4 sm:gap-6">
                     <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                      <div className="self-stretch relative justify-start text-indigo-600 text-base font-bold font-['Product_Sans'] tracking-wider">
+                      <div className="self-stretch relative justify-start text-indigo-600 text-base font-bold font-sans tracking-wider">
                         Research & Ideation
                       </div>
-                      <div className="relative justify-start text-slate-800 text-5xl font-medium font-['Product_Sans_Medium'] leading-[67.20px]">
+                      <div className="relative justify-start text-slate-800 text-5xl font-medium font-sans leading-[67.20px]">
                         Learning from the Best
                       </div>
                     </div>
@@ -219,7 +219,7 @@ export default function SpringDesignProject() {
                   />
                   <div className="flex flex-col justify-start items-start gap-6">
                     <div className="w-full lg:w-full lg:w-2/3">
-                      <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                      <span className="text-slate-800 text-xl font-normal font-sans leading-7">
                         As we began building, we took an iterative approach.
                         Instead of trying to get everything perfect from the
                         start, we focused on testing the components we created
@@ -238,7 +238,7 @@ export default function SpringDesignProject() {
                     </div>
                   </div>
                 </div>
-                <div className="w-full lg:w-full lg:w-2/3 text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                <div className="w-full lg:w-full lg:w-2/3 text-slate-800 text-xl font-normal font-sans leading-7">
                   After a few rounds of testing with different teams, we finally
                   began to see the results of our work. We had built something
                   that allowed the team to seamlessly switch between themes,
@@ -259,23 +259,23 @@ export default function SpringDesignProject() {
                   <div className="flex flex-col gap-12 sm:gap-20">
                     <div className="flex flex-col gap-4 sm:gap-6">
                       <div className="self-stretch flex flex-col justify-start items-start gap-6">
-                        <div className="self-stretch relative justify-start text-indigo-500 text-base font-bold font-['Product_Sans'] tracking-wider">
+                        <div className="self-stretch relative justify-start text-indigo-500 text-base font-bold font-sans tracking-wider">
                           Impact
                         </div>
-                        <div className="relative justify-start text-slate-800 text-5xl font-medium font-['Product_Sans_Medium'] leading-[67.20px]">
+                        <div className="relative justify-start text-slate-800 text-5xl font-medium font-sans leading-[67.20px]">
                           Faster, Smarter, and More Efficient
                         </div>
                       </div>
                       <div className="flex flex-col gap-6">
                         <div className="w-full lg:w-full lg:w-2/3">
-                          <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                          <span className="text-slate-800 text-xl font-normal font-sans leading-7">
                             The impact was clear.{" "}
                           </span>
-                          <span className="text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
+                          <span className="text-slate-800 text-xl font-bold font-sans leading-7">
                             What used to take weeks of work was now done in a
                             fraction of the time
                           </span>
-                          <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                          <span className="text-slate-800 text-xl font-normal font-sans leading-7">
                             . The efficiency boost was noticeable across the
                             board, and the team felt empowered by the new
                             system. What had been a source of frustration and

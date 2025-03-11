@@ -2,41 +2,40 @@
 
 import { useEffect, useRef } from "react";
 import ProjectCard from "../ProjectCard";
-import Marquee from "./Marquee";
 import { motion } from "framer-motion";
+import Interactive3DImage from "../Interactive3DImage";
+import Marquee from "./Marquee";
 
 const PROJECTS = [
   {
-    title: "Simplifying Hut Rewards",
-    description: "Creating loyal and happy customers",
+    title: "Designing the next-gen fraud detection system",
+    description: "TeamX",
+    image: "/images/projects/team-x.png",
+    href: "/projects/raptor-x",
+  },
+  {
+    title: "Branding and royalty system for global pizza brand",
+    description: "Pizza Hut Indonesia",
     image: "/images/projects/hut-rewards.png",
     href: "/projects/pizza-hut",
   },
+  // {
+  //   title: "Mara design system",
+  //   description: "Marathon Digital Holdings",
+  //   image: "/images/projects/meta-design.png",
+  // },
   {
-    title: "Meta design system",
-    description: "Design system for Meta products",
-    image: "/images/projects/meta-design.png",
+    title: "Spring Design System",
+    description: "Team",
+    image: "/images/projects/spring.png",
+    href: "/projects/spring-design",
   },
-  {
-    title: "Crafting ad making process",
-    description: "Streamlining the ad creation workflow",
-    image: "/images/projects/ad-making.png",
-  },
-  {
-    title: "Farming ecosystem",
-    description: "Crafting digital green revolution",
-    image: "/images/projects/farming.png",
-  },
-  {
-    title: "Note Up",
-    description: "Creating loyal and happy customers",
-    image: "/images/projects/note-up.png",
-  },
-  {
-    title: "Helix design system",
-    description: "Design system that scales with your product",
-    image: "/images/projects/helix.png",
-  },
+
+  // {
+  //   title: "Crafting better note taking experience",
+  //   description: "anonymous",
+  //   image: "/images/projects/note-up.png",
+  // },
 ];
 
 // Animation variants
@@ -199,6 +198,16 @@ export default function About() {
             <br className="hidden sm:block" />a sport or Design
           </motion.h2>
 
+          {/* Add animated helmet image here */}
+          <motion.div className="w-full">
+            <Interactive3DImage
+              src="/images/playstation.png"
+              width={400}
+              height={400}
+              alt="playstation"
+            />
+          </motion.div>
+
           {/* Second text block */}
           <motion.p
             className="text-white/80 text-xl sm:text-3xl max-w-2xl mx-auto leading-relaxed"
@@ -216,14 +225,10 @@ export default function About() {
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent to-[#0E0F16]/30" />
       </div>
 
-      <Marquee />
-
       {/* White section */}
-      <div
-        className="min-h-[70vh] bg-white relative py-16 sm:py-24"
-        ref={projectsRef}
-      >
-        <div className="widescreenConstraint">
+      <div className="bg-white relative" ref={projectsRef}>
+        {/* Top Content - Constrained */}
+        <div className="pt-16 sm:pt-24 pb-32 widescreenConstraint">
           <motion.div
             className="text-center space-y-6"
             initial={{ opacity: 0, y: 30 }}
@@ -238,10 +243,17 @@ export default function About() {
             </h2>
             <p className="text-gray text-lg sm:text-xl">that matters...</p>
           </motion.div>
+        </div>
 
-          {/* Project Grid */}
+        {/* Marquee - Full Width */}
+        <div className="w-full pb-32">
+          <Marquee />
+        </div>
+
+        {/* Projects Grid - Constrained */}
+        <div className="widescreenConstraint pb-24">
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mt-20 sm:mt-32 max-w-6xl mx-auto"
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
@@ -249,7 +261,7 @@ export default function About() {
           >
             {/* Left Column */}
             <div className="space-y-6 sm:space-y-8">
-              {PROJECTS.slice(0, 3).map((project, index) => (
+              {PROJECTS.slice(0, 2).map((project, index) => (
                 <motion.div
                   key={index}
                   variants={{
@@ -275,9 +287,9 @@ export default function About() {
 
             {/* Right Column */}
             <div className="space-y-6 sm:space-y-8 mt-6 sm:mt-16 lg:mt-32">
-              {PROJECTS.slice(3).map((project, index) => (
+              {PROJECTS.slice(2, 3).map((project, index) => (
                 <motion.div
-                  key={index + 3}
+                  key={index + 2}
                   variants={{
                     hidden: { opacity: 0, y: 30 },
                     visible: {
@@ -285,7 +297,7 @@ export default function About() {
                       y: 0,
                       transition: {
                         duration: 0.6,
-                        delay: (index + 3) * 0.1,
+                        delay: (index + 2) * 0.1,
                       },
                     },
                   }}

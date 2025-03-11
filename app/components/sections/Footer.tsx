@@ -1,7 +1,7 @@
 import Link from "next/link";
 export default function Footer() {
   return (
-    <section className="min-h-5/6 bg-[#0E0F16] flex flex-col items-start justify-center">
+    <section className="min-h-[50vh] bg-[#0E0F16] flex flex-col items-start justify-center">
       <div className="w-full flex flex-row justify-between widescreenConstraint">
         {/* Main Content */}
         <div className="space-y-6 text-left mb-16">
@@ -10,9 +10,9 @@ export default function Footer() {
             <br />
             outbursting idea ??
           </h2>
-          <p className="text-gray-400">Lets chat over a cup of coffee</p>
+          <p className="text-white">Lets chat over a cup of coffee</p>
           <Link
-            href="mailto:your-email@example.com"
+            href="mailto:satyaprakashray999@gmail.com"
             className="inline-block px-8 py-3 text-white border border-white/20 rounded-full hover:bg-white/10 transition-colors"
           >
             Lets talk
