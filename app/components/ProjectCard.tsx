@@ -22,10 +22,10 @@ export default function ProjectCard({
 
   const shakeAnimation = {
     shake: {
-      x: [0, -20, 20, -15, 15, -10, 10, 0],
-      rotate: [0, -5, 5, -3, 3, -2, 2, 0],
+      x: [0, -200, 200, -160, 160, -120, 120, -80, 80, -40, 40, 0],
+      rotate: [0, -14, 14, -10, 10, -6, 6, -4, 4, -2, 2, 0],
       transition: {
-        duration: 0.5,
+        duration: 0.6,
         ease: "easeInOut",
       },
     },
