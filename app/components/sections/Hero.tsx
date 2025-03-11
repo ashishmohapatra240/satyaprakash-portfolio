@@ -1,6 +1,5 @@
 "use client";
 import { useEffect } from "react";
-import Image from "next/image";
 import clsx from "clsx";
 
 export default function Hero() {
@@ -62,7 +61,10 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Section with Image */}
+        {/* Right Section - Empty div to maintain layout */}
+        <div className="w-full md:w-1/3"></div>
+
+        {/* Original Right Section (Commented out)
         <div className="w-full md:w-1/3 flex flex-col items-center">
           <div className="rounded-3xl relative flex items-center justify-center">
             <Image
@@ -79,6 +81,7 @@ export default function Hero() {
             Getting lost in realm of design is what i ❤️
           </p>
         </div>
+        */}
       </div>
 
       {/* Bottom section */}

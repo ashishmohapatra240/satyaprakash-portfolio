@@ -1,7 +1,7 @@
 import Link from "next/link";
 export default function Footer() {
   return (
-    <section className="min-h-screen bg-[#0E0F16] flex flex-col items-start justify-center">
+    <section className="min-h-[80vh] bg-[#0E0F16] flex flex-col items-start justify-center">
       <div className="w-full flex flex-row justify-between widescreenConstraint">
         {/* Main Content */}
         <div className="space-y-6 text-left mb-16">
