@@ -7,35 +7,30 @@ import { motion } from "framer-motion";
 
 const PROJECTS = [
   {
-    title: "Simplifying Hut Rewards",
-    description: "Creating loyal and happy customers",
+    title: "Branding and royalty system for global pizza brand",
+    description: "Pizza Hut Indonesia",
     image: "/images/projects/hut-rewards.png",
     href: "/projects/pizza-hut",
   },
   {
-    title: "Meta design system",
-    description: "Design system for Meta products",
+    title: "Mara design system",
+    description: "Marathon Digital Holdings",
     image: "/images/projects/meta-design.png",
   },
   {
-    title: "Crafting ad making process",
-    description: "Streamlining the ad creation workflow",
-    image: "/images/projects/ad-making.png",
+    title: "Spring Design System",
+    description: "Team",
+    image: "/images/projects/spring.png",
   },
   {
-    title: "Farming ecosystem",
-    description: "Crafting digital green revolution",
-    image: "/images/projects/farming.png",
+    title: "Designing the next-gen fraud detection system",
+    description: "TeamX",
+    image: "/images/projects/team-x.png",
   },
   {
-    title: "Note Up",
-    description: "Creating loyal and happy customers",
+    title: "Crafting better note taking experience",
+    description: "anonymous",
     image: "/images/projects/note-up.png",
-  },
-  {
-    title: "Helix design system",
-    description: "Design system that scales with your product",
-    image: "/images/projects/helix.png",
   },
 ];
 

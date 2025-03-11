@@ -14,10 +14,24 @@ export default function ProjectCard({
   image,
   href = "#",
 }: ProjectCardProps) {
+  const isSecureProject =
+    description === "Marathon Digital Holdings" || description === "anonymous";
+
   return (
     <Link href={href}>
       <div className="group bg-white rounded-lg p-6 transition-all duration-300 cursor-pointer">
         <div className="relative w-full h-96 mb-4 overflow-hidden rounded-lg">
+          {isSecureProject && (
+            <div className="absolute top-4 left-4 z-10">
+              <Image
+                src="/icons/lock.png"
+                alt="Secure Project"
+                width={72}
+                height={40}
+                className="opacity-80 scale-75"
+              />
+            </div>
+          )}
           <Image
             src={image}
             alt={title}
