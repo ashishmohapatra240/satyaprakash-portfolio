@@ -10,6 +10,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
+    { label: "Projects", href: "/projects" },
     { label: "Resume", href: "/Satya-Resume.pdf", target: "_blank" },
     { label: "About me", href: "/about" },
     // { label: "Explore my realm", href: "/explore" },

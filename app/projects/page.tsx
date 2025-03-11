@@ -1,0 +1,124 @@
+"use client";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
+
+const projects = [
+  {
+    title: "Designing the next-gen fraud detection system",
+    description:
+      "A comprehensive fraud detection system for TeamX that helps protect millions of transactions.",
+    company: "TeamX",
+    image: "/images/projects/team-x.png",
+    href: "/projects/raptor-x",
+    year: "2023",
+  },
+  {
+    title: "Branding and royalty system",
+    description:
+      "Redesigning the loyalty program experience for Pizza Hut Indonesia's customers.",
+    company: "Pizza Hut Indonesia",
+    image: "/images/projects/hut-rewards.png",
+    href: "/projects/pizza-hut",
+    year: "2022",
+  },
+  {
+    title: "Spring Design System",
+    description:
+      "Creating a scalable and consistent design system that powers multiple products.",
+    company: "Team",
+    image: "/images/projects/spring.png",
+    href: "/projects/spring-design",
+    year: "2021",
+  },
+];
+
+const fadeInUp = {
+  initial: { y: 20, opacity: 0 },
+  animate: { y: 0, opacity: 1 },
+  transition: { duration: 0.5 },
+};
+
+const staggerContainer = {
+  animate: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+export default function Projects() {
+  return (
+    <main className="pt-16 pb-0">
+      {/* Hero Section */}
+      <motion.section
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        variants={staggerContainer}
+        className="mx-auto min-h-[80vh] flex items-center"
+      >
+        <div className="w-full widescreenConstraint">
+          <motion.div variants={fadeInUp} className="max-w-4xl">
+            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-normal text-slate-800 leading-tight mb-8">
+              Selected Works
+            </h1>
+            <p className="text-2xl sm:text-3xl text-slate-600">
+              A collection of projects I&apos;ve worked on, focusing on user
+              experience, design systems, and product strategy.
+            </p>
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Projects Grid */}
+      <motion.section
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        variants={staggerContainer}
+        className="mx-auto py-16 md:py-32"
+      >
+        <div className="widescreenConstraint">
+          <div className="grid grid-cols-1 gap-20">
+            {projects.map((project, index) => (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                whileHover={{ scale: 0.98 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Link href={project.href} className="block group">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div className="order-2 md:order-1">
+                      <span className="text-sm text-slate-500">
+                        {project.year}
+                      </span>
+                      <h2 className="text-3xl sm:text-4xl font-normal text-slate-800 mt-2 mb-4 group-hover:text-slate-600 transition-colors">
+                        {project.title}
+                      </h2>
+                      <p className="text-lg text-slate-600 mb-4">
+                        {project.description}
+                      </p>
+                      <span className="text-slate-500">{project.company}</span>
+                    </div>
+                    <div className="order-1 md:order-2">
+                      <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          fill
+                          className="object-cover transform group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+    </main>
+  );
+}
