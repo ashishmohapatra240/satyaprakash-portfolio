@@ -14,3 +14,7 @@ body {
 .widescreenConstraint {
   @apply max-w-[90%] lg:max-w-[80%] mx-auto;
 }
+
+.blogConstraint {
+  @apply max-w-[1440px] mx-auto;
+}

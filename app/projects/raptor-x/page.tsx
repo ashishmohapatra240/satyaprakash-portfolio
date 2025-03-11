@@ -20,7 +20,7 @@ export default function RaptorXProject() {
   ];
 
   return (
-    <main className="bg-white">
+    <main className="bg-white blogConstraint">
       <section className="py-12">
         <div className="mx-auto widescreenConstraint">
           {/* Project Category */}

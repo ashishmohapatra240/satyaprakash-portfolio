@@ -20,7 +20,7 @@ export default function SpringDesignProject() {
   ];
 
   return (
-    <main className="bg-white">
+    <main className="bg-white blogConstraint">
       <section className="py-12">
         <div className="widescreenConstraint">
           {/* Project Category */}
