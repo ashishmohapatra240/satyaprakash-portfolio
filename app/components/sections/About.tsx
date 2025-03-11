@@ -21,11 +21,13 @@ const PROJECTS = [
     title: "Spring Design System",
     description: "Team",
     image: "/images/projects/spring.png",
+    href: "/projects/spring-design",
   },
   {
     title: "Designing the next-gen fraud detection system",
     description: "TeamX",
     image: "/images/projects/team-x.png",
+    href: "/projects/raptor-x",
   },
   {
     title: "Crafting better note taking experience",

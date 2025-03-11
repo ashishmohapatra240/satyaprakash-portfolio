@@ -154,7 +154,7 @@ export default function SpringDesignProject() {
                       <div className="self-stretch relative justify-start text-indigo-600 text-base font-bold font-sans tracking-wider">
                         Research & Ideation
                       </div>
-                      <div className="relative justify-start text-slate-800 text-5xl font-medium font-['Product_Sans_Medium'] leading-[67.20px]">
+                      <div className="relative justify-start text-slate-800 text-5xl font-medium font-sans leading-[67.20px]">
                         Learning from the Best
                       </div>
                     </div>
@@ -262,7 +262,7 @@ export default function SpringDesignProject() {
                         <div className="self-stretch relative justify-start text-indigo-500 text-base font-bold font-sans tracking-wider">
                           Impact
                         </div>
-                        <div className="relative justify-start text-slate-800 text-5xl font-medium font-['Product_Sans_Medium'] leading-[67.20px]">
+                        <div className="relative justify-start text-slate-800 text-5xl font-medium font-sans leading-[67.20px]">
                           Faster, Smarter, and More Efficient
                         </div>
                       </div>
