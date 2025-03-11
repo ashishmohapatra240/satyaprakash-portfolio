@@ -30,7 +30,7 @@ export const DESIGN_ACTIVITIES = [
 
 export default function Design() {
   return (
-    <section className="min-h-screen bg-white py-20">
+    <section className="min-h-screen bg-white py-20 flex items-center">
       <div className=" mx-auto widescreenConstraint">
         <div className="text-center space-y-4 mb-8">
           <h2 className="text-2xl sm:text-5xl font-medium text-[#0E0F16]">
