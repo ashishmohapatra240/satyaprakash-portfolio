@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import ProjectCard from "../ProjectCard";
 import Marquee from "./Marquee";
 import { motion } from "framer-motion";
+import Interactive3DImage from "../Interactive3DImage";
 
 const PROJECTS = [
   {
@@ -195,6 +196,16 @@ export default function About() {
             I love challenges may it be
             <br className="hidden sm:block" />a sport or Design
           </motion.h2>
+
+          {/* Add animated helmet image here */}
+          <motion.div className="w-full">
+            <Interactive3DImage
+              src="/images/playstation.png"
+              width={400}
+              height={400}
+              alt="playstation"
+            />
+          </motion.div>
 
           {/* Second text block */}
           <motion.p
