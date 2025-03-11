@@ -10,9 +10,9 @@ export default function Footer() {
             <br />
             outbursting idea ??
           </h2>
-          <p className="text-gray-400">Lets chat over a cup of coffee</p>
+          <p className="text-white">Lets chat over a cup of coffee</p>
           <Link
-            href="mailto:your-email@example.com"
+            href="mailto:satyaprakashray999@gmail.com"
             className="inline-block px-8 py-3 text-white border border-white/20 rounded-full hover:bg-white/10 transition-colors"
           >
             Lets talk
