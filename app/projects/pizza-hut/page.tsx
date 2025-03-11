@@ -142,25 +142,25 @@ export default function PizzaHutProject() {
                       staying within the established design language.
                     </p>
                     <div className="space-y-4">
-                      <p className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                      <p className="text-slate-800 text-xl font-normal font-sans leading-7">
                         Initial Concepts:
                       </p>
                       <div className="space-y-2">
                         <p>
-                          <span className="text-slate-800 text-xl font-bold font-['Product_Sans']">
+                          <span className="text-slate-800 text-xl font-bold font-sans">
                             Dark Theme Layout
                           </span>
-                          <span className="text-slate-800 text-xl font-normal font-['Product_Sans']">
+                          <span className="text-slate-800 text-xl font-normal font-sans">
                             {" "}
                             – I experimented with a dark theme to create
                             contrast and make the rewards section stand out.
                           </span>
                         </p>
                         <p>
-                          <span className="text-slate-800 text-xl font-bold font-['Product_Sans']">
+                          <span className="text-slate-800 text-xl font-bold font-sans">
                             Bold Typography
                           </span>
-                          <span className="text-slate-800 text-xl font-normal font-['Product_Sans']">
+                          <span className="text-slate-800 text-xl font-normal font-sans">
                             {" "}
                             – While scrolling through Instagram, I came across a
                             bold, striking typeface. It felt like the perfect
@@ -171,7 +171,7 @@ export default function PizzaHutProject() {
                       </div>
                     </div>
 
-                    <p className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                    <p className="text-slate-800 text-xl font-normal font-sans leading-7">
                       However, due to certain design constraints, I
                       couldn&apos;t deviate too far from the existing system.
                       Despite my efforts, the feedback remained neutral, leaving
@@ -298,14 +298,14 @@ export default function PizzaHutProject() {
                 <div className="flex flex-col lg:flex-row gap-12">
                   <div className="space-y-6 lg:max-w-full lg:w-2/3">
                     <div className="space-y-2">
-                      <span className="text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                      <span className="text-slate-800 text-3xl font-normal font-sans leading-10">
                         The redesigned loyalty system
                       </span>
-                      <span className="text-slate-800 text-3xl font-bold font-['Product_Sans'] leading-10">
+                      <span className="text-slate-800 text-3xl font-bold font-sans leading-10">
                         {" "}
                         significantly increased use of loyalty system by 20%
                       </span>
-                      <span className="text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                      <span className="text-slate-800 text-3xl font-normal font-sans leading-10">
                         , making it easier for customers to track and redeem
                         their rewards. This project reinforced the importance of
                         visibility, simplicity, and visual contrast in UI/UX

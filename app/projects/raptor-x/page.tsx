@@ -87,7 +87,7 @@ export default function RaptorXProject() {
                   and overwhelming alert data, making it hard for analysts to
                   act quickly.
                 </div>
-                <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-5xl font-bold font-['Product_Sans'] leading-[67.20px]">
+                <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-5xl font-bold font-sans leading-[67.20px]">
                   &quot;
                 </div>
               </div>
@@ -109,12 +109,12 @@ export default function RaptorXProject() {
                 </div>
                 <div className="flex flex-col lg:flex-row gap-12">
                   <div className="inline-flex flex-col justify-start items-start gap-6">
-                    <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                    <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-sans leading-7">
                       Entering this domain was entirely new for me, and I
                       wasn&apos;t sure where to begin or how to approach the
                       problem. I had many questions:
                     </div>
-                    <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                    <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-sans leading-7">
                       How is an alert defined?
                       <br />
                       Should users spend more time on an alert for thorough
@@ -129,34 +129,34 @@ export default function RaptorXProject() {
                       What exactly are we solving and building?
                     </div>
                     <div className="flex flex-col justify-start items-start gap-3">
-                      <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                      <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-3xl font-normal font-sans leading-10">
                         Who is the User?
                       </div>
-                      <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                      <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-sans leading-7">
                         Our users are analysts in the eCommerce and banking
                         sectors who are assigned fraud cases to investigate,
                         assess, and take action on the associated entities.
                       </div>
                     </div>
                     <div className="flex flex-col justify-start items-start gap-3">
-                      <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                      <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-3xl font-normal font-sans leading-10">
                         We conducted Primary and Secondary Research
                       </div>
                       <div className="w-full lg:w-2/3 relative justify-start">
-                        <span className="text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
+                        <span className="text-slate-800 text-xl font-bold font-sans leading-7">
                           Primary research :<br />
                         </span>
-                        <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                        <span className="text-slate-800 text-xl font-normal font-sans leading-7">
                           stake holder Interview
                           <br />
                         </span>
-                        <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                        <span className="text-slate-800 text-xl font-normal font-sans leading-7">
                           <br />
                         </span>
-                        <span className="text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
+                        <span className="text-slate-800 text-xl font-bold font-sans leading-7">
                           Secondary research :<br />
                         </span>
-                        <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                        <span className="text-slate-800 text-xl font-normal font-sans leading-7">
                           Competitor analysis
                           <br />
                           Product reviews & Docs
@@ -169,10 +169,10 @@ export default function RaptorXProject() {
                 </div>
                 <div className="self-stretch inline-flex justify-start items-start gap-6">
                   <div className="inline-flex flex-col justify-center items-start gap-3">
-                    <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                    <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-3xl font-normal font-sans leading-10">
                       Understanding the Market, Product & competitors
                     </div>
-                    <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                    <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-sans leading-7">
                       After analyzing the fraud detection industry landscape, I
                       examined various competing solutions to understand the
                       market dynamics. I studied their feature sets—identifying
@@ -191,7 +191,7 @@ export default function RaptorXProject() {
               height={1000}
               className="w-full h-auto"
             />
-            <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+            <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-sans leading-7">
               After thorough research, we focused specifically on the alert
               resolution workflow within the product. We began by creating
               journey maps to understand this critical process in detail.
@@ -205,50 +205,50 @@ export default function RaptorXProject() {
             />
             <div className="inline-flex flex-col justify-start items-start gap-6">
               <div className="flex flex-col justify-start items-start gap-3">
-                <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-3xl font-normal font-sans leading-10">
                   Findings
                 </div>
                 <div className="w-full lg:w-2/3 relative justify-start">
-                  <span className="text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
+                  <span className="text-slate-800 text-xl font-bold font-sans leading-7">
                     Lack of Clarity
                   </span>
-                  <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                  <span className="text-slate-800 text-xl font-normal font-sans leading-7">
                     {" "}
                     – Alert information is presented in a cluttered manner,
                     making it difficult to extract key insights.
                     <br />
                   </span>
-                  <span className="text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
+                  <span className="text-slate-800 text-xl font-bold font-sans leading-7">
                     Unstructured Data Segmentation
                   </span>
-                  <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                  <span className="text-slate-800 text-xl font-normal font-sans leading-7">
                     {" "}
                     – Critical data points are not well-organized, leading to
                     confusion in prioritizing alerts.
                     <br />
                   </span>
-                  <span className="text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
+                  <span className="text-slate-800 text-xl font-bold font-sans leading-7">
                     Insufficient Guidance
                   </span>
-                  <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                  <span className="text-slate-800 text-xl font-normal font-sans leading-7">
                     {" "}
                     – Users struggle to interpret alerts due to the absence of
                     contextual explanations or actionable insights.
                     <br />
                   </span>
-                  <span className="text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
+                  <span className="text-slate-800 text-xl font-bold font-sans leading-7">
                     Information Overload
                   </span>
-                  <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                  <span className="text-slate-800 text-xl font-normal font-sans leading-7">
                     {" "}
                     – Excessive, irrelevant data makes it hard for analysts to
                     focus on what truly matters.
                     <br />
                   </span>
-                  <span className="text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
+                  <span className="text-slate-800 text-xl font-bold font-sans leading-7">
                     Ambiguity in Decision-Making
                   </span>
-                  <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                  <span className="text-slate-800 text-xl font-normal font-sans leading-7">
                     {" "}
                     – Unclear risk indicators and lack of recommendations hinder
                     quick and confident actions.
@@ -256,10 +256,10 @@ export default function RaptorXProject() {
                 </div>
               </div>
               <div className="flex flex-col justify-start items-start gap-3">
-                <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-3xl font-normal font-sans leading-10">
                   Problem statement{" "}
                 </div>
-                <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-sans leading-7">
                   Design a streamlined workflow for analysts that enhances their
                   ability to understand and resolve alerts with confidence. The
                   solution should provide clear guidance, actionable insights,
@@ -283,10 +283,10 @@ export default function RaptorXProject() {
                 </div>
                 <div className="space-y-4">
                   <div className="inline-flex flex-col justify-start items-start gap-3">
-                    <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                    <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-3xl font-normal font-sans leading-10">
                       Fixing the Flow
                     </div>
-                    <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                    <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-sans leading-7">
                       We mapped the user flow for the Alert Details page to
                       identify obstacles and streamline the design, making the
                       alert resolution process faster and more intuitive.
@@ -303,10 +303,10 @@ export default function RaptorXProject() {
               className="w-full h-auto px-40"
             />
             <div className="inline-flex flex-col justify-start items-start gap-3">
-              <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+              <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-3xl font-normal font-sans leading-10">
                 Sketching Ideas & Design
               </div>
-              <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+              <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-sans leading-7">
                 Through discussions and brainstorming with developers and
                 stakeholders, we realized that minimizing data wasn&apos;t an
                 option, as every detail was crucial. However, the development
@@ -324,14 +324,14 @@ export default function RaptorXProject() {
               className="w-full h-auto"
             />
             <div className="w-full lg:w-2/3 relative justify-start">
-              <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+              <span className="text-slate-800 text-xl font-normal font-sans leading-7">
                 After exploring multiple layouts, I worked closely with the
                 team, iterating daily and gathering continuous feedback. The key
                 questions driving our design decisions were:
                 <br />
                 <br />
               </span>
-              <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+              <span className="text-slate-800 text-xl font-normal font-sans leading-7">
                 Will analysts be able to find the data easily?
                 <br />
                 Will this help them resolve alerts faster?
@@ -339,7 +339,7 @@ export default function RaptorXProject() {
                 What are the key insights analysts need to understand the data?
                 <br />
               </span>
-              <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+              <span className="text-slate-800 text-xl font-normal font-sans leading-7">
                 <br />
                 During these weeks of iteration, we also had to account for data
                 variability—each case differed in complexity and size.
@@ -417,21 +417,21 @@ export default function RaptorXProject() {
                 <div className="space-y-4">
                   <div className="inline-flex flex-col justify-start items-start gap-3">
                     <div className="w-full lg:w-2/3 relative justify-start">
-                      <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                      <span className="text-slate-800 text-xl font-normal font-sans leading-7">
                         While testing internally, we found Option B more
                         intuitive. We developed it, tested it on our database,
                         and shipped it for our beta launch. The design improved
                         user efficiency by{" "}
                       </span>
-                      <span className="text-slate-800 text-xl font-bold font-['Product_Sans'] leading-7">
+                      <span className="text-slate-800 text-xl font-bold font-sans leading-7">
                         10%,
                       </span>
-                      <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                      <span className="text-slate-800 text-xl font-normal font-sans leading-7">
                         {" "}
                         but it still wasn&apos;t enough.
                       </span>
                     </div>
-                    <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                    <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-sans leading-7">
                       Beyond this, we received mixed feedback from both users
                       and team members—some aspects worked well, while others
                       needed improvement. To align everyone&apos;s understanding
@@ -453,17 +453,17 @@ export default function RaptorXProject() {
             />
             <div className="self-stretch pt-12 inline-flex flex-col justify-start items-start gap-6">
               <div className="flex flex-col justify-start items-start gap-3">
-                <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-sans leading-7">
                   Given our timeline for the next release, we prioritized key
                   problems to address and focused our ideation efforts on
                   solving them effectively.
                 </div>
               </div>
               <div className="flex flex-col justify-start items-start gap-3">
-                <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-3xl font-normal font-sans leading-10">
                   Focused Idnetified problems
                 </div>
-                <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-sans leading-7">
                   Users struggled with complex cases due to the overwhelming
                   amount of data to analyze.
                   <br />
@@ -475,10 +475,10 @@ export default function RaptorXProject() {
                 </div>
               </div>
               <div className="flex flex-col justify-start items-start gap-3">
-                <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-3xl font-normal font-sans leading-10">
                   Breakthrough in Tech, helping better Ideation
                 </div>
-                <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-sans leading-7">
                   AI-driven insights for alerts are now more optimized,
                   providing users with valuable guidance.
                   <br />
@@ -488,7 +488,7 @@ export default function RaptorXProject() {
                 </div>
               </div>
               <div className="flex flex-col justify-start items-start gap-3">
-                <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-3xl font-normal font-sans leading-10">
                   With major technological breakthroughs, new opportunities
                   emerged for more tech-driven solutions, enabling us to address
                   user feedback more effectively and refine our problem-solving
@@ -497,18 +497,18 @@ export default function RaptorXProject() {
               </div>
               <div className="self-stretch pt-6 flex flex-col justify-start items-start gap-8">
                 <div className="self-stretch inline-flex justify-start items-start gap-20">
-                  <div className="flex-1 relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                  <div className="flex-1 relative justify-start text-slate-800 text-3xl font-normal font-sans leading-10">
                     Problem
                   </div>
-                  <div className="flex-1 relative justify-start text-slate-800 text-3xl font-normal font-['Product_Sans'] leading-10">
+                  <div className="flex-1 relative justify-start text-slate-800 text-3xl font-normal font-sans leading-10">
                     Solution
                   </div>
                 </div>
                 <div className="self-stretch inline-flex justify-start items-start gap-20">
-                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-sans leading-7">
                     A lot of data and Tabs
                   </div>
-                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-sans leading-7">
                     Improved risk scoring to enhance alert prioritization.
                     <br />
                     Reduced and restructured tabs for a more intuitive data
@@ -518,10 +518,10 @@ export default function RaptorXProject() {
                   </div>
                 </div>
                 <div className="self-stretch inline-flex justify-start items-start gap-20">
-                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-sans leading-7">
                     Always need to generate AI Insights
                   </div>
-                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-sans leading-7">
                     Backend optimizations allow us to surface generated insights
                     upfront.
                     <br />
@@ -531,10 +531,10 @@ export default function RaptorXProject() {
                   </div>
                 </div>
                 <div className="self-stretch inline-flex justify-start items-start gap-20">
-                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-sans leading-7">
                     Generic Action panel
                   </div>
-                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-sans leading-7">
                     Introduced specific action suggestions based on AI-generated
                     insights.
                     <br />
@@ -543,10 +543,10 @@ export default function RaptorXProject() {
                   </div>
                 </div>
                 <div className="self-stretch inline-flex justify-start items-start gap-20">
-                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-sans leading-7">
                     Guidance
                   </div>
-                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                  <div className="flex-1 relative justify-start text-slate-800 text-xl font-normal font-sans leading-7">
                     Integrated a chat interface for seamless document uploads
                     and collaboration.
                     <br />
@@ -577,7 +577,7 @@ export default function RaptorXProject() {
                 <div className="space-y-4">
                   <div className="inline-flex flex-col justify-start items-start gap-3">
                     <div className="w-full lg:w-2/3 relative justify-start">
-                      <span className="text-slate-800 text-xl font-normal font-['Product_Sans'] leading-7">
+                      <span className="text-slate-800 text-xl font-normal font-sans leading-7">
                         With these refinements, the product became more robust,
                         and its core features were now more intuitive. The
                         result? Analysts could solve 60% more fraud scenarios

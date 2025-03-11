@@ -39,7 +39,7 @@ export default function ProjectCard({
             className="object-cover h-full w-full group-hover:scale-105 transition-transform duration-300"
           />
         </div>
-        <h3 className="text-lg font-medium text-dark mb-2 group-hover:text-primary transition-colors">
+        <h3 className="text-lg font-medium text-dark mb-2 group-hover:text-primary transition-colors font-sans">
           {title}
         </h3>
         <p className="text-gray">{description}</p>
