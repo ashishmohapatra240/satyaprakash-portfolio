@@ -244,16 +244,27 @@ export default function PizzaHutProject() {
                       the benefits associated with them.
                     </p>
                   </div>
+                  <div className="w-full lg:w-1/3">
+                    <video
+                      src="/images/new-projects/pizza-hut/4.mp4"
+                      loop={true}
+                      autoPlay={true}
+                      width={1200}
+                      height={600}
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                  </div>
                 </div>
               </div>
             </section>
-            <video
-              src="/images/new-projects/pizza-hut/4.mp4"
-              loop={true}
-              autoPlay={true}
-              width={1200}
+
+            {/* Full Width Image */}
+            <Image
+              src="/images/new-projects/pizza-hut/5.png"
+              alt="Pizza Hut UI Design"
+              width={1000}
               height={600}
-              className="w-full h-full object-cover rounded-lg mt-24 mb-24"
+              className="w-full h-auto rounded-lg"
             />
 
             {/* UI Design Section */}
@@ -268,7 +279,7 @@ export default function PizzaHutProject() {
                   </h2>
                 </div>
                 <div className="flex flex-col lg:flex-row gap-12">
-                  <div className="space-y-6 lg:max-w-full lg:w-2/3">
+                  <div className="space-y-6 lg:w-full">
                     <p className="text-slate-800 text-lg sm:text-xl leading-relaxed">
                       With a clear direction set, UI execution was smooth and
                       efficient. Since we had already explored multiple visual
@@ -282,15 +293,6 @@ export default function PizzaHutProject() {
                       and the Pizza Hut developers. But together we solved that
                       issue and Delivered them the handoff file.
                     </p>
-                  </div>
-                  <div className="w-full lg:w-96 h-auto">
-                    <Image
-                      src="/images/new-projects/pizza-hut/5.png"
-                      alt="Pizza Hut UI Design"
-                      width={412}
-                      height={362}
-                      className="w-full h-auto rounded-lg"
-                    />
                   </div>
                 </div>
               </div>

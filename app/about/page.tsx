@@ -263,7 +263,7 @@ export default function About() {
         whileInView="animate"
         viewport={{ once: true }}
         variants={staggerContainer}
-        className="bg-gray-100 py-28"
+        className="bg-[#F0F1F6] py-28"
       >
         <div className="mx-auto">
           <motion.div variants={fadeInUp} className="widescreenConstraint">
