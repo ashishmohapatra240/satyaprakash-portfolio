@@ -2,23 +2,6 @@ import Image from "next/image";
 import NextProjects from "@/app/components/NextProjects";
 
 export default function teamXProject() {
-  const otherProjects = [
-    {
-      href: "/projects/meta-design",
-      title: "Meta design system",
-      bgColor: "#222222",
-      logoChar: "M",
-      accentColor: "#FFCC00",
-    },
-    {
-      href: "/projects/pizza-hut",
-      title: "Pizza Hut",
-      bgColor: "#E31837",
-      logoChar: "P",
-      accentColor: "#FFFFFF",
-    },
-  ];
-
   return (
     <main className="bg-white blogConstraint">
       <section className="py-12">
@@ -608,7 +591,7 @@ export default function teamXProject() {
       </section>
 
       {/* Next Projects Section - Moved outside the container */}
-      <NextProjects projects={otherProjects} />
+      <NextProjects />
     </main>
   );
 }

@@ -1,22 +1,6 @@
 import Image from "next/image";
 import Nextprojects from "@/app/components/NextProjects";
 export default function PizzaHutProject() {
-  const otherProjects = [
-    {
-      href: "/projects/spring-design",
-      title: "Spring design system",
-      bgColor: "#222222",
-      logoChar: "S",
-      accentColor: "#FFCC00",
-    },
-    {
-      href: "/projects/team-x",
-      title: "Pizza Hut",
-      bgColor: "#E31837",
-      logoChar: "T",
-      accentColor: "#FFFFFF",
-    },
-  ];
   return (
     <main className="bg-white blogConstraint">
       <section className="py-12">
@@ -391,7 +375,7 @@ export default function PizzaHutProject() {
       </section>
 
       {/* Next new-projects */}
-      <Nextprojects projects={otherProjects} />
+      <Nextprojects />
     </main>
   );
 }

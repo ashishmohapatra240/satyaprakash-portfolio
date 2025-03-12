@@ -1,29 +1,13 @@
-type Project = {
-  href: string;
-  title: string;
-  logo?: string;
-  bgColor?: string;
-  logoChar?: string;
-  accentColor?: string;
-};
+"use client";
 
-type NextProjectsProps = {
-  projects?: Project[];
-};
+import { usePathname } from "next/navigation";
+import { ALL_PROJECTS } from "../data";
 
-export default function NextProjects({ projects }: NextProjectsProps) {
-  // Default projects if none provided
-  const defaultProjects = [
-    {
-      href: "/projects/meta-design",
-      title: "Meta design system",
-      bgColor: "#222222",
-      logoChar: "M",
-      accentColor: "#FFCC00",
-    },
-  ];
-
-  const displayProjects = projects || defaultProjects;
+export default function NextProjects() {
+  const pathname = usePathname();
+  const displayProjects = ALL_PROJECTS.filter(
+    (project) => project.href !== pathname
+  );
 
   return (
     <section className="bg-gray-50 py-20">
