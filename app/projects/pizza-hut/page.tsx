@@ -78,7 +78,7 @@ export default function PizzaHutProject() {
           {/* Content Sections */}
           <div className="space-y-16 sm:space-y-24">
             {/* Analysis Section */}
-            <section>
+            <section className="mt-12 sm:mt-24">
               <div className="space-y-6">
                 <div className="space-y-2">
                   <div className="text-rose-700 text-base font-bold tracking-wider">
@@ -96,7 +96,6 @@ export default function PizzaHutProject() {
                     </p>
                     <div className="space-y-5">
                       <div className="flex gap-3">
-                        <div className="w-8 h-8 p-0.5 bg-rose-700/10 rounded-md flex-shrink-0"></div>
                         <div className="flex-1 space-y-1">
                           <h3 className="text-slate-800 text-lg sm:text-xl font-bold leading-7">
                             Lack of Visibility
@@ -108,7 +107,6 @@ export default function PizzaHutProject() {
                         </div>
                       </div>
                       <div className="flex gap-3">
-                        <div className="w-8 h-8 p-0.5 bg-rose-700/10 rounded-md flex-shrink-0"></div>
                         <div className="flex-1 space-y-1">
                           <h3 className="text-slate-800 text-lg sm:text-xl font-bold leading-7">
                             Complexity in Representation

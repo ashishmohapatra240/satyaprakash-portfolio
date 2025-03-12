@@ -187,8 +187,8 @@ export default function teamXProject() {
             <Image
               src="/images/new-projects/team-x/2.png"
               alt="Flow Refining Dashboard"
-              width={1000}
-              height={1000}
+              width={1200}
+              height={675}
               className="w-full h-auto"
             />
             <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-sans leading-7">
@@ -199,8 +199,8 @@ export default function teamXProject() {
             <Image
               src="/images/new-projects/team-x/3.png"
               alt="Flow Refining Dashboard"
-              width={1000}
-              height={1000}
+              width={1200}
+              height={675}
               className="w-full h-auto px-40"
             />
             <div className="inline-flex flex-col justify-start items-start gap-6">
@@ -298,8 +298,8 @@ export default function teamXProject() {
             <Image
               src="/images/new-projects/team-x/5.png"
               alt="Flow Refining Dashboard"
-              width={1000}
-              height={1000}
+              width={1200}
+              height={675}
               className="w-full h-auto px-40"
             />
             <div className="inline-flex flex-col justify-start items-start gap-3">
@@ -319,8 +319,8 @@ export default function teamXProject() {
             <Image
               src="/images/new-projects/team-x/6.png"
               alt="Flow Refining Dashboard"
-              width={1000}
-              height={1000}
+              width={1200}
+              height={675}
               className="w-full h-auto"
             />
             <div className="w-full lg:w-2/3 relative justify-start">
@@ -354,8 +354,8 @@ export default function teamXProject() {
                 <Image
                   className="w-full h-auto rounded-lg"
                   src="/images/new-projects/team-x/7.png"
-                  width={400}
-                  height={400}
+                  width={1200}
+                  height={675}
                   alt="Option A"
                 />
                 <div className="text-slate-800 text-base sm:text-lg lg:text-xl leading-relaxed">
@@ -369,8 +369,8 @@ export default function teamXProject() {
                 <Image
                   className="w-full h-auto rounded-lg"
                   src="/images/new-projects/team-x/8.png"
-                  width={400}
-                  height={400}
+                  width={1200}
+                  height={675}
                   alt="Option B"
                 />
                 <div className="text-slate-800 text-base sm:text-lg lg:text-xl leading-relaxed">
@@ -387,8 +387,8 @@ export default function teamXProject() {
                 <Image
                   className="w-full h-auto rounded-lg"
                   src="/images/new-projects/team-x/9.png"
-                  width={600}
-                  height={600}
+                  width={1200}
+                  height={675}
                   alt="Option C"
                 />
                 <div className="text-slate-800 text-base sm:text-lg lg:text-xl leading-relaxed">
@@ -445,8 +445,8 @@ export default function teamXProject() {
             <Image
               src="/images/new-projects/team-x/9.png"
               alt="Flow Refining Dashboard"
-              width={1000}
-              height={1000}
+              width={1200}
+              height={675}
               className="w-full h-auto"
             />
             <div className="self-stretch pt-12 inline-flex flex-col justify-start items-start gap-6">
