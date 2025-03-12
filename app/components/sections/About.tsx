@@ -213,9 +213,9 @@ export default function About() {
             className="text-white/80 text-xl sm:text-3xl max-w-2xl mx-auto leading-relaxed"
             variants={fadeIn}
           >
-            It&apos;s the adrenaline that keeps me up. May it be
+            It&apos;s the adrenaline that keeps me up. May it be{" "}
             <br className="hidden sm:block" />
-            riding my bike, cherishing basketball or Creating
+            riding my bike, cherishing basketball or creating{" "}
             <br className="hidden sm:block" />
             solution which helps thousands of people
           </motion.p>

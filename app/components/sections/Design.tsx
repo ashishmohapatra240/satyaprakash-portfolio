@@ -44,7 +44,7 @@ export default function Design() {
 
         <p className="text-center text-gray-600 max-w-2xl mx-auto mb-16">
           I always find some time to explore things and go away from figma to do
-          crazy stuff, and it have always been great fun.
+          crazy stuff, and it has always been great fun.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto place-items-center">
