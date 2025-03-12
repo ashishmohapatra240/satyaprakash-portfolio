@@ -348,40 +348,38 @@ export default function teamXProject() {
               </span>
             </div>
 
-            {/* Options Display - Restructured for better responsiveness */}
+            {/* Options Display - Vertical layout */}
             <div className="flex flex-col gap-12">
-              <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-                <div className="flex flex-col gap-3">
-                  <Image
-                    className="w-full lg:w-96 h-[800px] rounded-lg"
-                    src="/images/new-projects/team-x/6.png"
-                    width={400}
-                    height={400}
-                    alt="Option 1"
-                  />
-                  <div className="text-slate-800 text-base sm:text-lg lg:text-xl leading-relaxed">
-                    ✅ Everything is accessible on scroll <br />
-                    ✅ Right panel is for actions
-                    <br />❌ Lot of data without segregation
-                  </div>
+              <div className="flex flex-col gap-3">
+                <Image
+                  className="w-full h-auto rounded-lg"
+                  src="/images/new-projects/team-x/6.png"
+                  width={400}
+                  height={400}
+                  alt="Option 1"
+                />
+                <div className="text-slate-800 text-base sm:text-lg lg:text-xl leading-relaxed">
+                  ✅ Everything is accessible on scroll <br />
+                  ✅ Right panel is for actions
+                  <br />❌ Lot of data without segregation
                 </div>
-                <div className="flex flex-col gap-3">
-                  <Image
-                    className="w-full h-auto rounded-lg"
-                    src="/images/new-projects/team-x/7.png"
-                    width={400}
-                    height={400}
-                    alt="Option 2"
-                  />
-                  <div className="text-slate-800 text-base sm:text-lg lg:text-xl leading-relaxed">
-                    ✅ Everything Segregated under tabs and sub-tabs Different
-                    groupings(based on relation) have different tabs <br />
-                    ✅ Important datapoints on top
-                    <br />
-                    ✅ Organised Panels
-                    <br />❌ Might get confused from the information
-                    architecture
-                  </div>
+              </div>
+
+              <div className="flex flex-col gap-3">
+                <Image
+                  className="w-full h-auto rounded-lg"
+                  src="/images/new-projects/team-x/7.png"
+                  width={400}
+                  height={400}
+                  alt="Option 2"
+                />
+                <div className="text-slate-800 text-base sm:text-lg lg:text-xl leading-relaxed">
+                  ✅ Everything Segregated under tabs and sub-tabs Different
+                  groupings(based on relation) have different tabs <br />
+                  ✅ Important datapoints on top
+                  <br />
+                  ✅ Organised Panels
+                  <br />❌ Might get confused from the information architecture
                 </div>
               </div>
 
