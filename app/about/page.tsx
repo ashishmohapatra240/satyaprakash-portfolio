@@ -8,10 +8,25 @@ const fadeInUp = {
   transition: { duration: 0.5 },
 };
 
+// Add new animation variants
 const staggerContainer = {
+  initial: {},
   animate: {
     transition: {
       staggerChildren: 0.2,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const imageStagger = {
+  initial: { y: 40, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: [0.4, 0, 0.2, 1],
     },
   },
 };
@@ -45,35 +60,46 @@ export default function About() {
 
             {/* Image Grid */}
             <motion.div variants={fadeInUp} className="">
-              <div className="relative w-[300px] sm:w-[400px] xl:w-[500px] h-[600px] sm:h-[500px] mx-auto lg:mx-0">
-                {/* Largest image */}
-                <div className="absolute top-0 -right-2.5 sm:right-0 xl:right-24 w-[258px] h-[266px] z-30">
+              <motion.div
+                variants={staggerContainer}
+                initial="initial"
+                animate="animate"
+                className="relative w-[300px] sm:w-[400px] xl:w-[500px] h-[600px] sm:h-[500px] mx-auto lg:mx-0"
+              >
+                <motion.div
+                  variants={imageStagger}
+                  className="absolute top-0 -right-2.5 sm:right-0 xl:right-24 w-[258px] h-[266px] z-30"
+                >
                   <Image
                     src="/images/about/about-1.jpeg"
                     alt="Profile 1"
                     fill
                     className="object-cover rounded-lg shadow-lg"
                   />
-                </div>
-                {/* Medium image */}
-                <div className="absolute top-[100px] left-0 w-[258px] h-[266px] z-20">
+                </motion.div>
+                <motion.div
+                  variants={imageStagger}
+                  className="absolute top-[100px] left-0 w-[258px] h-[266px] z-20"
+                >
                   <Image
                     src="/images/about/about-2.jpg"
                     alt="Profile 2"
                     fill
                     className="object-cover rounded-lg shadow-lg"
                   />
-                </div>
-                {/* Smallest image */}
-                <div className="absolute bottom-0 right-4 w-[258px] h-[266px] z-10">
+                </motion.div>
+                <motion.div
+                  variants={imageStagger}
+                  className="absolute bottom-0 right-4 w-[258px] h-[266px] z-10"
+                >
                   <Image
                     src="/images/about/about-3.jpg"
                     alt="Profile 3"
                     fill
                     className="object-cover rounded-lg shadow-lg"
                   />
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </motion.div>
           </div>
         </div>
@@ -116,47 +142,60 @@ export default function About() {
               </p>
             </div>
             <div className="md:w-2/5">
-              <div className="relative w-full h-96 md:aspect-square overflow-hidden">
-                <motion.div className="w-full h-full">
-                  <Image
-                    src="/images/with-dog.png"
-                    alt="With pet"
-                    fill
-                    className="object-cover rounded-xl"
-                  />
-                </motion.div>
-              </div>
+              <motion.div
+                variants={imageStagger}
+                className="relative w-full h-96 md:aspect-square overflow-hidden"
+              >
+                <Image
+                  src="/images/with-dog.png"
+                  alt="With pet"
+                  fill
+                  className="object-cover rounded-xl"
+                />
+              </motion.div>
             </div>
           </motion.div>
 
           <motion.div
-            variants={fadeInUp}
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-20"
           >
-            <div className="relative w-full h-64 md:h-96">
+            <motion.div
+              variants={imageStagger}
+              className="relative w-full h-64 md:h-96"
+            >
               <Image
                 src="/images/about/about-5.jpg"
                 alt="About 5"
                 fill
                 className="object-cover object-center sm:object-top rounded-xl"
               />
-            </div>
-            <div className="relative w-full h-64 md:h-96">
+            </motion.div>
+            <motion.div
+              variants={imageStagger}
+              className="relative w-full h-64 md:h-96"
+            >
               <Image
                 src="/images/about/about-6.jpg"
                 alt="About 6"
                 fill
                 className="object-cover object-center sm:object-top rounded-xl"
               />
-            </div>
-            <div className="relative w-full h-64 md:h-96">
+            </motion.div>
+            <motion.div
+              variants={imageStagger}
+              className="relative w-full h-64 md:h-96"
+            >
               <Image
                 src="/images/about/about-7.jpg"
                 alt="About 7"
                 fill
                 className="object-cover object-center sm:object-top rounded-xl"
               />
-            </div>
+            </motion.div>
           </motion.div>
 
           <motion.div variants={fadeInUp} className="mb-20">
@@ -192,7 +231,7 @@ export default function About() {
             >
               If any of this sounds even a little interesting, just drop a
               hello!
-              <br className="hidden md:block" />
+              <div className="block my-2" />
               I&apos;d love to connect, brainstorm wild ideas, and see where
               creativity takes us.
             </p>
