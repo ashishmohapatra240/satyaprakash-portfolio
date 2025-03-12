@@ -2,23 +2,6 @@ import Image from "next/image";
 import NextProjects from "@/app/components/NextProjects";
 
 export default function teamXProject() {
-  const otherProjects = [
-    {
-      href: "/projects/meta-design",
-      title: "Meta design system",
-      bgColor: "#222222",
-      logoChar: "M",
-      accentColor: "#FFCC00",
-    },
-    {
-      href: "/projects/pizza-hut",
-      title: "Pizza Hut",
-      bgColor: "#E31837",
-      logoChar: "P",
-      accentColor: "#FFFFFF",
-    },
-  ];
-
   return (
     <main className="bg-white blogConstraint">
       <section className="py-12">
@@ -187,8 +170,8 @@ export default function teamXProject() {
             <Image
               src="/images/new-projects/team-x/2.png"
               alt="Flow Refining Dashboard"
-              width={1000}
-              height={1000}
+              width={1200}
+              height={675}
               className="w-full h-auto"
             />
             <div className="w-full lg:w-2/3 relative justify-start text-slate-800 text-xl font-normal font-sans leading-7">
@@ -199,8 +182,8 @@ export default function teamXProject() {
             <Image
               src="/images/new-projects/team-x/3.png"
               alt="Flow Refining Dashboard"
-              width={1000}
-              height={1000}
+              width={1200}
+              height={675}
               className="w-full h-auto px-40"
             />
             <div className="inline-flex flex-col justify-start items-start gap-6">
@@ -296,10 +279,10 @@ export default function teamXProject() {
               </div>
             </section>
             <Image
-              src="/images/new-projects/team-x/4.png"
+              src="/images/new-projects/team-x/5.png"
               alt="Flow Refining Dashboard"
-              width={1000}
-              height={1000}
+              width={1200}
+              height={675}
               className="w-full h-auto px-40"
             />
             <div className="inline-flex flex-col justify-start items-start gap-3">
@@ -317,10 +300,10 @@ export default function teamXProject() {
             </div>
 
             <Image
-              src="/images/new-projects/team-x/5.png"
+              src="/images/new-projects/team-x/6.png"
               alt="Flow Refining Dashboard"
-              width={1000}
-              height={1000}
+              width={1200}
+              height={675}
               className="w-full h-auto"
             />
             <div className="w-full lg:w-2/3 relative justify-start">
@@ -348,40 +331,20 @@ export default function teamXProject() {
               </span>
             </div>
 
-            {/* Options Display - Restructured for better responsiveness */}
+            {/* Options Display - Vertical layout */}
             <div className="flex flex-col gap-12">
-              <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-                <div className="flex flex-col gap-3">
-                  <Image
-                    className="w-full lg:w-96 h-[800px] rounded-lg"
-                    src="/images/new-projects/team-x/6.png"
-                    width={400}
-                    height={400}
-                    alt="Option 1"
-                  />
-                  <div className="text-slate-800 text-base sm:text-lg lg:text-xl leading-relaxed">
-                    ✅ Everything is accessible on scroll <br />
-                    ✅ Right panel is for actions
-                    <br />❌ Lot of data without segregation
-                  </div>
-                </div>
-                <div className="flex flex-col gap-3">
-                  <Image
-                    className="w-full h-auto rounded-lg"
-                    src="/images/new-projects/team-x/7.png"
-                    width={400}
-                    height={400}
-                    alt="Option 2"
-                  />
-                  <div className="text-slate-800 text-base sm:text-lg lg:text-xl leading-relaxed">
-                    ✅ Everything Segregated under tabs and sub-tabs Different
-                    groupings(based on relation) have different tabs <br />
-                    ✅ Important datapoints on top
-                    <br />
-                    ✅ Organised Panels
-                    <br />❌ Might get confused from the information
-                    architecture
-                  </div>
+              <div className="flex flex-col gap-3">
+                <Image
+                  className="w-full h-auto rounded-lg"
+                  src="/images/new-projects/team-x/7.png"
+                  width={1200}
+                  height={675}
+                  alt="Option A"
+                />
+                <div className="text-slate-800 text-base sm:text-lg lg:text-xl leading-relaxed">
+                  ✅ Everything is accessible on scroll <br />
+                  ✅ Right panel is for actions
+                  <br />❌ Lot of data without segregation
                 </div>
               </div>
 
@@ -389,9 +352,27 @@ export default function teamXProject() {
                 <Image
                   className="w-full h-auto rounded-lg"
                   src="/images/new-projects/team-x/8.png"
-                  width={600}
-                  height={600}
-                  alt="Option 3"
+                  width={1200}
+                  height={675}
+                  alt="Option B"
+                />
+                <div className="text-slate-800 text-base sm:text-lg lg:text-xl leading-relaxed">
+                  ✅ Everything Segregated under tabs and sub-tabs Different
+                  groupings(based on relation) have different tabs <br />
+                  ✅ Important datapoints on top
+                  <br />
+                  ✅ Organised Panels
+                  <br />❌ Might get confused from the information architecture
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-3">
+                <Image
+                  className="w-full h-auto rounded-lg"
+                  src="/images/new-projects/team-x/9.png"
+                  width={1200}
+                  height={675}
+                  alt="Option C"
                 />
                 <div className="text-slate-800 text-base sm:text-lg lg:text-xl leading-relaxed">
                   ✅ One navigation tab having clear structure of information
@@ -447,8 +428,8 @@ export default function teamXProject() {
             <Image
               src="/images/new-projects/team-x/9.png"
               alt="Flow Refining Dashboard"
-              width={1000}
-              height={1000}
+              width={1200}
+              height={675}
               className="w-full h-auto"
             />
             <div className="self-stretch pt-12 inline-flex flex-col justify-start items-start gap-6">
@@ -562,8 +543,15 @@ export default function teamXProject() {
             </h2>
 
             <Image
-              src="/images/new-projects/team-x/10.png"
-              alt="Polishing"
+              src="/images/new-projects/team-x/11.png"
+              alt="Issue fix 1"
+              width={1200}
+              height={600}
+              className="w-full bg-sky-50 rounded-xl overflow-hidden relative mt-12 mb-12"
+            />
+            <Image
+              src="/images/new-projects/team-x/12.png"
+              alt="Issue fix 2"
               width={1200}
               height={600}
               className="w-full bg-sky-50 rounded-xl overflow-hidden relative mt-12 mb-12"
@@ -603,7 +591,7 @@ export default function teamXProject() {
       </section>
 
       {/* Next Projects Section - Moved outside the container */}
-      <NextProjects projects={otherProjects} />
+      <NextProjects />
     </main>
   );
 }

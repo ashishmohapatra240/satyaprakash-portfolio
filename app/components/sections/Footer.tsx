@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="flex flex-row gap-4">
             <Link
               href="https://calendly.com/satyaprakashray999/30min"
-              className="inline-block bg-white text-black px-8 py-3 text-white border border-white/20 rounded-full hover:bg-white/90  transition-colors"
+              className="inline-block bg-white text-black px-8 py-3 border border-white/20 rounded-full hover:bg-white/90  transition-colors"
             >
               Lets talk
             </Link>

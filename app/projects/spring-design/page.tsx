@@ -2,23 +2,6 @@ import Image from "next/image";
 import NextProjects from "@/app/components/NextProjects";
 
 export default function SpringDesignProject() {
-  const otherProjects = [
-    {
-      href: "/projects/pizza-hut",
-      title: "Pizza Hut",
-      bgColor: "#E31837",
-      logoChar: "P",
-      accentColor: "#FFFFFF",
-    },
-    {
-      href: "/projects/team-x",
-      title: "TEAM X",
-      bgColor: "#1E40AF",
-      logoChar: "R",
-      accentColor: "#FFFFFF",
-    },
-  ];
-
   return (
     <main className="bg-white blogConstraint">
       <section className="py-12">
@@ -296,7 +279,7 @@ export default function SpringDesignProject() {
       </section>
 
       {/* Next Projects Section */}
-      <NextProjects projects={otherProjects} />
+      <NextProjects />
     </main>
   );
 }

@@ -1,22 +1,6 @@
 import Image from "next/image";
 import Nextprojects from "@/app/components/NextProjects";
 export default function PizzaHutProject() {
-  const otherProjects = [
-    {
-      href: "/projects/spring-design",
-      title: "Spring design system",
-      bgColor: "#222222",
-      logoChar: "S",
-      accentColor: "#FFCC00",
-    },
-    {
-      href: "/projects/team-x",
-      title: "Pizza Hut",
-      bgColor: "#E31837",
-      logoChar: "T",
-      accentColor: "#FFFFFF",
-    },
-  ];
   return (
     <main className="bg-white blogConstraint">
       <section className="py-12">
@@ -78,7 +62,7 @@ export default function PizzaHutProject() {
           {/* Content Sections */}
           <div className="space-y-16 sm:space-y-24">
             {/* Analysis Section */}
-            <section>
+            <section className="mt-12 sm:mt-24">
               <div className="space-y-6">
                 <div className="space-y-2">
                   <div className="text-rose-700 text-base font-bold tracking-wider">
@@ -96,7 +80,6 @@ export default function PizzaHutProject() {
                     </p>
                     <div className="space-y-5">
                       <div className="flex gap-3">
-                        <div className="w-8 h-8 p-0.5 bg-rose-700/10 rounded-md flex-shrink-0"></div>
                         <div className="flex-1 space-y-1">
                           <h3 className="text-slate-800 text-lg sm:text-xl font-bold leading-7">
                             Lack of Visibility
@@ -108,7 +91,6 @@ export default function PizzaHutProject() {
                         </div>
                       </div>
                       <div className="flex gap-3">
-                        <div className="w-8 h-8 p-0.5 bg-rose-700/10 rounded-md flex-shrink-0"></div>
                         <div className="flex-1 space-y-1">
                           <h3 className="text-slate-800 text-lg sm:text-xl font-bold leading-7">
                             Complexity in Representation
@@ -244,16 +226,27 @@ export default function PizzaHutProject() {
                       the benefits associated with them.
                     </p>
                   </div>
+                  <div className="w-full lg:w-1/3">
+                    <video
+                      src="/images/new-projects/pizza-hut/4.mp4"
+                      loop={true}
+                      autoPlay={true}
+                      width={1200}
+                      height={600}
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                  </div>
                 </div>
               </div>
             </section>
-            <video
-              src="/images/new-projects/pizza-hut/4.mp4"
-              loop={true}
-              autoPlay={true}
-              width={1200}
+
+            {/* Full Width Image */}
+            <Image
+              src="/images/new-projects/pizza-hut/5.png"
+              alt="Pizza Hut UI Design"
+              width={1000}
               height={600}
-              className="w-full h-full object-cover rounded-lg mt-24 mb-24"
+              className="w-full h-auto rounded-lg"
             />
 
             {/* UI Design Section */}
@@ -268,7 +261,7 @@ export default function PizzaHutProject() {
                   </h2>
                 </div>
                 <div className="flex flex-col lg:flex-row gap-12">
-                  <div className="space-y-6 lg:max-w-full lg:w-2/3">
+                  <div className="space-y-6 lg:w-full">
                     <p className="text-slate-800 text-lg sm:text-xl leading-relaxed">
                       With a clear direction set, UI execution was smooth and
                       efficient. Since we had already explored multiple visual
@@ -282,15 +275,6 @@ export default function PizzaHutProject() {
                       and the Pizza Hut developers. But together we solved that
                       issue and Delivered them the handoff file.
                     </p>
-                  </div>
-                  <div className="w-full lg:w-96 h-auto">
-                    <Image
-                      src="/images/new-projects/pizza-hut/5.png"
-                      alt="Pizza Hut UI Design"
-                      width={412}
-                      height={362}
-                      className="w-full h-auto rounded-lg"
-                    />
                   </div>
                 </div>
               </div>
@@ -391,7 +375,7 @@ export default function PizzaHutProject() {
       </section>
 
       {/* Next new-projects */}
-      <Nextprojects projects={otherProjects} />
+      <Nextprojects />
     </main>
   );
 }
