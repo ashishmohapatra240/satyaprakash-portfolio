@@ -35,10 +35,11 @@ export default function PizzaHutProject() {
           <div className="mt-8 sm:mt-12 mb-16 sm:mb-24">
             <video
               src="/images/new-projects/pizza-hut/1.mp4"
+              loop={true}
+              autoPlay={true}
+              controls={false}
               width={1000}
               height={475}
-              autoPlay={true}
-              loop={true}
               className="w-full rounded-lg"
             />
           </div>
@@ -67,7 +68,13 @@ export default function PizzaHutProject() {
               </div>
             </div>
           </div>
-
+          <Image
+            src="/images/new-projects/pizza-hut/2.png"
+            alt="Pizza Hut Rewards Exploration"
+            width={1000}
+            height={600}
+            className="w-full h-auto rounded-lg"
+          />
           {/* Content Sections */}
           <div className="space-y-16 sm:space-y-24">
             {/* Analysis Section */}
@@ -192,10 +199,11 @@ export default function PizzaHutProject() {
                       Then we finalised the visual language!
                     </p>
                   </div>
+
                   <div className="w-full lg:w-96 h-auto">
                     <Image
-                      src="/images/new-projects/pizza-hut/2.png"
-                      alt="Pizza Hut Rewards Exploration"
+                      src="/images/new-projects/pizza-hut/3.png"
+                      alt="Pizza Hut Wireframes"
                       width={412}
                       height={362}
                       className="w-full h-auto rounded-lg"
@@ -235,15 +243,6 @@ export default function PizzaHutProject() {
                       ensuring users could easily understand their points and
                       the benefits associated with them.
                     </p>
-                  </div>
-                  <div className="w-full lg:w-96 h-auto">
-                    <Image
-                      src="/images/new-projects/pizza-hut/3.png"
-                      alt="Pizza Hut Wireframes"
-                      width={412}
-                      height={362}
-                      className="w-full h-auto rounded-lg"
-                    />
                   </div>
                 </div>
               </div>
@@ -347,6 +346,7 @@ export default function PizzaHutProject() {
                 src="/images/new-projects/pizza-hut/8.mp4"
                 loop={true}
                 autoPlay={true}
+                controls={false}
                 width={1200}
                 height={600}
                 className="w-full h-full object-cover rounded-lg"
