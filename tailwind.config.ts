@@ -8,6 +8,7 @@ const config: Config = {
   ],
   theme: {
     screens: {
+      xs: "375px", // Adding mobile breakpoint
       sm: "640px",
       md: "768px",
       lg: "1024px",
