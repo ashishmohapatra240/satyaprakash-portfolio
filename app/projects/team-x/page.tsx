@@ -296,7 +296,7 @@ export default function teamXProject() {
               </div>
             </section>
             <Image
-              src="/images/new-projects/team-x/4.png"
+              src="/images/new-projects/team-x/5.png"
               alt="Flow Refining Dashboard"
               width={1000}
               height={1000}
@@ -317,7 +317,7 @@ export default function teamXProject() {
             </div>
 
             <Image
-              src="/images/new-projects/team-x/5.png"
+              src="/images/new-projects/team-x/6.png"
               alt="Flow Refining Dashboard"
               width={1000}
               height={1000}
@@ -353,10 +353,10 @@ export default function teamXProject() {
               <div className="flex flex-col gap-3">
                 <Image
                   className="w-full h-auto rounded-lg"
-                  src="/images/new-projects/team-x/6.png"
+                  src="/images/new-projects/team-x/7.png"
                   width={400}
                   height={400}
-                  alt="Option 1"
+                  alt="Option A"
                 />
                 <div className="text-slate-800 text-base sm:text-lg lg:text-xl leading-relaxed">
                   ✅ Everything is accessible on scroll <br />
@@ -368,10 +368,10 @@ export default function teamXProject() {
               <div className="flex flex-col gap-3">
                 <Image
                   className="w-full h-auto rounded-lg"
-                  src="/images/new-projects/team-x/7.png"
+                  src="/images/new-projects/team-x/8.png"
                   width={400}
                   height={400}
-                  alt="Option 2"
+                  alt="Option B"
                 />
                 <div className="text-slate-800 text-base sm:text-lg lg:text-xl leading-relaxed">
                   ✅ Everything Segregated under tabs and sub-tabs Different
@@ -386,10 +386,10 @@ export default function teamXProject() {
               <div className="flex flex-col gap-3">
                 <Image
                   className="w-full h-auto rounded-lg"
-                  src="/images/new-projects/team-x/8.png"
+                  src="/images/new-projects/team-x/9.png"
                   width={600}
                   height={600}
-                  alt="Option 3"
+                  alt="Option C"
                 />
                 <div className="text-slate-800 text-base sm:text-lg lg:text-xl leading-relaxed">
                   ✅ One navigation tab having clear structure of information
@@ -560,8 +560,15 @@ export default function teamXProject() {
             </h2>
 
             <Image
-              src="/images/new-projects/team-x/10.png"
-              alt="Polishing"
+              src="/images/new-projects/team-x/11.png"
+              alt="Issue fix 1"
+              width={1200}
+              height={600}
+              className="w-full bg-sky-50 rounded-xl overflow-hidden relative mt-12 mb-12"
+            />
+            <Image
+              src="/images/new-projects/team-x/12.png"
+              alt="Issue fix 2"
               width={1200}
               height={600}
               className="w-full bg-sky-50 rounded-xl overflow-hidden relative mt-12 mb-12"
