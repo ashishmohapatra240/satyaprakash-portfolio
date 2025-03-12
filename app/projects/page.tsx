@@ -9,7 +9,7 @@ const projects = [
     description:
       "A comprehensive fraud detection system for TeamX that helps protect millions of transactions.",
     company: "TeamX",
-    image: "/images/projects/team-x.png",
+    image: "/images/new-projects/thumbnails/TeamX.png",
     href: "/projects/team-x",
     year: "2023",
   },
@@ -18,7 +18,7 @@ const projects = [
     description:
       "Redesigning the loyalty program experience for Pizza Hut Indonesia's customers.",
     company: "Pizza Hut Indonesia",
-    image: "/images/projects/hut-rewards.png",
+    image: "/images/new-projects/thumbnails/PH.png",
     href: "/projects/pizza-hut",
     year: "2022",
   },
@@ -27,7 +27,7 @@ const projects = [
     description:
       "Creating a scalable and consistent design system that powers multiple products.",
     company: "Team",
-    image: "/images/projects/spring.png",
+    image: "/images/new-projects/thumbnails/SD.png",
     href: "/projects/spring-design",
     year: "2021",
   },
