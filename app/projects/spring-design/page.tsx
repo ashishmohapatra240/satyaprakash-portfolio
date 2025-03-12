@@ -35,13 +35,14 @@ export default function SpringDesignProject() {
 
           {/* Hero Image */}
           <div className="mt-8 sm:mt-12 mb-24">
-            <Image
-              src="/images/projects/spring-ds/hero.png"
-              alt="Meta Design System"
+            <video
+              src="/images/new-projects/ds/1.mp4"
               width={1200}
               height={675}
               className="w-full rounded-lg"
-              priority
+              loop={true}
+              autoPlay={true}
+              controls={false}
             />
           </div>
 
@@ -111,7 +112,7 @@ export default function SpringDesignProject() {
               </div>
             </section>
             <Image
-              src="/images/projects/spring-ds/black-placeholder.png"
+              src="/images/new-projects/ds/2.png"
               alt="Design System Challenges"
               width={1200}
               height={600}
@@ -181,7 +182,7 @@ export default function SpringDesignProject() {
                       </div>
                       <Image
                         className="w-full lg:w-96 h-auto"
-                        src="/images/projects/spring-ds/learning.png"
+                        src="/images/new-projects/ds/3.png"
                         alt="Design System Research & Ideation"
                         width={412}
                         height={314}
@@ -192,7 +193,7 @@ export default function SpringDesignProject() {
               </div>
             </section>
             <Image
-              src="/images/projects/spring-ds/spring-system.png"
+              src="/images/new-projects/ds/4.png"
               alt="Design System Research & Ideation"
               width={1200}
               height={600}
