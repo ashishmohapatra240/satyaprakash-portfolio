@@ -217,7 +217,7 @@ export default function About() {
             <br className="hidden sm:block" />
             riding my bike, cherishing basketball or creating{" "}
             <br className="hidden sm:block" />
-            solution which helps thousands of people
+            solution which can help thousands of people
           </motion.p>
         </motion.div>
 
