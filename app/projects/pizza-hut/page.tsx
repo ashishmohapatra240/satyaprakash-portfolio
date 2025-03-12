@@ -1,24 +1,22 @@
 import Image from "next/image";
-import NextProjects from "@/app/components/NextProjects";
-
+import Nextprojects from "@/app/components/NextProjects";
 export default function PizzaHutProject() {
   const otherProjects = [
     {
-      href: "/projects/meta-design",
-      title: "Meta design system",
+      href: "/projects/spring-design",
+      title: "Spring design system",
       bgColor: "#222222",
-      logoChar: "M",
+      logoChar: "S",
       accentColor: "#FFCC00",
     },
     {
       href: "/projects/team-x",
-      title: "TEAM X",
-      bgColor: "#1E40AF",
-      logoChar: "R",
+      title: "Pizza Hut",
+      bgColor: "#E31837",
+      logoChar: "T",
       accentColor: "#FFFFFF",
     },
   ];
-
   return (
     <main className="bg-white blogConstraint">
       <section className="py-12">
@@ -35,13 +33,13 @@ export default function PizzaHutProject() {
 
           {/* Hero Image */}
           <div className="mt-8 sm:mt-12 mb-16 sm:mb-24">
-            <Image
-              src="/images/projects/pizza-hut/hero.png"
-              alt="Pizza Hut Rewards App"
-              width={1200}
-              height={675}
+            <video
+              src="/images/new-projects/pizza-hut/1.mp4"
+              width={1000}
+              height={475}
+              autoPlay={true}
+              loop={true}
               className="w-full rounded-lg"
-              priority
             />
           </div>
 
@@ -196,7 +194,7 @@ export default function PizzaHutProject() {
                   </div>
                   <div className="w-full lg:w-96 h-auto">
                     <Image
-                      src="/images/projects/pizza-hut/exploration.png"
+                      src="/images/new-projects/pizza-hut/2.png"
                       alt="Pizza Hut Rewards Exploration"
                       width={412}
                       height={362}
@@ -240,7 +238,7 @@ export default function PizzaHutProject() {
                   </div>
                   <div className="w-full lg:w-96 h-auto">
                     <Image
-                      src="/images/projects/pizza-hut/skeleton.png"
+                      src="/images/new-projects/pizza-hut/3.png"
                       alt="Pizza Hut Wireframes"
                       width={412}
                       height={362}
@@ -250,9 +248,10 @@ export default function PizzaHutProject() {
                 </div>
               </div>
             </section>
-            <Image
-              src="/images/projects/pizza-hut/wireframe.png"
-              alt="Pizza Hut Wireframes"
+            <video
+              src="/images/new-projects/pizza-hut/4.mp4"
+              loop={true}
+              autoPlay={true}
               width={1200}
               height={600}
               className="w-full h-full object-cover rounded-lg mt-24 mb-24"
@@ -287,7 +286,7 @@ export default function PizzaHutProject() {
                   </div>
                   <div className="w-full lg:w-96 h-auto">
                     <Image
-                      src="/images/projects/pizza-hut/ui-designs.png"
+                      src="/images/new-projects/pizza-hut/5.png"
                       alt="Pizza Hut UI Design"
                       width={412}
                       height={362}
@@ -297,6 +296,62 @@ export default function PizzaHutProject() {
                 </div>
               </div>
             </section>
+            <div className="grid grid-cols-1 gap-8">
+              {/* First row - 2 videos */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <video
+                  src="/images/new-projects/pizza-hut/6-1.mp4"
+                  loop={true}
+                  autoPlay={true}
+                  width={600}
+                  height={400}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+                <video
+                  src="/images/new-projects/pizza-hut/6-2.mp4"
+                  loop={true}
+                  autoPlay={true}
+                  width={600}
+                  height={400}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+
+              {/* Second row - 3 images */}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <Image
+                  src="/images/new-projects/pizza-hut/7-1.png"
+                  alt="Pizza Hut Design"
+                  width={400}
+                  height={300}
+                  className="w-full h-auto rounded-lg"
+                />
+                <Image
+                  src="/images/new-projects/pizza-hut/7-2.png"
+                  alt="Pizza Hut Design"
+                  width={400}
+                  height={300}
+                  className="w-full h-auto rounded-lg"
+                />
+                <Image
+                  src="/images/new-projects/pizza-hut/7-3.png"
+                  alt="Pizza Hut Design"
+                  width={400}
+                  height={300}
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
+
+              {/* Third row - 1 video */}
+              <video
+                src="/images/new-projects/pizza-hut/8.mp4"
+                loop={true}
+                autoPlay={true}
+                width={1200}
+                height={600}
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
 
             {/* Impact & Takeaways Section */}
             <section>
@@ -335,8 +390,8 @@ export default function PizzaHutProject() {
         </div>
       </section>
 
-      {/* Next Projects */}
-      <NextProjects projects={otherProjects} />
+      {/* Next new-projects */}
+      <Nextprojects projects={otherProjects} />
     </main>
   );
 }
