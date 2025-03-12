@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useParallax } from "@/hooks/useParallax";
 
 const fadeInUp = {
   initial: { y: 20, opacity: 0 },
@@ -32,6 +33,8 @@ const imageStagger = {
 };
 
 export default function About() {
+  const mousePosition = useParallax();
+
   return (
     <main className="pt-16 pb-0">
       {/* Hero Section */}
@@ -41,17 +44,30 @@ export default function About() {
         viewport={{ once: true }}
         variants={staggerContainer}
         className="mx-auto min-h-screen flex items-center"
+        style={{
+          transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
+          transition: "transform 0.2s ease-out",
+        }}
       >
         <div className="w-full widescreenConstraint">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
             {/* Text Content */}
-            <motion.div variants={fadeInUp} className="w-full">
+            <motion.div
+              variants={fadeInUp}
+              className="w-full"
+              style={{
+                transform: `translate(${mousePosition.x * 0.6}px, ${
+                  mousePosition.y * 0.6
+                }px)`,
+                transition: "transform 0.2s ease-out",
+              }}
+            >
               <h1
                 className="font-normal text-slate-800 leading-tight mb-6"
                 style={{ fontSize: "clamp(3rem, 8vw, 8rem)" }}
               >
-                Design, sports <br className="hidden sm:block" />
-                and motorcycle
+                Design, sports, <br className="hidden sm:block" />
+                motorcycle
               </h1>
               <p className="text-2xl sm:text-3xl text-slate-800">
                 Cherishing every small milestones...
@@ -59,7 +75,15 @@ export default function About() {
             </motion.div>
 
             {/* Image Grid */}
-            <motion.div variants={fadeInUp} className="">
+            <motion.div
+              variants={fadeInUp}
+              style={{
+                transform: `translate(${mousePosition.x * 1.2}px, ${
+                  mousePosition.y * 1.2
+                }px)`,
+                transition: "transform 0.2s ease-out",
+              }}
+            >
               <motion.div
                 variants={staggerContainer}
                 initial="initial"
@@ -69,6 +93,12 @@ export default function About() {
                 <motion.div
                   variants={imageStagger}
                   className="absolute top-0 -right-2.5 sm:right-0 xl:right-24 w-[258px] h-[266px] z-30"
+                  style={{
+                    transform: `translate(${mousePosition.x * 1.8}px, ${
+                      mousePosition.y * 1.8
+                    }px)`,
+                    transition: "transform 0.2s ease-out",
+                  }}
                 >
                   <Image
                     src="/images/about/about-1.jpeg"
@@ -80,6 +110,12 @@ export default function About() {
                 <motion.div
                   variants={imageStagger}
                   className="absolute top-[100px] left-0 w-[258px] h-[266px] z-20"
+                  style={{
+                    transform: `translate(${mousePosition.x * 2}px, ${
+                      mousePosition.y * 2
+                    }px)`,
+                    transition: "transform 0.2s ease-out",
+                  }}
                 >
                   <Image
                     src="/images/about/about-2.jpg"
@@ -91,6 +127,12 @@ export default function About() {
                 <motion.div
                   variants={imageStagger}
                   className="absolute bottom-0 right-4 w-[258px] h-[266px] z-10"
+                  style={{
+                    transform: `translate(${mousePosition.x * 2.2}px, ${
+                      mousePosition.y * 2.2
+                    }px)`,
+                    transition: "transform 0.2s ease-out",
+                  }}
                 >
                   <Image
                     src="/images/about/about-3.jpg"
