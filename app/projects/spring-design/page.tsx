@@ -11,8 +11,8 @@ export default function SpringDesignProject() {
       accentColor: "#FFFFFF",
     },
     {
-      href: "/projects/raptor-x",
-      title: "Raptor X",
+      href: "/projects/team-x",
+      title: "TEAM X",
       bgColor: "#1E40AF",
       logoChar: "R",
       accentColor: "#FFFFFF",

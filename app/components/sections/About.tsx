@@ -11,7 +11,7 @@ const PROJECTS = [
     title: "Designing the next-gen fraud detection system",
     description: "TeamX",
     image: "/images/projects/team-x.png",
-    href: "/projects/raptor-x",
+    href: "/projects/team-x",
   },
   {
     title: "Branding and royalty system for global pizza brand",

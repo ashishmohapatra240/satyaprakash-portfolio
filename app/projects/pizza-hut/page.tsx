@@ -11,8 +11,8 @@ export default function PizzaHutProject() {
       accentColor: "#FFCC00",
     },
     {
-      href: "/projects/raptor-x",
-      title: "Raptor X",
+      href: "/projects/team-x",
+      title: "TEAM X",
       bgColor: "#1E40AF",
       logoChar: "R",
       accentColor: "#FFFFFF",
@@ -115,6 +115,20 @@ export default function PizzaHutProject() {
                           </p>
                         </div>
                       </div>
+                      <p className="text-slate-800 text-lg sm:text-xl leading-7">
+                        The company aimed for users to adopt the feature, but
+                        its visibility and clarity could be improved.
+                      </p>
+                      <p className="text-slate-800 text-lg sm:text-xl leading-7">
+                        I did a{" "}
+                        <span className="font-bold">
+                          analysis of different Platforms
+                        </span>{" "}
+                        to understand why some of them are not working, while
+                        some of them are working fine. After that, we explored
+                        some visual style, as the team had paused the Work for
+                        some management reason.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -299,7 +313,8 @@ export default function PizzaHutProject() {
                   <div className="space-y-6 lg:max-w-full lg:w-2/3">
                     <div className="space-y-2">
                       <span className="text-slate-800 text-3xl font-normal font-sans leading-10">
-                        The redesigned loyalty system
+                        I got the this from the pizza hut team, that the
+                        redesigned loyalty system
                       </span>
                       <span className="text-slate-800 text-3xl font-bold font-sans leading-10">
                         {" "}

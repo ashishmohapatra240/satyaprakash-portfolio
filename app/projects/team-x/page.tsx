@@ -1,7 +1,7 @@
 import Image from "next/image";
 import NextProjects from "@/app/components/NextProjects";
 
-export default function RaptorXProject() {
+export default function teamXProject() {
   const otherProjects = [
     {
       href: "/projects/meta-design",
@@ -25,7 +25,7 @@ export default function RaptorXProject() {
         <div className="mx-auto widescreenConstraint">
           {/* Project Category */}
           <div className="text-blue-600 text-base font-bold tracking-wider mt-8 sm:mt-12 md:mt-24">
-            RAPTOR X
+            TEAM X
           </div>
 
           {/* Project Title */}
@@ -36,8 +36,8 @@ export default function RaptorXProject() {
           {/* Hero Image */}
           <div className="mt-8 sm:mt-12 mb-12 sm:mb-24">
             <Image
-              src="/images/projects/raptor-x/hero.png"
-              alt="RaptorX Dashboard"
+              src="/images/projects/team-x/hero.png"
+              alt="teamX Dashboard"
               width={1200}
               height={675}
               className="w-full rounded-lg"
@@ -185,7 +185,7 @@ export default function RaptorXProject() {
               </div>
             </section>
             <Image
-              src="/images/projects/raptor-x/about-industry.png"
+              src="/images/projects/team-x/about-industry.png"
               alt="Flow Refining Dashboard"
               width={1000}
               height={1000}
@@ -197,7 +197,7 @@ export default function RaptorXProject() {
               journey maps to understand this critical process in detail.
             </div>
             <Image
-              src="/images/projects/raptor-x/solving-alert.png"
+              src="/images/projects/team-x/solving-alert.png"
               alt="Flow Refining Dashboard"
               width={1000}
               height={1000}
@@ -296,7 +296,7 @@ export default function RaptorXProject() {
               </div>
             </section>
             <Image
-              src="/images/projects/raptor-x/user-flow.png"
+              src="/images/projects/team-x/user-flow.png"
               alt="Flow Refining Dashboard"
               width={1000}
               height={1000}
@@ -317,7 +317,7 @@ export default function RaptorXProject() {
             </div>
 
             <Image
-              src="/images/projects/raptor-x/sketch.png"
+              src="/images/projects/team-x/sketch.png"
               alt="Flow Refining Dashboard"
               width={1000}
               height={1000}
@@ -354,7 +354,7 @@ export default function RaptorXProject() {
                 <div className="flex flex-col gap-3">
                   <Image
                     className="w-full lg:w-96 h-[800px] rounded-lg"
-                    src="/images/projects/raptor-x/option-a.png"
+                    src="/images/projects/team-x/option-a.png"
                     width={400}
                     height={400}
                     alt="Option 1"
@@ -368,7 +368,7 @@ export default function RaptorXProject() {
                 <div className="flex flex-col gap-3">
                   <Image
                     className="w-full h-auto rounded-lg"
-                    src="/images/projects/raptor-x/option-b.png"
+                    src="/images/projects/team-x/option-b.png"
                     width={400}
                     height={400}
                     alt="Option 2"
@@ -388,7 +388,7 @@ export default function RaptorXProject() {
               <div className="flex flex-col gap-3">
                 <Image
                   className="w-full h-auto rounded-lg"
-                  src="/images/projects/raptor-x/option-c.png"
+                  src="/images/projects/team-x/option-c.png"
                   width={600}
                   height={600}
                   alt="Option 3"
@@ -445,7 +445,7 @@ export default function RaptorXProject() {
             </section>
 
             <Image
-              src="/images/projects/raptor-x/listing-problems.png"
+              src="/images/projects/team-x/listing-problems.png"
               alt="Flow Refining Dashboard"
               width={1000}
               height={1000}
@@ -556,9 +556,13 @@ export default function RaptorXProject() {
                 </div>
               </div>
             </div>
+            <h2 className="text-slate-800 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-medium leading-tight">
+              understanding these issues, we tried to solve them, by the below
+              UI
+            </h2>
 
             <Image
-              src="/images/projects/raptor-x/graph-analytics.png"
+              src="/images/projects/team-x/graph-analytics.png"
               alt="Polishing"
               width={1200}
               height={600}
@@ -580,10 +584,14 @@ export default function RaptorXProject() {
                       <span className="text-slate-800 text-xl font-normal font-sans leading-7">
                         With these refinements, the product became more robust,
                         and its core features were now more intuitive. The
-                        result? Analysts could solve 60% more fraud scenarios
-                        than before! Meanwhile, our dev team continued to refine
-                        AI-generated insights, making them even more accurate
-                        and valuable to users.
+                        result? We got the data form the product team that the
+                        Analysts could{" "}
+                        <span className="font-bold">
+                          solve 60% more fraud scenarios than before in a day!
+                        </span>{" "}
+                        Meanwhile, our dev team continued to refine AI-generated
+                        insights, making them even more accurate and valuable to
+                        users.
                       </span>
                     </div>
                   </div>

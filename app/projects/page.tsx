@@ -10,7 +10,7 @@ const projects = [
       "A comprehensive fraud detection system for TeamX that helps protect millions of transactions.",
     company: "TeamX",
     image: "/images/projects/team-x.png",
-    href: "/projects/raptor-x",
+    href: "/projects/team-x",
     year: "2023",
   },
   {
