@@ -36,7 +36,7 @@ export default function teamXProject() {
           {/* Hero Image */}
           <div className="mt-8 sm:mt-12 mb-12 sm:mb-24">
             <Image
-              src="/images/projects/team-x/hero.png"
+              src="/images/new-projects/team-x/1.png"
               alt="teamX Dashboard"
               width={1200}
               height={675}
@@ -185,7 +185,7 @@ export default function teamXProject() {
               </div>
             </section>
             <Image
-              src="/images/projects/team-x/about-industry.png"
+              src="/images/new-projects/team-x/2.png"
               alt="Flow Refining Dashboard"
               width={1000}
               height={1000}
@@ -197,7 +197,7 @@ export default function teamXProject() {
               journey maps to understand this critical process in detail.
             </div>
             <Image
-              src="/images/projects/team-x/solving-alert.png"
+              src="/images/new-projects/team-x/3.png"
               alt="Flow Refining Dashboard"
               width={1000}
               height={1000}
@@ -296,7 +296,7 @@ export default function teamXProject() {
               </div>
             </section>
             <Image
-              src="/images/projects/team-x/user-flow.png"
+              src="/images/new-projects/team-x/4.png"
               alt="Flow Refining Dashboard"
               width={1000}
               height={1000}
@@ -317,7 +317,7 @@ export default function teamXProject() {
             </div>
 
             <Image
-              src="/images/projects/team-x/sketch.png"
+              src="/images/new-projects/team-x/5.png"
               alt="Flow Refining Dashboard"
               width={1000}
               height={1000}
@@ -354,7 +354,7 @@ export default function teamXProject() {
                 <div className="flex flex-col gap-3">
                   <Image
                     className="w-full lg:w-96 h-[800px] rounded-lg"
-                    src="/images/projects/team-x/option-a.png"
+                    src="/images/new-projects/team-x/6.png"
                     width={400}
                     height={400}
                     alt="Option 1"
@@ -368,7 +368,7 @@ export default function teamXProject() {
                 <div className="flex flex-col gap-3">
                   <Image
                     className="w-full h-auto rounded-lg"
-                    src="/images/projects/team-x/option-b.png"
+                    src="/images/new-projects/team-x/7.png"
                     width={400}
                     height={400}
                     alt="Option 2"
@@ -388,7 +388,7 @@ export default function teamXProject() {
               <div className="flex flex-col gap-3">
                 <Image
                   className="w-full h-auto rounded-lg"
-                  src="/images/projects/team-x/option-c.png"
+                  src="/images/new-projects/team-x/8.png"
                   width={600}
                   height={600}
                   alt="Option 3"
@@ -445,7 +445,7 @@ export default function teamXProject() {
             </section>
 
             <Image
-              src="/images/projects/team-x/listing-problems.png"
+              src="/images/new-projects/team-x/9.png"
               alt="Flow Refining Dashboard"
               width={1000}
               height={1000}
@@ -562,7 +562,7 @@ export default function teamXProject() {
             </h2>
 
             <Image
-              src="/images/projects/team-x/graph-analytics.png"
+              src="/images/new-projects/team-x/10.png"
               alt="Polishing"
               width={1200}
               height={600}
