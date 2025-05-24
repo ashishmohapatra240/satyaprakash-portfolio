@@ -94,7 +94,7 @@ const Navbar = () => {
         initial={{ y: 0, opacity: 1 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: "tween", duration: 0.3 }}
-        className={`fixed top-0 left-0 right-0 py-[20px] ${isOpen ? 'z-[100]' : 'z-30'}`}
+        className="fixed top-0 left-0 right-0 z-[100] py-[20px]"
       >
         <div className="mx-auto widescreenConstraint">
           <div className="flex items-center justify-between h-16">
@@ -181,204 +181,206 @@ const Navbar = () => {
             variants={menuVariants}
             className="fixed top-0 right-0 h-full z-50 bg-white shadow-2xl w-full md:w-[70%] lg:w-1/2"
           >
-            <div className="flex flex-col h-full p-6 md:p-8 lg:p-12 xl:p-16 pt-20 md:pt-24">
+            <div className="flex flex-col h-full py-6 md:py-8 lg:py-12 xl:py-16 pt-20 md:pt-24 widescreenConstraint">
               {/* Top Section - Two Columns */}
-              <div className="flex-1 flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-24 mt-12 md:mt-16">
-                {/* Left Column - Social Media */}
-                <div className="flex-shrink-0">
-                  <motion.div
-                    custom={0}
-                    variants={itemVariants}
-                    initial="closed"
-                    animate="open"
-                    exit="closed"
-                  >
-                    <h3 className="text-gray-400 text-xs md:text-sm mb-4 md:mb-6">Social media</h3>
-                    <div className="space-y-2 md:space-y-3">
-                      {[
-                        { name: "LinkedIn", url: "https://www.linkedin.com/in/satyaprakash-ray-9308aa1a1/" },
-                        { name: "Behance", url: "https://www.behance.net/satyaprakashray" },
-                        { name: "Dribbble", url: "https://dribbble.com/satyaprakash_ray" },
-                        { name: "Instagram", url: "https://www.instagram.com/pixraydesigns" }
-                      ].map((social, i) => (
-                        <motion.div
-                          key={social.name}
-                          custom={i + 1}
-                          variants={itemVariants}
-                          initial="closed"
-                          animate="open"
-                          exit="closed"
-                        >
-                          <Link
-                            href={social.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-block text-slate-800 hover:text-slate-600 active:text-[#0019FF] transition-colors text-xs md:text-sm relative group"
-                            onClick={() => setIsOpen(false)}
+              <div className="flex-1">
+                <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12 lg:gap-24 mt-12 md:mt-16">
+                  {/* Left Column - Social Media */}
+                  <div>
+                    <motion.div
+                      custom={0}
+                      variants={itemVariants}
+                      initial="closed"
+                      animate="open"
+                      exit="closed"
+                    >
+                      <h3 className="text-gray-400 text-xs md:text-sm mb-4 md:mb-6">Social media</h3>
+                      <div className="space-y-2 md:space-y-3">
+                        {[
+                          { name: "LinkedIn", url: "https://www.linkedin.com/in/satyaprakash-ray-9308aa1a1/" },
+                          { name: "Behance", url: "https://www.behance.net/satyaprakashray" },
+                          { name: "Dribbble", url: "https://dribbble.com/satyaprakash_ray" },
+                          { name: "Instagram", url: "https://www.instagram.com/pixraydesigns" }
+                        ].map((social, i) => (
+                          <motion.div
+                            key={social.name}
+                            custom={i + 1}
+                            variants={itemVariants}
+                            initial="closed"
+                            animate="open"
+                            exit="closed"
                           >
-                            {social.name}
-                            <span className="absolute bottom-0 left-0 w-0 h-px bg-slate-400 group-hover:bg-slate-400 group-active:bg-[#0019FF] transition-all duration-300 ease-out group-hover:w-full group-active:w-full"></span>
-                          </Link>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </motion.div>
-                </div>
+                            <Link
+                              href={social.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-block text-slate-800 hover:text-slate-600 active:text-[#0019FF] transition-colors text-xs md:text-sm relative group"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {social.name}
+                              <span className="absolute bottom-0 left-0 w-0 h-px bg-slate-400 group-hover:bg-slate-400 group-active:bg-[#0019FF] transition-all duration-300 ease-out group-hover:w-full group-active:w-full"></span>
+                            </Link>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </motion.div>
+                  </div>
 
-                {/* Right Column - Main Navigation */}
-                <div className="flex-1">
-                  <motion.div
-                    custom={5}
-                    variants={itemVariants}
-                    initial="closed"
-                    animate="open"
-                    exit="closed"
-                  >
-                    <h3 className="text-gray-400 text-xs md:text-sm mb-4 md:mb-6">Menu</h3>
-                    <div className="space-y-3 md:space-y-4">
-                      {/* Projects */}
-                      <motion.div
-                        custom={6}
-                        variants={itemVariants}
-                        initial="closed"
-                        animate="open"
-                        exit="closed"
-                      >
-                        <Link
-                          href="/projects"
-                          onClick={() => setIsOpen(false)}
-                          className={`inline-block text-2xl md:text-3xl lg:text-4xl font-normal transition-colors duration-300 relative group ${pathname === '/projects'
-                            ? 'text-[#0019FF]'
-                            : 'text-slate-800 hover:text-slate-600 active:text-[#0019FF]'
-                            }`}
-                        >
-                          Projects
-                          <span className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === '/projects'
-                            ? 'w-full bg-[#0019FF]'
-                            : 'w-0 bg-slate-400 group-hover:bg-slate-400 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full'
-                            }`}></span>
-                        </Link>
-                      </motion.div>
-
-                      {/* Resume */}
-                      <motion.div
-                        custom={7}
-                        variants={itemVariants}
-                        initial="closed"
-                        animate="open"
-                        exit="closed"
-                      >
-                        <Link
-                          href="/Satya-Resume.pdf"
-                          target="_blank"
-                          onClick={() => setIsOpen(false)}
-                          className="inline-block text-2xl md:text-3xl lg:text-4xl font-normal text-slate-800 hover:text-slate-600 active:text-[#0019FF] transition-colors duration-300 relative group"
-                        >
-                          Resume
-                          <span className="absolute bottom-0 left-0 w-0 h-px bg-slate-400 group-hover:bg-slate-400 group-active:bg-[#0019FF] transition-all duration-300 ease-out group-hover:w-full group-active:w-full"></span>
-                        </Link>
-                      </motion.div>
-
-                      {/* About Me with Sub-items */}
-                      <div>
+                  {/* Right Column - Main Navigation */}
+                  <div>
+                    <motion.div
+                      custom={5}
+                      variants={itemVariants}
+                      initial="closed"
+                      animate="open"
+                      exit="closed"
+                    >
+                      <h3 className="text-gray-400 text-xs md:text-sm mb-4 md:mb-6">Menu</h3>
+                      <div className="space-y-3 md:space-y-4">
+                        {/* Projects */}
                         <motion.div
-                          custom={8}
+                          custom={6}
                           variants={itemVariants}
                           initial="closed"
                           animate="open"
                           exit="closed"
                         >
                           <Link
-                            href="/about"
+                            href="/projects"
                             onClick={() => setIsOpen(false)}
-                            className={`inline-block text-2xl md:text-3xl lg:text-4xl font-normal transition-colors duration-300 relative group ${pathname === '/about'
+                            className={`inline-block text-2xl md:text-3xl lg:text-4xl font-normal transition-colors duration-300 relative group ${pathname === '/projects'
                               ? 'text-[#0019FF]'
                               : 'text-slate-800 hover:text-slate-600 active:text-[#0019FF]'
                               }`}
                           >
-                            About me
-                            <span className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === '/about'
+                            Projects
+                            <span className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === '/projects'
                               ? 'w-full bg-[#0019FF]'
                               : 'w-0 bg-slate-400 group-hover:bg-slate-400 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full'
                               }`}></span>
                           </Link>
                         </motion.div>
 
-                        {/* Sub-navigation items */}
-                        <div className="mt-2 md:mt-3 space-y-1 md:space-y-2">
+                        {/* Resume */}
+                        <motion.div
+                          custom={7}
+                          variants={itemVariants}
+                          initial="closed"
+                          animate="open"
+                          exit="closed"
+                        >
+                          <Link
+                            href="/Satya-Resume.pdf"
+                            target="_blank"
+                            onClick={() => setIsOpen(false)}
+                            className="inline-block text-2xl md:text-3xl lg:text-4xl font-normal text-slate-800 hover:text-slate-600 active:text-[#0019FF] transition-colors duration-300 relative group"
+                          >
+                            Resume
+                            <span className="absolute bottom-0 left-0 w-0 h-px bg-slate-400 group-hover:bg-slate-400 group-active:bg-[#0019FF] transition-all duration-300 ease-out group-hover:w-full group-active:w-full"></span>
+                          </Link>
+                        </motion.div>
+
+                        {/* About Me with Sub-items */}
+                        <div>
                           <motion.div
-                            custom={9}
+                            custom={8}
                             variants={itemVariants}
                             initial="closed"
                             animate="open"
                             exit="closed"
                           >
                             <Link
-                              href="/mentoring"
+                              href="/about"
                               onClick={() => setIsOpen(false)}
-                              className={`inline-block font-medium transition-colors duration-300 relative group ${pathname === '/mentoring'
+                              className={`inline-block text-2xl md:text-3xl lg:text-4xl font-normal transition-colors duration-300 relative group ${pathname === '/about'
                                 ? 'text-[#0019FF]'
-                                : 'text-slate-600 hover:text-slate-800 active:text-[#0019FF]'
+                                : 'text-slate-800 hover:text-slate-600 active:text-[#0019FF]'
                                 }`}
-                              style={{ fontSize: '16px' }}
                             >
-                              Mentoring
-                              <span className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === '/mentoring'
+                              About me
+                              <span className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === '/about'
                                 ? 'w-full bg-[#0019FF]'
-                                : 'w-0 bg-slate-300 group-hover:bg-slate-300 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full'
+                                : 'w-0 bg-slate-400 group-hover:bg-slate-400 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full'
                                 }`}></span>
                             </Link>
                           </motion.div>
-                          <motion.div
-                            custom={10}
-                            variants={itemVariants}
-                            initial="closed"
-                            animate="open"
-                            exit="closed"
-                          >
-                            <Link
-                              href="/scribbling"
-                              onClick={() => setIsOpen(false)}
-                              className={`inline-block font-medium transition-colors duration-300 relative group ${pathname === '/scribbling'
-                                ? 'text-[#0019FF]'
-                                : 'text-slate-600 hover:text-slate-800 active:text-[#0019FF]'
-                                }`}
-                              style={{ fontSize: '16px' }}
+
+                          {/* Sub-navigation items */}
+                          <div className="mt-2 md:mt-3 space-y-1 md:space-y-2">
+                            <motion.div
+                              custom={9}
+                              variants={itemVariants}
+                              initial="closed"
+                              animate="open"
+                              exit="closed"
                             >
-                              Scribbling
-                              <span className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === '/scribbling'
-                                ? 'w-full bg-[#0019FF]'
-                                : 'w-0 bg-slate-300 group-hover:bg-slate-300 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full'
-                                }`}></span>
-                            </Link>
-                          </motion.div>
-                          <motion.div
-                            custom={11}
-                            variants={itemVariants}
-                            initial="closed"
-                            animate="open"
-                            exit="closed"
-                          >
-                            <Link
-                              href="/design-disciplines"
-                              onClick={() => setIsOpen(false)}
-                              className={`inline-block font-medium transition-colors duration-300 relative group ${pathname === '/design-disciplines'
-                                ? 'text-[#0019FF]'
-                                : 'text-slate-600 hover:text-slate-800 active:text-[#0019FF]'
-                                }`}
-                              style={{ fontSize: '16px' }}
+                              <Link
+                                href="/mentoring"
+                                onClick={() => setIsOpen(false)}
+                                className={`inline-block font-medium transition-colors duration-300 relative group ${pathname === '/mentoring'
+                                  ? 'text-[#0019FF]'
+                                  : 'text-slate-600 hover:text-slate-800 active:text-[#0019FF]'
+                                  }`}
+                                style={{ fontSize: '16px' }}
+                              >
+                                Mentoring
+                                <span className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === '/mentoring'
+                                  ? 'w-full bg-[#0019FF]'
+                                  : 'w-0 bg-slate-300 group-hover:bg-slate-300 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full'
+                                  }`}></span>
+                              </Link>
+                            </motion.div>
+                            <motion.div
+                              custom={10}
+                              variants={itemVariants}
+                              initial="closed"
+                              animate="open"
+                              exit="closed"
                             >
-                              Design disciplines
-                              <span className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === '/design-disciplines'
-                                ? 'w-full bg-[#0019FF]'
-                                : 'w-0 bg-slate-300 group-hover:bg-slate-300 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full'
-                                }`}></span>
-                            </Link>
-                          </motion.div>
+                              <Link
+                                href="/scribbling"
+                                onClick={() => setIsOpen(false)}
+                                className={`inline-block font-medium transition-colors duration-300 relative group ${pathname === '/scribbling'
+                                  ? 'text-[#0019FF]'
+                                  : 'text-slate-600 hover:text-slate-800 active:text-[#0019FF]'
+                                  }`}
+                                style={{ fontSize: '16px' }}
+                              >
+                                Scribbling
+                                <span className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === '/scribbling'
+                                  ? 'w-full bg-[#0019FF]'
+                                  : 'w-0 bg-slate-300 group-hover:bg-slate-300 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full'
+                                  }`}></span>
+                              </Link>
+                            </motion.div>
+                            <motion.div
+                              custom={11}
+                              variants={itemVariants}
+                              initial="closed"
+                              animate="open"
+                              exit="closed"
+                            >
+                              <Link
+                                href="/design-disciplines"
+                                onClick={() => setIsOpen(false)}
+                                className={`inline-block font-medium transition-colors duration-300 relative group ${pathname === '/design-disciplines'
+                                  ? 'text-[#0019FF]'
+                                  : 'text-slate-600 hover:text-slate-800 active:text-[#0019FF]'
+                                  }`}
+                                style={{ fontSize: '16px' }}
+                              >
+                                Design disciplines
+                                <span className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === '/design-disciplines'
+                                  ? 'w-full bg-[#0019FF]'
+                                  : 'w-0 bg-slate-300 group-hover:bg-slate-300 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full'
+                                  }`}></span>
+                              </Link>
+                            </motion.div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </motion.div>
+                    </motion.div>
+                  </div>
                 </div>
               </div>
 
