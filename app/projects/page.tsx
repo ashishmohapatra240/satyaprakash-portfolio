@@ -5,6 +5,15 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "Building a revolutionary AI-powered dream interpretation platform",
+    description:
+      "Creating an intuitive and engaging interface for DreamX that makes dream interpretation accessible while maintaining a sense of wonder and personal connection.",
+    company: "DreamX",
+    image: "/images/new-projects/thumbnails/DreamX.png",
+    href: "/projects/dreamx",
+    year: "2024",
+  },
+  {
     title: "Designing the next-gen fraud detection system",
     description:
       "A comprehensive fraud detection system for TeamX that helps protect millions of transactions.",

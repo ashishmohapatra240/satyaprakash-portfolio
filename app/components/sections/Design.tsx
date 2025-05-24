@@ -32,20 +32,20 @@ export default function Design() {
   return (
     <section className="min-h-screen bg-white py-20 flex items-center">
       <div className=" mx-auto widescreenConstraint">
-        <div className="text-center space-y-4 mb-8">
-          <h2 className="text-2xl sm:text-5xl font-medium text-[#0E0F16]">
-            Exploring and living
+        <div className="text-left space-y-4 mb-16">
+          <h2 className="text-4xl sm:text-7xl font-medium text-[#0E0F16]">
+            design is just more
             <br className="hidden sm:block" /> design realm
           </h2>
-          <p className="text-gray text-lg sm:text-xl">
+          {/* <p className="text-gray text-lg sm:text-xl">
             Just awesome stuff away from figma
-          </p>
+          </p> */}
         </div>
 
-        <p className="text-center text-gray-600 max-w-2xl mx-auto mb-16">
+        {/* <p className="text-center text-gray-600 max-w-2xl mx-auto mb-16">
           I always find some time to explore things and go away from figma to do
           crazy stuff, and it has always been great fun.
-        </p>
+        </p> */}
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto place-items-center">
           {DESIGN_ACTIVITIES.map((activity, index) => (

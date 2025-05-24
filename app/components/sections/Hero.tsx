@@ -32,7 +32,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal leading-tight text-dark mx-auto md:mx-0 max-w-[90%] md:max-w-none">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal leading-tight text-dark mx-auto md:mx-0 max-w-[90%] md:max-w-none font-sans">
               building products &<br />
               design systems
             </h1>

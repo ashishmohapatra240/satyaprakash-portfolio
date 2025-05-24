@@ -56,9 +56,8 @@ export default function About() {
               variants={fadeInUp}
               className="w-full"
               style={{
-                transform: `translate(${mousePosition.x * 0.6}px, ${
-                  mousePosition.y * 0.6
-                }px)`,
+                transform: `translate(${mousePosition.x * 0.6}px, ${mousePosition.y * 0.6
+                  }px)`,
                 transition: "transform 0.2s ease-out",
               }}
             >
@@ -78,9 +77,8 @@ export default function About() {
             <motion.div
               variants={fadeInUp}
               style={{
-                transform: `translate(${mousePosition.x * 1.2}px, ${
-                  mousePosition.y * 1.2
-                }px)`,
+                transform: `translate(${mousePosition.x * 1.2}px, ${mousePosition.y * 1.2
+                  }px)`,
                 transition: "transform 0.2s ease-out",
               }}
             >
@@ -94,9 +92,8 @@ export default function About() {
                   variants={imageStagger}
                   className="absolute top-0 -right-2.5 sm:right-0 xl:right-24 w-[258px] h-[266px] z-30"
                   style={{
-                    transform: `translate(${mousePosition.x * 1.8}px, ${
-                      mousePosition.y * 1.8
-                    }px)`,
+                    transform: `translate(${mousePosition.x * 1.8}px, ${mousePosition.y * 1.8
+                      }px)`,
                     transition: "transform 0.2s ease-out",
                   }}
                 >
@@ -111,9 +108,8 @@ export default function About() {
                   variants={imageStagger}
                   className="absolute top-[100px] left-0 w-[258px] h-[266px] z-20"
                   style={{
-                    transform: `translate(${mousePosition.x * 2}px, ${
-                      mousePosition.y * 2
-                    }px)`,
+                    transform: `translate(${mousePosition.x * 2}px, ${mousePosition.y * 2
+                      }px)`,
                     transition: "transform 0.2s ease-out",
                   }}
                 >
@@ -128,9 +124,8 @@ export default function About() {
                   variants={imageStagger}
                   className="absolute bottom-0 right-4 w-[258px] h-[266px] z-10"
                   style={{
-                    transform: `translate(${mousePosition.x * 2.2}px, ${
-                      mousePosition.y * 2.2
-                    }px)`,
+                    transform: `translate(${mousePosition.x * 2.2}px, ${mousePosition.y * 2.2
+                      }px)`,
                     transition: "transform 0.2s ease-out",
                   }}
                 >
@@ -267,16 +262,16 @@ export default function About() {
       >
         <div className="mx-auto">
           <motion.div variants={fadeInUp} className="widescreenConstraint">
-            <p
+            <div
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-neutral-900 font-normal"
               style={{ lineHeight: "1.1" }}
             >
               If any of this sounds even a little interesting, just drop a
               hello!
-              <div className="block my-2" />
+              <br className="block my-2" />
               I&apos;d love to connect, brainstorm wild ideas, and see where
               creativity takes us.
-            </p>
+            </div>
           </motion.div>
         </div>
       </motion.section>

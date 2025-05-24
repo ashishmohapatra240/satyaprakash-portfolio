@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+
 export default function Footer() {
   return (
     <section className="min-h-[50vh] bg-[#0E0F16] flex flex-col items-start justify-center">

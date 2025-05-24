@@ -11,7 +11,7 @@ export default function PizzaHutProject() {
           </div>
 
           {/* Project Title */}
-          <h1 className="text-slate-800 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mt-4">
+          <h1 className="text-[#222222] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mt-4">
             Building a royalty system for a global pizza brand
           </h1>
 
