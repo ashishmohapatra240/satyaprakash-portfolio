@@ -43,7 +43,7 @@ const Mentoring = () => {
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-100 to-blue-50 rounded-3xl opacity-0 blur-xl"></div>
               <div className="relative">
                 <Image
-                  src="/images/design/mentoring/1.png"
+                  src="/images/design/Mentoring/1.png"
                   alt="Mentoring session"
                   width={600}
                   height={400}
@@ -77,7 +77,7 @@ const Mentoring = () => {
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-50 to-blue-100 rounded-3xl opacity-0 blur-xl"></div>
               <div className="relative">
                 <Image
-                  src="/images/design/mentoring/2.png"
+                  src="/images/design/Mentoring/2.png"
                   alt="Design teaching"
                   width={600}
                   height={400}
@@ -93,7 +93,7 @@ const Mentoring = () => {
             <div className="absolute -inset-2 bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50 rounded-3xl opacity-0 blur-xl"></div>
             <div className="relative">
               <Image
-                src="/images/design/mentoring/3.png"
+                src="/images/design/Mentoring/3.png"
                 alt="Group photo"
                 width={1440}
                 height={720}
@@ -108,7 +108,7 @@ const Mentoring = () => {
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-100 to-blue-50 rounded-3xl opacity-0 blur-xl"></div>
               <div className="relative">
                 <Image
-                  src="/images/design/mentoring/4.png"
+                  src="/images/design/Mentoring/4.png"
                   alt="Workshop help"
                   width={600}
                   height={400}
@@ -120,7 +120,7 @@ const Mentoring = () => {
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-50 to-blue-100 rounded-3xl opacity-0 blur-xl"></div>
               <div className="relative">
                 <Image
-                  src="/images/design/mentoring/5.png"
+                  src="/images/design/Mentoring/5.png"
                   alt="Design session"
                   width={600}
                   height={400}
