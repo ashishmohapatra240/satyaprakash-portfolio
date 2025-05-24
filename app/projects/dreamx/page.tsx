@@ -28,7 +28,7 @@ export default function DreamXProject() {
                             className="w-full rounded-lg"
                         /> */}
                         <Image
-                            src="/images/new-projects/dreamx/1.png"
+                            src="/images/projects/dreamx/1.png"
                             alt="DreamX Hero Image"
                             width={1000}
                             height={475}
@@ -39,7 +39,7 @@ export default function DreamXProject() {
                     {/* Project Info */}
                     <div className="py-12 sm:py-20 flex flex-col sm:flex-row gap-8 sm:gap-24">
                         <div className="text-slate-800 text-xl sm:text-2xl lg:text-3xl" style={{ lineHeight: '1.6' }}>
-                            DreamX was building a payment app to help Dream11 users seamlessly use their winnings for everyday transactions. However, the existing design system was fragmented and lacked consistency—especially with Figma's new variable system. Our design team identified this as an opportunity to overhaul the system, streamline design processes, and create a scalable, cohesive design foundation.
+                            DreamX was building a payment app to help Dream11 users seamlessly use their winnings for everyday transactions. However, the existing design system was fragmented and lacked consistency—especially with Figma&apos;s new variable system. Our design team identified this as an opportunity to overhaul the system, streamline design processes, and create a scalable, cohesive design foundation.
                         </div>
                         <div className="flex flex-col gap-8 sm:min-w-[250px]">
                             <div className="space-y-2">
@@ -116,7 +116,7 @@ export default function DreamXProject() {
                             </div>
                         </section>
                         <Image
-                            src="/images/new-projects/dreamx/2.png"
+                            src="/images/projects/dreamx/2.png"
                             alt="DreamX Platform Overview"
                             width={1000}
                             height={600}
@@ -205,20 +205,18 @@ export default function DreamXProject() {
                         {/* Full Width Image */}
 
                         <div className="grid grid-cols-1 gap-8">
-                            {/* First row - 2 videos */}
+                            {/* First row - 2 images */}
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                                <video
-                                    src="/images/new-projects/pizza-hut/6-1.mp4"
-                                    loop={true}
-                                    autoPlay={true}
+                                <Image
+                                    src="/images/projects/dreamx/3.png"
+                                    alt="DreamX Process Image 1"
                                     width={600}
                                     height={400}
                                     className="w-full h-full object-cover rounded-lg"
                                 />
-                                <video
-                                    src="/images/new-projects/pizza-hut/6-2.mp4"
-                                    loop={true}
-                                    autoPlay={true}
+                                <Image
+                                    src="/images/projects/dreamx/4.png"
+                                    alt="DreamX Process Image 2"
                                     width={600}
                                     height={400}
                                     className="w-full h-full object-cover rounded-lg"
@@ -274,30 +272,30 @@ export default function DreamXProject() {
                         <div className="space-y-8">
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                                 <Image
-                                    src="/images/new-projects/pizza-hut/7-1.png"
-                                    alt="Pizza Hut Design"
+                                    src="/images/projects/dreamx/6.png"
+                                    alt="DreamX Design 1"
                                     width={400}
                                     height={300}
-                                    className="w-full h-auto rounded-lg"
+                                    className="w-full h-full object-cover rounded-lg"
                                 />
                                 <Image
-                                    src="/images/new-projects/pizza-hut/7-2.png"
-                                    alt="Pizza Hut Design"
+                                    src="/images/projects/dreamx/7.png"
+                                    alt="DreamX Design 2"
                                     width={400}
                                     height={300}
-                                    className="w-full h-auto rounded-lg"
+                                    className="w-full h-full object-cover rounded-lg"
                                 />
                                 <Image
-                                    src="/images/new-projects/pizza-hut/7-3.png"
-                                    alt="Pizza Hut Design"
+                                    src="/images/projects/dreamx/8.png"
+                                    alt="DreamX Design 3"
                                     width={400}
                                     height={300}
-                                    className="w-full h-auto rounded-lg"
+                                    className="w-full h-full object-cover rounded-lg"
                                 />
                             </div>
 
                             <Image
-                                src="/images/new-projects/dreamx/5.png"
+                                src="/images/projects/dreamx/9.png"
                                 alt="DreamX Final Design"
                                 width={1000}
                                 height={600}
