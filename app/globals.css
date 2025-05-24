@@ -18,3 +18,55 @@ body {
 .blogConstraint {
   @apply max-w-[1440px] mx-auto;
 }
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+
+  10% {
+    transform: translateX(-200px) rotate(-14deg);
+  }
+
+  20% {
+    transform: translateX(200px) rotate(14deg);
+  }
+
+  30% {
+    transform: translateX(-160px) rotate(-10deg);
+  }
+
+  40% {
+    transform: translateX(160px) rotate(10deg);
+  }
+
+  50% {
+    transform: translateX(-120px) rotate(-6deg);
+  }
+
+  60% {
+    transform: translateX(120px) rotate(6deg);
+  }
+
+  70% {
+    transform: translateX(-80px) rotate(-4deg);
+  }
+
+  80% {
+    transform: translateX(80px) rotate(4deg);
+  }
+
+  90% {
+    transform: translateX(-40px) rotate(-2deg);
+  }
+
+  95% {
+    transform: translateX(40px) rotate(2deg);
+  }
+}
+
+.shake-animation {
+  animation: shake 0.6s ease-in-out;
+}

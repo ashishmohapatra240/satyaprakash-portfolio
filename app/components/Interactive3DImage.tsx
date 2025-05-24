@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRef, useEffect } from "react";
 
@@ -114,11 +113,11 @@ export default function Interactive3DImage({
   }, []);
 
   return (
-    <motion.div
+    <div
       ref={containerRef}
       className="relative w-full max-w-2xl mx-auto rounded-2xl overflow-hidden bg-[#1e293b]"
     >
-      <motion.div
+      <div
         ref={imageRef}
         className="relative transition-all duration-100 ease-out"
         style={{ willChange: "transform" }}
@@ -131,7 +130,7 @@ export default function Interactive3DImage({
           layout="responsive"
           className="relative z-10"
         />
-      </motion.div>
+      </div>
       <div
         ref={shadowRef}
         className="absolute inset-0 z-20 pointer-events-none bg-black/20 transition-all duration-100"
@@ -139,6 +138,6 @@ export default function Interactive3DImage({
           boxShadow: "inset 0 0 30px rgba(255, 199, 162, 0.5)",
         }}
       />
-    </motion.div>
+    </div>
   );
 }

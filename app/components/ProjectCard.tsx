@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useAnimation } from "framer-motion";
 import clsx from "clsx";
 
 interface ProjectCardProps {
@@ -18,30 +17,20 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   const isSecureProject =
     description === "Marathon Digital Holdings" || description === "anonymous";
-  const controls = useAnimation();
 
-  const shakeAnimation = {
-    shake: {
-      x: [0, -200, 200, -160, 160, -120, 120, -80, 80, -40, 40, 0],
-      rotate: [0, -14, 14, -10, 10, -6, 6, -4, 4, -2, 2, 0],
-      transition: {
-        duration: 0.6,
-        ease: "easeInOut",
-      },
-    },
-  };
-
-  const handleClick = async () => {
+  const handleClick = (e: React.MouseEvent) => {
     if (isSecureProject) {
-      await controls.start("shake");
+      const element = e.currentTarget;
+      element.classList.add('shake-animation');
+      setTimeout(() => {
+        element.classList.remove('shake-animation');
+      }, 600);
     }
   };
 
   const CardContent = () => (
-    <motion.div
+    <div
       className="group bg-white rounded-lg p-6 transition-all duration-300 cursor-pointer"
-      variants={shakeAnimation}
-      animate={controls}
       onClick={handleClick}
     >
       <div className="relative w-full h-96 mb-4 overflow-hidden rounded-lg">
@@ -74,7 +63,7 @@ export default function ProjectCard({
         {title}
       </h3>
       <p className="text-gray">{description}</p>
-    </motion.div>
+    </div>
   );
 
   return isSecureProject ? (

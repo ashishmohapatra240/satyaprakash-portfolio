@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { DesignCardProps } from "./sections/Design";
 
 const DesignCard = ({
@@ -11,19 +10,13 @@ const DesignCard = ({
   bgColor,
 }: DesignCardProps) => {
   return (
-    <motion.div
-      whileHover={{ scale: 0.97 }}
-      transition={{ duration: 0.3 }}
-      className={`${bgColor} rounded-2xl p-6 text-white relative overflow-hidden flex flex-col justify-between h-80 max-w-80 w-full cursor-pointer`}
+    <div
+      className={`${bgColor} rounded-2xl p-6 text-white relative overflow-hidden flex flex-col justify-between h-80 max-w-80 w-full cursor-pointer transform transition-transform duration-300 hover:scale-97`}
     >
       <div className="absolute inset-0">
-        <motion.div
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.4 }}
-          className="h-full w-full"
-        >
+        <div className="h-full w-full transform transition-transform duration-400 hover:scale-110">
           <Image src={image} fill className="object-cover" alt={title} />
-        </motion.div>
+        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-transparent" />
       </div>
 
@@ -36,7 +29,7 @@ const DesignCard = ({
           {description}
         </p>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

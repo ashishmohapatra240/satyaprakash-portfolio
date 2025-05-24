@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
 import dynamic from 'next/dynamic';
 
@@ -36,13 +35,10 @@ const Navbar = () => {
   ];
 
   return (
-    <motion.nav
-      initial={{ y: 0, opacity: 1 }}
-      animate={{ y: showNavbar ? 0 : -60, opacity: showNavbar ? 1 : 0 }}
-      transition={{ type: "tween", duration: 0.3 }}
+    <nav
       className={clsx(
-        "fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md py-[20px]"
-        // "px-4 md:px-0 md:max-w-[90%] lg:max-w-[80%] md:mx-auto"
+        "fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md py-[20px] transition-all duration-300",
+        showNavbar ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
       )}
     >
       <div className="mx-auto widescreenConstraint">
@@ -117,30 +113,28 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="md:hidden"
-          >
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/80 backdrop-blur-md">
-              {menuItems.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="block px-3 py-2 text-gray-800 hover:text-gray-600 transition-colors duration-200"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </motion.div>
+      <div
+        className={clsx(
+          "md:hidden transition-all duration-300 transform",
+          isOpen
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-4 pointer-events-none"
         )}
-      </AnimatePresence>
-    </motion.nav>
+      >
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/80 backdrop-blur-md">
+          {menuItems.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              className="block px-3 py-2 text-gray-800 hover:text-gray-600 transition-colors duration-200"
+              onClick={() => setIsOpen(false)}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </nav>
   );
 };
 
