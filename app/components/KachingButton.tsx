@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Phone } from "react-feather";
 
 interface KachingButtonProps {
-  icon?: React.ComponentType<{ size?: number }>;
+  icon?: React.ComponentType<{ size?: number }>; 
   text?: string;
 }
 
