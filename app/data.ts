@@ -7,7 +7,7 @@ export type Project = {
   accentColor?: string;
 };
 
-export const ALL_PROJECTS = [
+export const ALL_PROJECTS: Project[] = [
   {
     href: "/projects/spring-design",
     title: "Spring design system",
