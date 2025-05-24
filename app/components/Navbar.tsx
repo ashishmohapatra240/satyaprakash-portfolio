@@ -427,9 +427,9 @@ const Navbar = () => {
                               exit="closed"
                             >
                               <Link
-                                href="/design-disciplines"
+                                href="/3d-motion-more"
                                 onClick={() => setIsOpen(false)}
-                                className={`inline-block font-medium transition-colors duration-300 relative group ${pathname === "/design-disciplines"
+                                className={`inline-block font-medium transition-colors duration-300 relative group ${pathname === "/3d-motion-more"
                                   ? "text-[#0019FF]"
                                   : "text-slate-600 hover:text-slate-800 active:text-[#0019FF]"
                                   }`}
@@ -437,7 +437,7 @@ const Navbar = () => {
                               >
                                 3D, Motion & more
                                 <span
-                                  className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === "/design-disciplines"
+                                  className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === "/3d-motion-more"
                                     ? "w-full bg-[#0019FF]"
                                     : "w-0 bg-slate-300 group-hover:bg-slate-300 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full"
                                     }`}
