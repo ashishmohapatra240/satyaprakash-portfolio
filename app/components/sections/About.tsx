@@ -66,6 +66,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-responsive-2xl lg:text-responsive-3xl 2xl:text-responsive-4xl font-medium text-[#0E0F16] mt-8 sm:mt-16 leading-tight">
+            <h2 className="text-responsive-2xl lg:text-responsive-3xl 2xl:text-responsive-4xl font-medium text-[#0E0F16] mt-8 sm:mt-16 leading-tight">
               Crafting experience
               <br className="hidden sm:block" />
               Creating Impact

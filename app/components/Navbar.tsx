@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
@@ -14,7 +15,6 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isScrollingDown, setIsScrollingDown] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,40 +53,7 @@ const Navbar = () => {
     };
   }, [isOpen]);
 
-  const menuVariants = {
-    closed: {
-      opacity: 0,
-      x: "100%",
-      transition: {
-        duration: 0.5,
-        ease: [0.16, 1, 0.3, 1],
-      },
-    },
-    open: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.5,
-        ease: [0.16, 1, 0.3, 1],
-      },
-    },
-  };
 
-  const itemVariants = {
-    closed: {
-      opacity: 0,
-      x: 20,
-    },
-    open: (i: number) => ({
-      opacity: 1,
-      x: 0,
-      transition: {
-        delay: 0.2 + i * 0.1,
-        duration: 0.4,
-        ease: [0.22, 1, 0.36, 1],
-      },
-    }),
-  };
 
   return (
     <>
@@ -192,10 +159,29 @@ const Navbar = () => {
                 </div>
               </motion.button>
             </div>
+                </div>
+              </motion.button>
+            </div>
           </div>
         </div>
       </motion.nav>
+      </motion.nav>
 
+      {/* Overlay Background - Above everything except panel and hamburger */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-40 bg-black/70 backdrop-blur-md"
+            onClick={() => setIsOpen(false)}
+          />
+        )}
+      </AnimatePresence>
+
+      {/* Right Sliding Menu Panel */}
       {/* Overlay Background - Above everything except panel and hamburger */}
       <AnimatePresence>
         {isOpen && (
@@ -493,6 +479,7 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
+    </>
     </>
   );
 };

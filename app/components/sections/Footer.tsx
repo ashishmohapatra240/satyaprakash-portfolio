@@ -14,18 +14,9 @@ export default function Footer() {
           </h2>
           <p className="text-white">Lets chat over a cup of coffee</p>
           <div className="flex flex-row gap-4">
-            <Link
-              href="https://calendly.com/satyaprakashray999/30min"
-              className="inline-block bg-white text-black px-8 py-3 border border-white/20 rounded-full hover:bg-white/90  transition-colors"
-            >
+            <ButtonWhite href="https://calendly.com/satyaprakashray999/30min">
               Lets talk
-            </Link>
-            <Link
-              href="mailto:satyaprakashray999@gmail.com"
-              className="inline-block px-8 py-3 text-white border border-white/20 rounded-full hover:bg-white/10 transition-colors"
-            >
-              Drop a mail
-            </Link>
+            </ButtonWhite>
           </div>
 
           {/* Social Links */}
