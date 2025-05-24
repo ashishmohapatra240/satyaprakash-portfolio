@@ -30,7 +30,7 @@ export default function PizzaHutProject() {
 
           {/* Project Info */}
           <div className="py-12 sm:py-20 flex flex-col sm:flex-row gap-8 sm:gap-24">
-            <div className="text-slate-800 text-xl sm:text-2xl lg:text-3xl leading-relaxed">
+            <div className="text-slate-800 text-xl sm:text-2xl lg:text-3xl" style={{ lineHeight: '1.6' }}>
               Pizza Hut introduced a rewards program to increase user engagement
               and drive repeat orders. However, the system failed to encourage
               customers to redeem their points effectively. My team and I took

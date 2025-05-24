@@ -1,25 +1,23 @@
 import Image from "next/image";
-import { Calendar } from "react-feather";
-import KachingButton from "../components/KachingButton";
 
-const Mentoring = () => {
+const Scribbling = () => {
     return (
         <main className="min-h-screen">
             {/* Hero Section */}
             <div className="max-w-[1220px] mx-auto px-4 sm:px-6 lg:px-12 min-h-screen flex flex-col">
                 <div className="pt-20 md:pt-32 mb-8">
-                    <h2 className="text-base sm:text-lg text-[#1E293B] font-normal">Helping people by</h2>
+                    <h2 className="text-base sm:text-lg text-[#1E293B] font-normal">Finding stillness in every stroke</h2>
                     <h1 className="text-[clamp(3rem,12vw,8rem)] font-normal text-[#1E293B] leading-[0.95]">
-                        Mentoring
+                        Scribbling
                     </h1>
                 </div>
 
                 <div className="flex flex-col md:flex-row md:justify-between mt-auto mb-20 md:mb-40 space-y-8 md:space-y-0">
                     <div className="max-w-full md:max-w-[460px] text-slate-800 text-xl sm:text-2xl lg:text-3xl" style={{ lineHeight: '1.6' }}>
-                        I love to spend time teaching stuff, that i know, and guiding students, who want to make a career in design
+                        Scribbling brings me a sense of peace. Drawing and sketching have been a part of my life since childhood, and they’re something I’ve always enjoyed.
                     </div>
                     <div className="max-w-full md:max-w-[460px] text-slate-800 text-xl sm:text-2xl lg:text-3xl" style={{ lineHeight: '1.6' }}>
-                        I also help them with my network, by connecting them to certain individuals who can help them.
+                        I may not be a pro yet, but I’m sketching my way to greatness—one doodle at a time!
                     </div>
                 </div>
             </div>
@@ -33,7 +31,7 @@ const Mentoring = () => {
                             <div className="absolute -inset-2 bg-gradient-to-r from-blue-100 to-blue-50 rounded-3xl opacity-0 blur-xl"></div>
                             <div className="relative">
                                 <Image
-                                    src="/images/design/mentoring/1.png"
+                                    src="/images/design/scribbling/1.png"
                                     alt="Mentoring session"
                                     width={600}
                                     height={400}
@@ -59,7 +57,7 @@ const Mentoring = () => {
                             <div className="absolute -inset-2 bg-gradient-to-r from-blue-50 to-blue-100 rounded-3xl opacity-0 blur-xl"></div>
                             <div className="relative">
                                 <Image
-                                    src="/images/design/mentoring/2.png"
+                                    src="/images/design/scribbling/2.png"
                                     alt="Design teaching"
                                     width={600}
                                     height={400}
@@ -75,7 +73,7 @@ const Mentoring = () => {
                         <div className="absolute -inset-2 bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50 rounded-3xl opacity-0 blur-xl"></div>
                         <div className="relative">
                             <Image
-                                src="/images/design/mentoring/3.png"
+                                src="/images/design/scribbling/5.png"
                                 alt="Group photo"
                                 width={1440}
                                 height={720}
@@ -90,7 +88,7 @@ const Mentoring = () => {
                             <div className="absolute -inset-2 bg-gradient-to-r from-blue-100 to-blue-50 rounded-3xl opacity-0 blur-xl"></div>
                             <div className="relative">
                                 <Image
-                                    src="/images/design/mentoring/4.png"
+                                    src="/images/design/scribbling/4.png"
                                     alt="Workshop help"
                                     width={600}
                                     height={400}
@@ -102,7 +100,7 @@ const Mentoring = () => {
                             <div className="absolute -inset-2 bg-gradient-to-r from-blue-50 to-blue-100 rounded-3xl opacity-0 blur-xl"></div>
                             <div className="relative">
                                 <Image
-                                    src="/images/design/mentoring/5.png"
+                                    src="/images/design/scribbling/3.png"
                                     alt="Design session"
                                     width={600}
                                     height={400}
@@ -114,7 +112,7 @@ const Mentoring = () => {
                 </section>
             </div>
 
-            {/* Footer Section */}
+            {/* Footer Section
             <section className="pt-30 pb-40 md:pt-48 md:pb-64 text-center">
                 <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
                     <p className="max-w-[640px] mx-auto text-slate-800 text-xl sm:text-2xl lg:text-3xl tracking-wide cursor-default mb-8 md:mb-12" style={{ lineHeight: '1.6' }}>
@@ -127,9 +125,9 @@ const Mentoring = () => {
                         </KachingButton>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </main>
     );
 };
 
-export default Mentoring;
+export default Scribbling;

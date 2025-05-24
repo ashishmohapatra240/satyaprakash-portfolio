@@ -30,7 +30,7 @@ export default function teamXProject() {
 
           {/* Project Info */}
           <div className="py-8 sm:py-12 md:py-20 flex flex-col sm:flex-row gap-8 sm:gap-24">
-            <div className="text-slate-800 text-lg sm:text-xl lg:text-2xl xl:text-3xl leading-relaxed">
+            <div className="text-slate-800 text-lg sm:text-xl lg:text-2xl xl:text-3xl" style={{ lineHeight: '1.6' }}>
               TeamX was building an AI-driven fraud detection system to help
               businesses minimize losses. Their core feature assigned risk
               scores to entities while generating alerts based on patterns. We
