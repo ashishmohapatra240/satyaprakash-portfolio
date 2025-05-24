@@ -2,24 +2,24 @@ import Image from "next/image";
 import { Calendar } from "react-feather";
 import KachingButton from "../components/KachingButton";
 
-const Mentoring = () => {
+const ThreeDMotionandMore = () => {
     return (
         <main className="min-h-screen">
             {/* Hero Section */}
             <div className="max-w-[1220px] mx-auto px-4 sm:px-6 lg:px-12 min-h-screen flex flex-col">
                 <div className="pt-20 md:pt-32 mb-8">
-                    <h2 className="text-base sm:text-lg text-[#1E293B] font-normal">Helping people by</h2>
+                    <h2 className="text-base sm:text-lg text-[#1E293B] font-normal">Getting away from UI and getting into</h2>
                     <h1 className="text-[clamp(3rem,12vw,8rem)] font-normal text-[#1E293B] leading-[0.95]">
-                        Mentoring
+                        3D, Motion & More
                     </h1>
                 </div>
 
                 <div className="flex flex-col md:flex-row md:justify-between mt-auto mb-20 md:mb-40 space-y-8 md:space-y-0">
                     <div className="max-w-full md:max-w-[460px] text-slate-800 text-xl sm:text-2xl lg:text-3xl" style={{ lineHeight: '1.6' }}>
-                        I love to spend time teaching stuff, that i know, and guiding students, who want to make a career in design
+                        Still figuring it out, but the fun is in the fiddling
                     </div>
                     <div className="max-w-full md:max-w-[460px] text-slate-800 text-xl sm:text-2xl lg:text-3xl" style={{ lineHeight: '1.6' }}>
-                        I also help them with my network, by connecting them to certain individuals who can help them.
+                        I often find myself diving into unfamiliar design spaces—tinkering with motion, Creating in 3D, and discovering the magic in motion.
                     </div>
                 </div>
             </div>
@@ -33,8 +33,8 @@ const Mentoring = () => {
                             <div className="absolute -inset-2 bg-gradient-to-r from-blue-100 to-blue-50 rounded-3xl opacity-0 blur-xl"></div>
                             <div className="relative">
                                 <Image
-                                    src="/images/design/mentoring/1.png"
-                                    alt="Mentoring session"
+                                    src="/images/design/3d-motion.png"
+                                    alt="3D Motion design"
                                     width={600}
                                     height={400}
                                     className="rounded-2xl object-cover shadow-lg"
@@ -43,7 +43,7 @@ const Mentoring = () => {
                         </div>
                         <div className="flex items-start">
                             <p className="text-slate-800 text-xl sm:text-2xl lg:text-3xl tracking-wide cursor-default" style={{ lineHeight: '1.6' }}>
-                                Being a self-taught designer, I relate with people struggling and being clueless in this design career.
+                                It's not just pixels and meshes—sometimes a tiny animation can say more than words.
                             </p>
                         </div>
                     </div>
@@ -52,15 +52,15 @@ const Mentoring = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                         <div className="flex items-start">
                             <p className="text-slate-800 text-xl sm:text-2xl lg:text-3xl tracking-wide cursor-default" style={{ lineHeight: '1.6' }}>
-                                Helping them with proper resources, and guiding them is what makes me happy. I also teach things, about design.
+                                Every frame, angle, and keyframe teaches me to see design in motion—and motion in design.
                             </p>
                         </div>
                         <div className="relative">
                             <div className="absolute -inset-2 bg-gradient-to-r from-blue-50 to-blue-100 rounded-3xl opacity-0 blur-xl"></div>
                             <div className="relative">
                                 <Image
-                                    src="/images/design/mentoring/2.png"
-                                    alt="Design teaching"
+                                    src="/images/design/motion.png"
+                                    alt="Motion design"
                                     width={600}
                                     height={400}
                                     className="rounded-2xl object-cover shadow-lg"
@@ -75,8 +75,8 @@ const Mentoring = () => {
                         <div className="absolute -inset-2 bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50 rounded-3xl opacity-0 blur-xl"></div>
                         <div className="relative">
                             <Image
-                                src="/images/design/mentoring/3.png"
-                                alt="Group photo"
+                                src="/images/design/sketch.png"
+                                alt="Design sketches"
                                 width={1440}
                                 height={720}
                                 className="w-full rounded-2xl object-cover aspect-[3/2] sm:aspect-[2/1] shadow-lg"
@@ -90,8 +90,8 @@ const Mentoring = () => {
                             <div className="absolute -inset-2 bg-gradient-to-r from-blue-100 to-blue-50 rounded-3xl opacity-0 blur-xl"></div>
                             <div className="relative">
                                 <Image
-                                    src="/images/design/mentoring/4.png"
-                                    alt="Workshop help"
+                                    src="/images/design/sketching.png"
+                                    alt="Sketching process"
                                     width={600}
                                     height={400}
                                     className="rounded-2xl object-cover w-full aspect-[4/3] shadow-lg"
@@ -102,8 +102,8 @@ const Mentoring = () => {
                             <div className="absolute -inset-2 bg-gradient-to-r from-blue-50 to-blue-100 rounded-3xl opacity-0 blur-xl"></div>
                             <div className="relative">
                                 <Image
-                                    src="/images/design/mentoring/5.png"
-                                    alt="Design session"
+                                    src="/images/design/mentor.png"
+                                    alt="Design process"
                                     width={600}
                                     height={400}
                                     className="rounded-2xl object-cover w-full aspect-[4/3] shadow-lg"
@@ -132,4 +132,4 @@ const Mentoring = () => {
     );
 };
 
-export default Mentoring;
+export default ThreeDMotionandMore; 
