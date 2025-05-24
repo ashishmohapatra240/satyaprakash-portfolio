@@ -4,9 +4,9 @@ import KachingButton from "../components/KachingButton";
 
 const Mentoring = () => {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen max-w-7xl mx-auto px-4 lg:px-0 ">
       {/* Hero Section */}
-      <div className="max-w-[1220px] mx-auto px-4 sm:px-6 lg:px-12 min-h-screen flex flex-col">
+      <div className="flex flex-col">
         <div className="pt-20 md:pt-32 mb-8">
           <h2 className="text-base sm:text-lg text-[#1E293B] font-normal">
             Helping people by
@@ -18,14 +18,14 @@ const Mentoring = () => {
 
         <div className="flex flex-col md:flex-row md:justify-between mt-auto mb-20 md:mb-40 space-y-8 md:space-y-0">
           <div
-            className="max-w-full md:max-w-[460px] text-slate-800 text-xl sm:text-2xl lg:text-3xl"
+            className=" text-slate-800 text-xl sm:text-2xl lg:text-3xl"
             style={{ lineHeight: "1.6" }}
           >
             I love to spend time teaching stuff, that i know, and guiding
             students, who want to make a career in design
           </div>
           <div
-            className="max-w-full md:max-w-[460px] text-slate-800 text-xl sm:text-2xl lg:text-3xl"
+            className=" text-slate-800 text-xl sm:text-2xl lg:text-3xl"
             style={{ lineHeight: "1.6" }}
           >
             I also help them with my network, by connecting them to certain
@@ -35,7 +35,7 @@ const Mentoring = () => {
       </div>
 
       {/* Image and Quote Sections */}
-      <div className="max-w-[1220px] mx-auto px-4 sm:px-6 lg:px-12 py-16 md:py-32">
+      <div className="max-w-7xl mx-auto px-4 lg:px-0 py-16 md:py-32">
         <section className="space-y-8">
           {/* Image and Quote Section 1 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
