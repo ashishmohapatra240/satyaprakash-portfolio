@@ -2,12 +2,31 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
+import dynamic from 'next/dynamic';
+
+const KachingButton = dynamic(() => import('./KachingButton'), { ssr: false });
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY.current && currentScrollY > 40) {
+        setShowNavbar(false); // scrolling down
+      } else {
+        setShowNavbar(true); // scrolling up
+      }
+      lastScrollY.current = currentScrollY;
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const menuItems = [
     { label: "Projects", href: "/projects" },
@@ -17,9 +36,12 @@ const Navbar = () => {
   ];
 
   return (
-    <nav
+    <motion.nav
+      initial={{ y: 0, opacity: 1 }}
+      animate={{ y: showNavbar ? 0 : -60, opacity: showNavbar ? 1 : 0 }}
+      transition={{ type: "tween", duration: 0.3 }}
       className={clsx(
-        "fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md"
+        "fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md py-[20px]"
         // "px-4 md:px-0 md:max-w-[90%] lg:max-w-[80%] md:mx-auto"
       )}
     >
@@ -48,6 +70,7 @@ const Navbar = () => {
                 {item.label}
               </Link>
             ))}
+            <KachingButton />
           </div>
 
           {/* Mobile Menu Button */}
@@ -117,7 +140,7 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </motion.nav>
   );
 };
 

@@ -1,8 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import ButtonWhite from "../ButtonWhite";
+
 export default function Footer() {
   return (
-    <section className="min-h-[50vh] bg-[#0E0F16] flex flex-col items-start justify-center">
+    <section className="min-h-[50vh] bg-[#0E0F16] flex flex-col items-start justify-center py-[72px]">
       <div className="w-full flex flex-row justify-between widescreenConstraint">
         {/* Main Content */}
         <div className="space-y-6 text-left mb-16">
@@ -13,18 +15,7 @@ export default function Footer() {
           </h2>
           <p className="text-white">Lets chat over a cup of coffee</p>
           <div className="flex flex-row gap-4">
-            <Link
-              href="https://calendly.com/satyaprakashray999/30min"
-              className="inline-block bg-white text-black px-8 py-3 border border-white/20 rounded-full hover:bg-white/90  transition-colors"
-            >
-              Lets talk
-            </Link>
-            <Link
-              href="mailto:satyaprakashray999@gmail.com"
-              className="inline-block px-8 py-3 text-white border border-white/20 rounded-full hover:bg-white/10 transition-colors"
-            >
-              Drop a mail
-            </Link>
+            <ButtonWhite href="https://calendly.com/satyaprakashray999/30min">Lets talk</ButtonWhite>
           </div>
 
           {/* Social Links */}
