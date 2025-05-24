@@ -31,7 +31,7 @@ export default function SpringDesignProject() {
 
           {/* Project Info */}
           <div className="py-12 sm:py-20 flex flex-col sm:flex-row gap-6 sm:gap-24">
-            <div className="text-slate-800 text-lg sm:text-xl lg:text-2xl xl:text-3xl leading-relaxed">
+            <div className="text-slate-800 text-lg sm:text-xl lg:text-2xl xl:text-3xl" style={{ lineHeight: '1.6' }}>
               Creating a design system that was both simple and effective seemed
               like an ambitious task, but it even one use knew had the potential
               to change the way we worked. The goal was clear: to build a system
