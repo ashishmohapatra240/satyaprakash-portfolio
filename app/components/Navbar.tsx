@@ -123,36 +123,54 @@ const Navbar = () => {
               </motion.div>
             </Link>
 
-            {/* Menu Button - Transforms in place */}
-            <motion.button
-              onClick={() => setIsOpen(!isOpen)}
-              className="relative inline-flex items-center justify-center w-10 h-10 text-gray-800 hover:text-gray-600 transition-colors z-[100]"
-              whileTap={{ scale: 0.95 }}
-              animate={{
-                backgroundColor: (isScrolled && !isOpen) ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 0)"
-              }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-              style={{ borderRadius: '6px' }}
-            >
-              <span className="sr-only">{isOpen ? 'Close menu' : 'Open menu'}</span>
-              <div className="w-6 h-6 relative flex items-center justify-center">
-                <motion.span
-                  animate={isOpen ? { rotate: 45, y: 0 } : { rotate: 0, y: -6 }}
-                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                  className="absolute w-6 h-0.5 bg-gray-800 transform origin-center"
-                />
-                <motion.span
-                  animate={isOpen ? { opacity: 0, scale: 0 } : { opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                  className="absolute w-6 h-0.5 bg-gray-800"
-                />
-                <motion.span
-                  animate={isOpen ? { rotate: -45, y: 0 } : { rotate: 0, y: 6 }}
-                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                  className="absolute w-6 h-0.5 bg-gray-800 transform origin-center"
-                />
-              </div>
-            </motion.button>
+            {/* Right Side - Button and Hamburger */}
+            <div className="flex items-center gap-8">
+              {/* KachingButton - visible when panel is closed */}
+              <motion.div
+                animate={{
+                  backgroundColor: (isScrolled && !isOpen) ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 0)",
+                  opacity: isOpen ? 0 : (isScrollingDown ? 0 : 1),
+                  y: isScrollingDown && !isOpen ? -60 : 0,
+                  pointerEvents: isOpen ? 'none' : 'auto'
+                }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="p-2 -m-2"
+                style={{ borderRadius: '6px' }}
+              >
+                <KachingButton />
+              </motion.div>
+
+              {/* Menu Button - Transforms in place */}
+              <motion.button
+                onClick={() => setIsOpen(!isOpen)}
+                className="relative inline-flex items-center justify-center w-10 h-10 text-gray-800 hover:text-gray-600 transition-colors z-[100]"
+                whileTap={{ scale: 0.95 }}
+                animate={{
+                  backgroundColor: (isScrolled && !isOpen) ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 0)"
+                }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                style={{ borderRadius: '6px' }}
+              >
+                <span className="sr-only">{isOpen ? 'Close menu' : 'Open menu'}</span>
+                <div className="w-6 h-6 relative flex items-center justify-center">
+                  <motion.span
+                    animate={isOpen ? { rotate: 45, y: 0 } : { rotate: 0, y: -6 }}
+                    transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                    className="absolute w-6 h-0.5 bg-gray-800 transform origin-center"
+                  />
+                  <motion.span
+                    animate={isOpen ? { opacity: 0, scale: 0 } : { opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                    className="absolute w-6 h-0.5 bg-gray-800"
+                  />
+                  <motion.span
+                    animate={isOpen ? { rotate: -45, y: 0 } : { rotate: 0, y: 6 }}
+                    transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                    className="absolute w-6 h-0.5 bg-gray-800 transform origin-center"
+                  />
+                </div>
+              </motion.button>
+            </div>
           </div>
         </div>
       </motion.nav>

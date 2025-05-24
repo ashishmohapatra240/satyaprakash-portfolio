@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react";
 import ProjectCard from "../ProjectCard";
 import { motion } from "framer-motion";
-import Interactive3DImage from "../Interactive3DImage";
 import Marquee from "./Marquee";
 
 const PROJECTS = [
@@ -39,14 +38,6 @@ const PROJECTS = [
 ];
 
 // Animation variants
-const fadeIn = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.08, ease: "easeOut" },
-  },
-};
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -107,9 +98,8 @@ export default function About() {
           // Faster fade out
           el.style.opacity = `${1 - progress * 1.2}`;
           // More dramatic shift but completes faster
-          el.style.transform = `translateY(${-progress * 40}px) scale(${
-            1 - progress * 0.08
-          })`;
+          el.style.transform = `translateY(${-progress * 40}px) scale(${1 - progress * 0.08
+            })`;
           el.style.willChange =
             progress > 0 && progress < 1 ? "opacity, transform" : "auto";
           // Faster color transition
@@ -125,9 +115,8 @@ export default function About() {
         // More dramatic hero image animation
         const heroImage = hero.querySelector("img") as HTMLElement;
         if (heroImage) {
-          heroImage.style.transform = `translateY(${-progress * 100}px) scale(${
-            1 - progress * 0.35
-          }) rotate(${progress * -6}deg)`;
+          heroImage.style.transform = `translateY(${-progress * 100}px) scale(${1 - progress * 0.35
+            }) rotate(${progress * -6}deg)`;
           heroImage.style.opacity = `${1 - progress * 1.2}`;
           heroImage.style.willChange =
             progress > 0 && progress < 1 ? "transform, opacity" : "auto";
@@ -151,9 +140,8 @@ export default function About() {
           el.style.transform = `scale(${0.95 + adjustedProgress * 0.05}) 
                                rotate(${(1 - adjustedProgress) * 0.5}deg)`;
           // Add text shadow for depth effect that fades in
-          el.style.textShadow = `0 ${(1 - adjustedProgress) * 8}px ${
-            adjustedProgress * 12
-          }px rgba(0,0,0,${adjustedProgress * 0.2})`;
+          el.style.textShadow = `0 ${(1 - adjustedProgress) * 8}px ${adjustedProgress * 12
+            }px rgba(0,0,0,${adjustedProgress * 0.2})`;
           // Add filter for subtle blur effect that clears as scrolled
           el.style.filter = `blur(${(1 - adjustedProgress) * 3}px)`;
           el.style.willChange =
@@ -181,50 +169,6 @@ export default function About() {
 
   return (
     <section className="relative w-full overflow-hidden" ref={sectionRef}>
-      {/* Dark section */}
-      <div className="min-h-screen bg-transparent relative flex flex-col justify-center items-center text-center pt-20 pb-32 widescreenConstraint">
-        <motion.div
-          className="mx-auto px-4 sm:px-6 lg:px-36 space-y-16 sm:space-y-24 dark-section-content"
-          initial="hidden"
-          animate="visible"
-          variants={staggerContainer}
-        >
-          {/* First text block */}
-          <motion.h2
-            className="text-white text-3xl sm:text-5xl max-w-2xl mx-auto font-medium leading-tight"
-            variants={fadeIn}
-          >
-            I love challenges may it be
-            <br className="hidden sm:block" />a sport or Design
-          </motion.h2>
-
-          {/* Add animated helmet image here */}
-          <motion.div className="w-full">
-            <Interactive3DImage
-              src="/images/playstation.png"
-              width={400}
-              height={400}
-              alt="playstation"
-            />
-          </motion.div>
-
-          {/* Second text block */}
-          <motion.p
-            className="text-white/80 text-xl sm:text-3xl max-w-2xl mx-auto leading-relaxed"
-            variants={fadeIn}
-          >
-            It&apos;s the adrenaline that keeps me up. May it be{" "}
-            <br className="hidden sm:block" />
-            riding my bike, cherishing basketball or creating{" "}
-            <br className="hidden sm:block" />
-            solution which can help thousands of people
-          </motion.p>
-        </motion.div>
-
-        {/* Enhanced gradient overlay at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent to-[#0E0F16]/30" />
-      </div>
-
       {/* White section */}
       <div className="bg-white relative" ref={projectsRef}>
         {/* Top Content - Constrained */}
@@ -236,12 +180,12 @@ export default function About() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl sm:text-5xl font-medium text-[#0E0F16] mt-8 sm:mt-16 leading-tight">
+            <h2 className="text-responsive-2xl lg:text-responsive-3xl 2xl:text-responsive-4xl font-medium text-[#0E0F16] mt-8 sm:mt-16 leading-tight">
               Crafting experience
               <br className="hidden sm:block" />
               Creating Impact
             </h2>
-            <p className="text-gray text-lg sm:text-xl">that matters...</p>
+            <p className="text-gray text-responsive-base lg:text-responsive-lg">that matters...</p>
           </motion.div>
         </div>
 
