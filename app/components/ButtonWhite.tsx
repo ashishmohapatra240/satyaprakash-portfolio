@@ -28,8 +28,8 @@ export default function ButtonWhite({ children, href }: ButtonWhiteProps) {
                 style={{ background: "#B5BDFF33" }}
             /> */}
             <span className="absolute left-0 top-0 bottom-0 flex items-center animate-reflectGroup z-0">
-                <span className="w-[45px] h-full bg-white/10 skew-x-[-15deg] " style={{ background: "#B5BDFF33" }} />
-                <span className="w-[25px] h-full bg-white/10 skew-x-[-15deg] ml-[6px] " style={{ background: "#B5BDFF33" }} />
+                <span className="w-[45px] h-full bg-blue-200/40 skew-x-[-15deg]" />
+                <span className="w-[25px] h-full bg-blue-200/40 skew-x-[-15deg] ml-[6px]" />
             </span>
         </button>
     );

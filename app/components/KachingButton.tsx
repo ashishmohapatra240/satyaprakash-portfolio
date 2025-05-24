@@ -1,8 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { Phone } from "react-feather";
 
-export default function KachingButton() {
+interface KachingButtonProps {
+    icon?: React.ComponentType<{ size?: number }>;
+    text?: string;
+}
+
+export default function KachingButton({ icon: Icon = Phone, text = "Let's talk" }: KachingButtonProps) {
     const [isPressed, setIsPressed] = useState(false);
 
     return (
@@ -14,7 +20,10 @@ export default function KachingButton() {
                 onMouseUp={() => setIsPressed(false)}
                 onMouseLeave={() => setIsPressed(false)}
             >
-                <span className="relative z-10 antialiased">Kach-ing</span>
+                <span className="relative z-10 antialiased flex items-center gap-2">
+                    <Icon size={16} />
+                    {text}
+                </span>
                 <span className="absolute left-0 top-0 bottom-0 flex items-center animate-reflectGroup z-0">
                     <span className="w-[45px] h-full bg-white/10 skew-x-[-15deg]" />
                     <span className="w-[25px] h-full bg-white/10 skew-x-[-15deg] ml-[6px]" />
