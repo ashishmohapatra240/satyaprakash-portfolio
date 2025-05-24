@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import ProjectCard from "../ProjectCard";
 import { motion } from "framer-motion";
 import Interactive3DImage from "../Interactive3DImage";
@@ -61,123 +61,6 @@ const staggerContainer = {
 export default function About() {
   const projectsRef = useRef(null);
   const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // Enhanced color transition effect with faster speed
-      const section = sectionRef.current as HTMLElement | null;
-      const hero = document.querySelector(
-        "section:first-of-type"
-      ) as HTMLElement;
-
-      if (section && hero) {
-        const sectionTop = section.getBoundingClientRect().top;
-        const viewportHeight = window.innerHeight;
-
-        // Faster transition with narrower range for quicker completion
-        const transitionStart = viewportHeight * 0.5;
-        const transitionEnd = viewportHeight * 0.2;
-        const transitionRange = transitionStart - transitionEnd;
-
-        // Calculate progress with faster easing
-        let progress = 0;
-        if (sectionTop <= transitionStart) {
-          progress = Math.max(
-            0,
-            Math.min(1, (transitionStart - sectionTop) / transitionRange)
-          );
-
-          // More aggressive easing curve for faster feel
-          progress = Math.pow(progress, 1.2);
-        }
-
-        // Apply background color with enhanced RGB values - using will-change for better performance
-        const r = Math.round(255 - (255 - 14) * progress);
-        const g = Math.round(255 - (255 - 15) * progress);
-        const b = Math.round(255 - (255 - 22) * progress);
-
-        document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-        document.body.style.willChange =
-          progress > 0 && progress < 1 ? "background-color" : "auto";
-
-        // Apply text color transitions to hero elements with faster animations
-        const heroTexts = hero.querySelectorAll("p, h1");
-        heroTexts.forEach((element) => {
-          const el = element as HTMLElement;
-          // Faster fade out
-          el.style.opacity = `${1 - progress * 1.2}`;
-          // More dramatic shift but completes faster
-          el.style.transform = `translateY(${-progress * 40}px) scale(${
-            1 - progress * 0.08
-          })`;
-          el.style.willChange =
-            progress > 0 && progress < 1 ? "opacity, transform" : "auto";
-          // Faster color transition
-          el.style.color = `rgb(
-            ${Math.round(32 + (0 - 32) * progress)},
-            ${Math.round(35 + (255 - 35) * progress)},
-            ${Math.round(61 + (255 - 61) * progress)}
-          )`;
-          // Add transition for smoother color changes
-          el.style.transition = "color 0.2s ease-out";
-        });
-
-        // More dramatic hero image animation
-        const heroImage = hero.querySelector("img") as HTMLElement;
-        if (heroImage) {
-          heroImage.style.transform = `translateY(${-progress * 100}px) scale(${
-            1 - progress * 0.35
-          }) rotate(${progress * -6}deg)`;
-          heroImage.style.opacity = `${1 - progress * 1.2}`;
-          heroImage.style.willChange =
-            progress > 0 && progress < 1 ? "transform, opacity" : "auto";
-        }
-
-        // New animation for About section text - subtle reveal effect
-        const aboutTexts = document.querySelectorAll(
-          ".dark-section-content h2, .dark-section-content p"
-        );
-        aboutTexts.forEach((element, index) => {
-          const el = element as HTMLElement;
-          const delay = index * 0.03;
-          const adjustedProgress = Math.max(
-            0,
-            (progress - delay) * (1 / (1 - delay))
-          );
-
-          // Subtle fade in with slight blur effect
-          el.style.opacity = `${Math.min(1, adjustedProgress * 2.5)}`;
-          // Subtle scale and rotation effect
-          el.style.transform = `scale(${0.95 + adjustedProgress * 0.05}) 
-                               rotate(${(1 - adjustedProgress) * 0.5}deg)`;
-          // Add text shadow for depth effect that fades in
-          el.style.textShadow = `0 ${(1 - adjustedProgress) * 8}px ${
-            adjustedProgress * 12
-          }px rgba(0,0,0,${adjustedProgress * 0.2})`;
-          // Add filter for subtle blur effect that clears as scrolled
-          el.style.filter = `blur(${(1 - adjustedProgress) * 3}px)`;
-          el.style.willChange =
-            adjustedProgress > 0 && adjustedProgress < 1
-              ? "opacity, transform, filter"
-              : "auto";
-        });
-
-        // Animate the scroll button in hero section
-        const scrollButton = hero.querySelector("button") as HTMLElement;
-        if (scrollButton) {
-          scrollButton.style.opacity = `${1 - progress * 2}`;
-          scrollButton.style.transform = `translateY(${progress * 25}px)`;
-          scrollButton.style.willChange =
-            progress > 0 && progress < 1 ? "opacity, transform" : "auto";
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    // Trigger once on load to set initial state
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <section className="relative w-full overflow-hidden" ref={sectionRef}>
