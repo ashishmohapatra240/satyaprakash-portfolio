@@ -15,7 +15,7 @@ module.exports = {
                 },
             },
             animation: {
-                reflectGroup: 'reflectGroup 5s linear infinite',
+                reflectGroup: 'reflectGroup 3s linear infinite',
             },
         },
     },
