@@ -3,18 +3,55 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
 
 const KachingButton = dynamic(() => import("./KachingButton"), { ssr: false });
 
+// Add animation variants
+const menuVariants = {
+  open: {
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 30,
+      staggerChildren: 0.05,
+    },
+  },
+  closed: {
+    x: "100%",
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 30,
+      staggerChildren: 0.05,
+    },
+  },
+};
+
+const itemVariants = {
+  open: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.1,
+      duration: 0.3,
+    },
+  }),
+  closed: {
+    opacity: 0,
+    y: 20,
+  },
+};
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isScrollingDown, setIsScrollingDown] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,8 +90,6 @@ const Navbar = () => {
     };
   }, [isOpen]);
 
-
-
   return (
     <>
       <motion.nav
@@ -76,13 +111,12 @@ const Navbar = () => {
                 animate={{
                   backgroundColor:
                     isScrolled && !isOpen
-                      ? "rgba(255, 255, 255, 1)"
+                      ? "rgba(255, 255, 255, 0)"
                       : "rgba(255, 255, 255, 0)",
                   opacity: isOpen ? 0 : isScrollingDown ? 0 : 1,
                   y: isScrollingDown && !isOpen ? -60 : 0,
                 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="p-2 -m-2"
                 style={{ borderRadius: "6px" }}
               >
                 <Image
@@ -109,13 +143,12 @@ const Navbar = () => {
                   pointerEvents: isOpen ? "none" : "auto",
                 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="p-2 -m-2"
                 style={{ borderRadius: "6px" }}
               >
                 <KachingButton />
               </motion.div>
 
-              {/* Menu Button - Transforms in place */}
+              {/* Menu Button */}
               <motion.button
                 onClick={() => setIsOpen(!isOpen)}
                 className="relative inline-flex items-center justify-center w-10 h-10 text-gray-800 hover:text-gray-600 transition-colors z-[100]"
@@ -159,30 +192,11 @@ const Navbar = () => {
                 </div>
               </motion.button>
             </div>
-                </div>
-              </motion.button>
-            </div>
           </div>
         </div>
       </motion.nav>
-      </motion.nav>
 
-      {/* Overlay Background - Above everything except panel and hamburger */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-black/70 backdrop-blur-md"
-            onClick={() => setIsOpen(false)}
-          />
-        )}
-      </AnimatePresence>
-
-      {/* Right Sliding Menu Panel */}
-      {/* Overlay Background - Above everything except panel and hamburger */}
+      {/* Overlay Background */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -479,7 +493,6 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
     </>
   );
 };

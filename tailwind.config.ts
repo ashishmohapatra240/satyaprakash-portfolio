@@ -26,6 +26,15 @@ const config: Config = {
         dark: "#20233D",
         gray: "#9099A5",
       },
+      keyframes: {
+        reflectGroup: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(200%)' },
+        },
+      },
+      animation: {
+        reflectGroup: 'reflectGroup 2s infinite',
+      },
     },
   },
   plugins: [],

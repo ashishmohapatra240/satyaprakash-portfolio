@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import ButtonWhite from "../ButtonWhite";
 
 export default function Footer() {
   return (
