@@ -435,7 +435,7 @@ const Navbar = () => {
                                   }`}
                                 style={{ fontSize: "16px" }}
                               >
-                                Design disciplines
+                                3D, Motion & more
                                 <span
                                   className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === "/design-disciplines"
                                     ? "w-full bg-[#0019FF]"
