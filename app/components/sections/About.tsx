@@ -57,7 +57,7 @@ export default function About() {
       {/* White section */}
       <div className="bg-white relative" ref={projectsRef}>
         {/* Top Content - Constrained */}
-        {/* <div className="pt-16 sm:pt-24 pb-32 widescreenConstraint">
+        {/* <div className="pt-16 sm:pt-24 pb-32 ">
           <motion.div
             className="text-center space-y-6"
             initial={{ opacity: 0, y: 30 }}
@@ -83,7 +83,7 @@ export default function About() {
         </div> */}
 
         {/* Projects Grid - Constrained */}
-        <div className="widescreenConstraint pb-24">
+        <div className=" pb-24">
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto"
             initial="hidden"

@@ -58,7 +58,7 @@ const staggerContainer = {
 
 export default function Projects() {
   return (
-    <main className="pt-16 pb-0">
+    <main className="pt-16 pb-0 max-w-7xl mx-auto px-4 lg:px-0">
       {/* Hero Section */}
       <motion.section
         initial="initial"
@@ -67,7 +67,7 @@ export default function Projects() {
         variants={staggerContainer}
         className="mx-auto min-h-[80vh] flex items-center"
       >
-        <div className="w-full widescreenConstraint">
+        <div className="w-full ">
           <motion.div variants={fadeInUp} className="max-w-4xl">
             <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-normal text-slate-800 leading-tight mb-8">
               Selected Works
@@ -88,7 +88,7 @@ export default function Projects() {
         variants={staggerContainer}
         className="mx-auto py-16 md:py-32"
       >
-        <div className="widescreenConstraint">
+        <div className="">
           <div className="grid grid-cols-1 gap-20">
             {projects.map((project, index) => (
               <motion.div

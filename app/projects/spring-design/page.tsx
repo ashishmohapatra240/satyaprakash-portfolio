@@ -3,9 +3,9 @@ import NextProjects from "@/app/components/NextProjects";
 
 export default function SpringDesignProject() {
   return (
-    <main className="bg-white blogConstraint">
+    <main className="bg-white">
       <section className="py-12">
-        <div className="widescreenConstraint">
+        <div className="mx-auto">
           {/* Project Category */}
           <div className="text-indigo-600 text-base font-bold tracking-wider mt-24">
             SPRING DESIGN SYSTEM

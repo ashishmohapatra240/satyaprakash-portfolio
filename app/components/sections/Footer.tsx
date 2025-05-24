@@ -5,7 +5,7 @@ import ButtonWhite from "../ButtonWhite";
 export default function Footer() {
   return (
     <section className="min-h-[50vh] bg-[#0E0F16] flex flex-col items-start justify-center">
-      <div className="w-full flex flex-row justify-between max-w-7xl mx-auto">
+      <div className="w-full flex flex-row justify-between max-w-7xl mx-auto px-4 lg:px-0">
         {/* Main Content */}
         <div className="space-y-6 text-left mb-16">
           <h2 className="text-4xl md:text-7xl text-white font-medium leading-tight mt-24">

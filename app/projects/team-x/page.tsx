@@ -3,9 +3,9 @@ import NextProjects from "@/app/components/NextProjects";
 
 export default function teamXProject() {
   return (
-    <main className="bg-white blogConstraint">
+    <main className="bg-white">
       <section className="py-12">
-        <div className="mx-auto widescreenConstraint">
+        <div className="mx-auto ">
           {/* Project Category */}
           <div className="text-blue-600 text-base font-bold tracking-wider mt-8 sm:mt-12 md:mt-24">
             TEAM X

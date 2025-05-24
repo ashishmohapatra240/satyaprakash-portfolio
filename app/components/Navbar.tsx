@@ -98,7 +98,7 @@ const Navbar = () => {
         transition={{ type: "tween", duration: 0.3 }}
         className="fixed top-0 left-0 right-0 z-[100] py-[20px]"
       >
-        <div className="mx-auto widescreenConstraint">
+        <div className="mx-auto max-w-7xl px-4 lg:px-0">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link
@@ -218,9 +218,9 @@ const Navbar = () => {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="fixed top-0 right-0 h-full z-50 bg-white shadow-2xl w-full md:w-[70%] lg:w-1/2"
+            className="fixed top-0 right-0 h-full z-50 bg-white shadow-2xl w-full md:w-[70%] lg:w-1/2 px-20"
           >
-            <div className="flex flex-col h-full py-6 md:py-8 lg:py-12 xl:py-16 pt-20 md:pt-24 widescreenConstraint">
+            <div className="flex flex-col h-full py-6 md:py-8 lg:py-12 xl:py-16 pt-20 md:pt-24">
               {/* Top Section - Two Columns */}
               <div className="flex-1">
                 <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12 lg:gap-24 mt-12 md:mt-16">

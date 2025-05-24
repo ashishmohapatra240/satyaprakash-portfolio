@@ -2,9 +2,9 @@ import Image from "next/image";
 import Nextprojects from "@/app/components/NextProjects";
 export default function PizzaHutProject() {
   return (
-    <main className="bg-white blogConstraint">
+    <main className="bg-white">
       <section className="py-12">
-        <div className="mx-auto widescreenConstraint">
+        <div className="mx-auto">
           {/* Project Category */}
           <div className="text-rose-700 text-base font-bold tracking-wider mt-12 sm:mt-24">
             PIZZA HUT

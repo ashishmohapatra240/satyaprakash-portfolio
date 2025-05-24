@@ -15,12 +15,7 @@ export default function Hero() {
   });
 
   return (
-    <section
-      className={clsx(
-        "min-h-screen flex flex-col relative",
-        "widescreenConstraint"
-      )}
-    >
+    <section className={clsx("min-h-screen flex flex-col relative", "")}>
       <div className="flex-1 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 pt-20 md:pt-0">
         {/* Left content */}
         <div className="space-y-4 md:space-y-6 w-full text-center md:text-left">
