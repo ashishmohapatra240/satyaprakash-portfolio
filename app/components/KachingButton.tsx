@@ -16,7 +16,6 @@ export default function KachingButton({ children }: KachingButtonProps) {
         onMouseDown={() => setIsPressed(true)}
         onMouseUp={() => setIsPressed(false)}
         onMouseLeave={() => setIsPressed(false)}
-        onClick={() => window.location.href = "mailto:satyaprakashray999@gmail.com"}
       >
         <span className="relative z-10 antialiased flex items-center gap-2">
           {children}

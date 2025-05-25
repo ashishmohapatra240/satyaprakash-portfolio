@@ -144,10 +144,12 @@ const Navbar = () => {
                 style={{ borderRadius: "6px" }}
                 className="hidden md:block"
               >
-                <KachingButton>
-                  <Phone size={16} />
-                  Let&apos;s talk
-                </KachingButton>
+                <div onClick={() => window.location.href = "mailto:satyaprakashray999@gmail.com"}>
+                  <KachingButton>
+                    <Phone size={16} />
+                    Let&apos;s talk
+                  </KachingButton>
+                </div>
               </motion.div>
 
               {/* Menu Button */}
@@ -468,10 +470,12 @@ const Navbar = () => {
                     animate="open"
                     exit="closed"
                   >
-                    <KachingButton>
-                      <Phone size={16} />
-                      Let&apos;s talk
-                    </KachingButton>
+                    <div onClick={() => window.location.href = "mailto:satyaprakashray999@gmail.com"}>
+                      <KachingButton>
+                        <Phone size={16} />
+                        Let&apos;s talk
+                      </KachingButton>
+                    </div>
                   </motion.div>
                 </div>
               </div>

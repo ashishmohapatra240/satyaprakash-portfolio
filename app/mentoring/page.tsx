@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Calendar } from "react-feather";
 import KachingButton from "../components/KachingButton";
+import Link from "next/link";
 
 const Mentoring = () => {
   return (
@@ -143,10 +144,12 @@ const Mentoring = () => {
             happy to connect and help you as much as I can.
           </p>
           <div className="flex justify-center">
-            <KachingButton>
-              <Calendar size={20} className="mr-2" />
-              Book a session
-            </KachingButton>
+            <Link href="https://calendly.com/satyaprakashray999/30min" target="_blank" rel="noopener noreferrer">
+              <KachingButton>
+                <Calendar size={20} className="mr-2" />
+                Book a session
+              </KachingButton>
+            </Link>
           </div>
         </div>
       </section>
