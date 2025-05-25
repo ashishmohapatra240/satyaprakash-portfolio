@@ -1,31 +1,30 @@
-import Image from "next/image";
 import Link from "next/link";
 import { motion, useAnimation } from "framer-motion";
-import clsx from "clsx";
 
 interface ProjectCardProps {
   title: string;
   description: string;
+  company: string;
   image: string;
   href?: string;
+  year?: string;
 }
 
 export default function ProjectCard({
   title,
   description,
-  image,
+  company,
   href = "#",
+  year,
 }: ProjectCardProps) {
-  const isSecureProject =
-    description === "Marathon Digital Holdings" || description === "anonymous";
+  const isSecureProject = company === "Marathon Digital Holdings" || company === "anonymous";
   const controls = useAnimation();
 
   const shakeAnimation = {
     shake: {
-      x: [0, -200, 200, -160, 160, -120, 120, -80, 80, -40, 40, 0],
-      rotate: [0, -14, 14, -10, 10, -6, 6, -4, 4, -2, 2, 0],
+      x: [0, -10, 10, -8, 8, -6, 6, -4, 4, -2, 2, 0],
       transition: {
-        duration: 0.6,
+        duration: 0.4,
         ease: "easeInOut",
       },
     },
@@ -37,51 +36,38 @@ export default function ProjectCard({
     }
   };
 
-  const CardContent = () => (
+  const ListItem = () => (
     <motion.div
-      className="group bg-white rounded-lg p-6 transition-all duration-300 cursor-pointer"
+      className="relative py-6 border-b border-gray-200 last:border-b-0 cursor-pointer"
       variants={shakeAnimation}
       animate={controls}
       onClick={handleClick}
     >
-      <div className="relative w-full h-96 mb-4 overflow-hidden rounded-lg">
-        {isSecureProject && (
-          <div className="absolute top-4 left-4 z-10">
-            <Image
-              src="/icons/lock.png"
-              alt="Secure Project"
-              width={72}
-              height={40}
-              className="opacity-80 scale-75"
-            />
-          </div>
-        )}
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-cover h-full w-full group-hover:scale-105 transition-transform duration-300"
-        />
+      <div className="flex flex-col space-y-2">
+        {/* Company/Year */}
+        <div className="flex items-center justify-between">
+          <span className="text-sm text-blue-600 font-medium">{company}</span>
+          {year && <span className="text-sm text-gray-500">{year}</span>}
+        </div>
+
+        {/* Project Title */}
+        <h3 className="text-2xl md:text-3xl lg:text-4xl font-normal text-slate-800 transition-colors duration-300">
+          {title}
+        </h3>
+
+        {/* Project Description */}
+        <p className="text-lg text-gray-600 max-w-3xl leading-relaxed">
+          {description}
+        </p>
       </div>
-      <h3
-        className={clsx(
-          "text-lg font-medium text-dark mb-2 transition-colors font-sans",
-          isSecureProject
-            ? "group-hover:text-red-700"
-            : "group-hover:text-primary"
-        )}
-      >
-        {title}
-      </h3>
-      <p className="text-gray">{description}</p>
     </motion.div>
   );
 
   return isSecureProject ? (
-    <CardContent />
+    <ListItem />
   ) : (
-    <Link href={href}>
-      <CardContent />
+    <Link href={href} className="block">
+      <ListItem />
     </Link>
   );
 }

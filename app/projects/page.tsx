@@ -1,41 +1,52 @@
 "use client";
 import { motion } from "framer-motion";
-import Link from "next/link";
-import Image from "next/image";
+import ProjectCard from "../components/ProjectCard";
 
 const projects = [
   {
-    title: "Building a revolutionary AI-powered dream interpretation platform",
-    description:
-      "Creating an intuitive and engaging interface for DreamX that makes dream interpretation accessible while maintaining a sense of wonder and personal connection.",
+    title: "Designing the next-gen fraud detection system",
+    description: "A comprehensive fraud detection system for TeamX that helps protect millions of transactions.",
+    company: "Team X",
+    image: "/images/new-projects/thumbnails/TeamX.png",
+    href: "/projects/team-x",
+    year: "2023",
+  },
+  {
+    title: "Creating a better interactive homepage",
+    description: "Redesigning ESPN's homepage to create a more engaging and personalized sports experience.",
+    company: "ESPN",
+    image: "/images/new-projects/thumbnails/ESPN.png",
+    href: "#",
+    year: "2023",
+  },
+  {
+    title: "Optimising the design system and home page experience for DreamPay",
+    description: "Creating an intuitive and engaging interface for DreamX that makes dream interpretation accessible while maintaining a sense of wonder and personal connection.",
     company: "DreamX",
     image: "/images/new-projects/thumbnails/DreamX.png",
     href: "/projects/dreamx",
     year: "2024",
   },
   {
-    title: "Designing the next-gen fraud detection system",
-    description:
-      "A comprehensive fraud detection system for TeamX that helps protect millions of transactions.",
-    company: "TeamX",
-    image: "/images/new-projects/thumbnails/TeamX.png",
-    href: "/projects/team-x",
-    year: "2023",
-  },
-  {
-    title: "Branding and royalty system",
-    description:
-      "Redesigning the loyalty program experience for Pizza Hut Indonesia's customers.",
+    title: "Building a royalty system for a global pizza brand",
+    description: "Redesigning the loyalty program experience for Pizza Hut Indonesia's customers.",
     company: "Pizza Hut Indonesia",
     image: "/images/new-projects/thumbnails/PH.png",
     href: "/projects/pizza-hut",
     year: "2022",
   },
   {
-    title: "Spring Design System",
-    description:
-      "Creating a scalable and consistent design system that powers multiple products.",
-    company: "Team",
+    title: "Spring Design system",
+    description: "Creating a scalable and consistent design system that powers multiple products.",
+    company: "Internal",
+    image: "/images/new-projects/thumbnails/SD.png",
+    href: "/projects/spring-design",
+    year: "2021",
+  },
+  {
+    title: "DreamX",
+    description: "Creating a scalable and consistent design system that powers multiple products.",
+    company: "Internal",
     image: "/images/new-projects/thumbnails/SD.png",
     href: "/projects/spring-design",
     year: "2021",
@@ -51,81 +62,57 @@ const fadeInUp = {
 const staggerContainer = {
   animate: {
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.1,
     },
   },
 };
 
 export default function Projects() {
   return (
-    <main className="pt-16 pb-0 mx-auto max-w-7xl px-5 lg:px-20 md:px-8">
+    <main className="pt-16 pb-16 mx-auto max-w-7xl px-5 lg:px-20 md:px-8">
       {/* Hero Section */}
       <motion.section
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
         variants={staggerContainer}
-        className="mx-auto min-h-[80vh] flex items-center"
+        className="mx-auto pt-16 pb-8"
       >
-        <div className="w-full ">
+        <div className="w-full">
           <motion.div variants={fadeInUp} className="max-w-4xl">
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-normal text-slate-800 leading-tight mb-8">
-              Selected Works
+            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-normal text-slate-800 leading-tight">
+              Crafting experience<br />
+              Creating Impact <span className="text-gray-400">that<br />
+                fuels me</span> 🥏
             </h1>
-            <p className="text-2xl sm:text-3xl text-slate-600">
-              A collection of projects I&apos;ve worked on, focusing on user
-              experience, design systems, and product strategy.
-            </p>
           </motion.div>
         </div>
       </motion.section>
 
-      {/* Projects Grid */}
+      {/* Projects List */}
       <motion.section
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
         variants={staggerContainer}
-        className="mx-auto py-16 md:py-32"
+        className="mx-auto"
       >
-        <div className="">
-          <div className="grid grid-cols-1 gap-20">
-            {projects.map((project, index) => (
-              <motion.div
-                key={index}
-                variants={fadeInUp}
-                whileHover={{ scale: 0.98 }}
-                transition={{ duration: 0.3 }}
-              >
-                <Link href={project.href} className="block group">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    <div className="order-2 md:order-1">
-                      <span className="text-sm text-slate-500">
-                        {project.year}
-                      </span>
-                      <h2 className="text-3xl sm:text-4xl font-normal text-slate-800 mt-2 mb-4 group-hover:text-slate-600 transition-colors">
-                        {project.title}
-                      </h2>
-                      <p className="text-lg text-slate-600 mb-4">
-                        {project.description}
-                      </p>
-                      <span className="text-slate-500">{project.company}</span>
-                    </div>
-                    <div className="order-1 md:order-2">
-                      <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-                        <Image
-                          src={project.image}
-                          alt={project.title}
-                          fill
-                          className="object-cover transform group-hover:scale-105 transition-transform duration-500"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
+        <div className="max-w-4xl">
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              variants={fadeInUp}
+            >
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                company={project.company}
+                image={project.image}
+                href={project.href}
+                year={project.year}
+              />
+            </motion.div>
+          ))}
         </div>
       </motion.section>
     </main>

@@ -33,7 +33,7 @@ export default function Design() {
     <section className="min-h-screen py-20 items-center">
       <div className="max-w-7xl px-3 lg:px-20 md:px-6">
         <div className="text-left space-y-4 mb-16">
-          <h2 className="text-4xl sm:text-7xl font-medium text-[#0E0F16]">
+          <h2 className="text-4xl sm:text-7xl font-medium text-dark">
             design is just more
             <br className="hidden sm:block" /> than pixels
           </h2>
