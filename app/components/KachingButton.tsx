@@ -12,7 +12,7 @@ export default function KachingButton({ children }: KachingButtonProps) {
   return (
     <div className="bg-blue-200 p-1 rounded w-fit shadow-inner">
       <button
-        className={`relative bg-[#0019FF] hidden sm:block text-white px-2 py-2 sm:px-6 py-3 rounded text-base font-medium overflow-hidden transition-all duration-150 ease-in-out transform-gpu will-change-transform${isPressed ? " scale-95 shadow-sm" : " scale-100"
+        className={`relative bg-[#0019FF] text-white px-2 py-2 sm:px-6 py-3 rounded text-base font-medium overflow-hidden transition-all duration-150 ease-in-out transform-gpu will-change-transform${isPressed ? " scale-95 shadow-sm" : " scale-100"
           }`}
         // style={{ boxShadow: "0 0 32px 0 #FFFFFF" }}
         onMouseDown={() => setIsPressed(true)}
