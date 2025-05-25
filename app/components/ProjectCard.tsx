@@ -100,9 +100,13 @@ export default function ProjectCard({
     },
   };
 
-  const handleClick = async () => {
+  const handleClick = async (e: React.MouseEvent) => {
     if (isSecureProject) {
       await controls.start("shake");
+    } else if (isMobile) {
+      // Prevent default behavior and navigate directly on mobile
+      e.preventDefault();
+      window.location.href = href;
     }
   };
 
@@ -183,7 +187,7 @@ export default function ProjectCard({
       className={`${
         !isLast ? "border-b-2 border-slate-200 hover:border-slate-300" : ""
       } transition-all duration-300 ${
-        isHovered ? "bg-gray-100" : "bg-transparent"
+        isHovered && !isMobile ? "bg-gray-100" : "bg-transparent"
       }`}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
@@ -197,11 +201,12 @@ export default function ProjectCard({
       className={`block ${
         !isLast ? "border-b-2 border-slate-200 hover:border-slate-300" : ""
       } transition-all duration-300 ${
-        isHovered ? "bg-gray-100" : "bg-transparent"
+        isHovered && !isMobile ? "bg-gray-100" : "bg-transparent"
       }`}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
     >
       <ListItem />
     </Link>
