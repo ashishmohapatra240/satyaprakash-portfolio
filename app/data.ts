@@ -2,31 +2,28 @@ export type Project = {
   href: string;
   title: string;
   logo?: string;
-  bgColor?: string;
-  logoChar?: string;
-  accentColor?: string;
+  path: string;
 };
 
 export const ALL_PROJECTS: Project[] = [
   {
     href: "/projects/spring-design",
     title: "Spring design system",
-    bgColor: "#222222",
-    logoChar: "S",
-    accentColor: "#FFCC00",
+    path: "/images/new-projects/thumbnails/SD.png",
   },
   {
     href: "/projects/pizza-hut",
     title: "Pizza Hut",
-    bgColor: "#E31837",
-    logoChar: "T",
-    accentColor: "#FFFFFF",
+    path: "/images/new-projects/thumbnails/PH.png",
   },
   {
     href: "/projects/team-x",
-    title: "TEAM X",
-    bgColor: "#1E40AF",
-    logoChar: "R",
-    accentColor: "#FFFFFF",
+    title: "Team X",
+    path: "/images/new-projects/thumbnails/TeamX.png",
+  },
+  {
+    href: "/projects/dreamx",
+    title: "DreamX",
+    path: "/images/new-projects/thumbnails/DreamX.png",
   },
 ];
