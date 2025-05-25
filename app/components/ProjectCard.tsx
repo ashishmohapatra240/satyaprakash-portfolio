@@ -28,6 +28,21 @@ export default function ProjectCard({
   const cardRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      const mediaQuery = window.matchMedia("(max-width: 768px)");
+      setIsMobile(mediaQuery.matches);
+    };
+
+    checkMobile();
+
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    mediaQuery.addEventListener("change", checkMobile);
+
+    return () => mediaQuery.removeEventListener("change", checkMobile);
+  }, []);
 
   // Global mouse move handler to track position and detect when mouse leaves card area
   useEffect(() => {
@@ -52,11 +67,11 @@ export default function ProjectCard({
     };
 
     if (isHovered) {
-      document.addEventListener('mousemove', handleGlobalMouseMove);
+      document.addEventListener("mousemove", handleGlobalMouseMove);
     }
 
     return () => {
-      document.removeEventListener('mousemove', handleGlobalMouseMove);
+      document.removeEventListener("mousemove", handleGlobalMouseMove);
     };
   }, [isHovered]);
 
@@ -119,13 +134,18 @@ export default function ProjectCard({
       <div className="flex flex-col space-y-2">
         {/* Company/Year */}
         <div className="flex items-center justify-between">
-          <span className={`text-sm ${getCompanyColor(company)} font-medium`}>{company}</span>
+          <span className={`text-sm ${getCompanyColor(company)} font-medium`}>
+            {company}
+          </span>
           {year && <span className="text-sm text-gray-500">{year}</span>}
         </div>
 
         {/* Project Title */}
-        <h3 className={`text-2xl md:text-3xl lg:text-4xl font-normal transition-colors duration-300 ${isHovered ? 'text-[#0019FF]' : 'text-slate-800'
-          }`}>
+        <h3
+          className={`text-2xl md:text-3xl lg:text-4xl font-normal transition-colors duration-300 ${
+            isHovered ? "text-[#0019FF]" : "text-slate-800"
+          }`}
+        >
           {title}
         </h3>
 
@@ -135,8 +155,8 @@ export default function ProjectCard({
         </p>
       </div>
 
-      {/* Floating Thumbnail */}
-      {isHovered && !isSecureProject && (
+      {/* Floating Thumbnail - only show if not mobile */}
+      {isHovered && !isSecureProject && !isMobile && (
         <div
           className="fixed pointer-events-none z-50"
           style={{
@@ -160,8 +180,11 @@ export default function ProjectCard({
 
   return isSecureProject ? (
     <div
-      className={`${!isLast ? "border-b-2 border-slate-200 hover:border-slate-300" : ""
-        } transition-all duration-300 ${isHovered ? 'bg-gray-100' : 'bg-transparent'}`}
+      className={`${
+        !isLast ? "border-b-2 border-slate-200 hover:border-slate-300" : ""
+      } transition-all duration-300 ${
+        isHovered ? "bg-gray-100" : "bg-transparent"
+      }`}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -171,8 +194,11 @@ export default function ProjectCard({
   ) : (
     <Link
       href={href}
-      className={`block ${!isLast ? "border-b-2 border-slate-200 hover:border-slate-300" : ""
-        } transition-all duration-300 ${isHovered ? 'bg-gray-100' : 'bg-transparent'}`}
+      className={`block ${
+        !isLast ? "border-b-2 border-slate-200 hover:border-slate-300" : ""
+      } transition-all duration-300 ${
+        isHovered ? "bg-gray-100" : "bg-transparent"
+      }`}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
