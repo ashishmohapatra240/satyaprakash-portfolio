@@ -114,7 +114,7 @@ export default function ProjectCard({
   };
 
   const handleMouseEnter = () => {
-    if (!isSecureProject) {
+    if (!isSecureProject && !isMobile) {
       setIsHovered(true);
     }
   };
@@ -143,7 +143,7 @@ export default function ProjectCard({
         {/* Project Title */}
         <h3
           className={`text-2xl md:text-3xl lg:text-4xl font-normal transition-colors duration-300 ${
-            isHovered ? "text-[#0019FF]" : "text-slate-800"
+            isHovered && !isMobile ? "text-[#0019FF]" : "text-slate-800"
           }`}
         >
           {title}
