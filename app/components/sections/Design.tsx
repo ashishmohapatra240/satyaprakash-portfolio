@@ -5,6 +5,7 @@ export type DesignCardProps = {
   description: string;
   image: string;
   bgColor: string;
+  link: string;
 };
 
 export const DESIGN_ACTIVITIES = [
@@ -13,18 +14,21 @@ export const DESIGN_ACTIVITIES = [
     description: "Giving back to the community",
     image: "/images/design/mentor.png",
     bgColor: "bg-[#7B6EF6]",
+    link: "/mentoring"
   },
   {
     title: "3D & Motion",
     description: "Molding and flowing",
     image: "/images/design/motion.png",
     bgColor: "bg-[#FF9F6A]",
+    link: "/motion"
   },
   {
     title: "Sketching",
     description: "Scribbling imperfections",
     image: "/images/design/sketch.png",
     bgColor: "bg-[#8B7FE8]",
+    link: "/sketching"
   },
 ];
 
