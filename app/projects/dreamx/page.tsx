@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Nextprojects from "@/app/components/NextProjects";
 
 export default function DreamXProject() {
   return (
     <main className="bg-white">
-      <section className="py-12">
+      <section className="py-12 mx-auto max-w-7xl px-5 lg:px-20 md:px-8">
         <div className="mx-auto">
           {/* Project Category */}
           <div className="text-rose-700 text-base font-bold tracking-wider mt-12 sm:mt-24">
@@ -422,6 +423,9 @@ export default function DreamXProject() {
           </div>
         </div>
       </section>
+
+      {/* Next new-projects */}
+      <Nextprojects />
     </main>
   );
 }

@@ -36,29 +36,28 @@ export default function About() {
   const mousePosition = useParallax();
 
   return (
-    <main className="pt-16 pb-0">
+    <main className="pt-16 pb-0 mx-auto">
       {/* Hero Section */}
       <motion.section
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
         variants={staggerContainer}
-        className="mx-auto min-h-screen flex items-center"
+        className="mx-auto min-h-screen flex items-center max-w-7xl px-5 lg:px-20 md:px-6"
         style={{
           transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
           transition: "transform 0.2s ease-out",
         }}
       >
-        <div className="w-full max-w-7xl mx-auto px-4 lg:px-0">
+        <div className="w-full">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
             {/* Text Content */}
             <motion.div
               variants={fadeInUp}
               className="w-full"
               style={{
-                transform: `translate(${mousePosition.x * 0.6}px, ${
-                  mousePosition.y * 0.6
-                }px)`,
+                transform: `translate(${mousePosition.x * 0.6}px, ${mousePosition.y * 0.6
+                  }px)`,
                 transition: "transform 0.2s ease-out",
               }}
             >
@@ -78,9 +77,8 @@ export default function About() {
             <motion.div
               variants={fadeInUp}
               style={{
-                transform: `translate(${mousePosition.x * 1.2}px, ${
-                  mousePosition.y * 1.2
-                }px)`,
+                transform: `translate(${mousePosition.x * 1.2}px, ${mousePosition.y * 1.2
+                  }px)`,
                 transition: "transform 0.2s ease-out",
               }}
             >
@@ -94,9 +92,8 @@ export default function About() {
                   variants={imageStagger}
                   className="absolute top-0 -right-2.5 sm:right-0 xl:right-24 w-[258px] h-[266px] z-30"
                   style={{
-                    transform: `translate(${mousePosition.x * 1.8}px, ${
-                      mousePosition.y * 1.8
-                    }px)`,
+                    transform: `translate(${mousePosition.x * 1.8}px, ${mousePosition.y * 1.8
+                      }px)`,
                     transition: "transform 0.2s ease-out",
                   }}
                 >
@@ -111,9 +108,8 @@ export default function About() {
                   variants={imageStagger}
                   className="absolute top-[100px] left-0 w-[258px] h-[266px] z-20"
                   style={{
-                    transform: `translate(${mousePosition.x * 2}px, ${
-                      mousePosition.y * 2
-                    }px)`,
+                    transform: `translate(${mousePosition.x * 2}px, ${mousePosition.y * 2
+                      }px)`,
                     transition: "transform 0.2s ease-out",
                   }}
                 >
@@ -128,9 +124,8 @@ export default function About() {
                   variants={imageStagger}
                   className="absolute bottom-0 right-4 w-[258px] h-[266px] z-10"
                   style={{
-                    transform: `translate(${mousePosition.x * 2.2}px, ${
-                      mousePosition.y * 2.2
-                    }px)`,
+                    transform: `translate(${mousePosition.x * 2.2}px, ${mousePosition.y * 2.2
+                      }px)`,
                     transition: "transform 0.2s ease-out",
                   }}
                 >
@@ -155,7 +150,7 @@ export default function About() {
         variants={staggerContainer}
         className="mx-auto py-16"
       >
-        <div className="mx-auto max-w-7xl px-4 lg:px-0">
+        <div className="mx-auto max-w-7xl px-5 lg:px-20 md:px-6">
           <motion.div variants={fadeInUp} className="mb-20">
             <p
               className="text-3xl sm:text-4xl md:text-6xl text-slate-800 font-normal text-left w-[90%]"
@@ -265,7 +260,7 @@ export default function About() {
         variants={staggerContainer}
         className="bg-[#F0F1F6] py-28"
       >
-        <div className="mx-auto max-w-7xl px-4 lg:px-0">
+        <div className="mx-auto max-w-7xl px-5 lg:px-20 md:px-6">
           <motion.div variants={fadeInUp} className="">
             <div
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-neutral-900 font-normal"

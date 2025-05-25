@@ -15,10 +15,10 @@ export default function Hero() {
   });
 
   return (
-    <section className={clsx("min-h-screen flex flex-col relative", "")}>
+    <section className={clsx("min-h-screen flex flex-col relative", "max-w-7xl px-5 lg:px-20 md:px-6")}>
       <div className="flex-1 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 pt-20 md:pt-0">
         {/* Left content */}
-        <div className="space-y-4 md:space-y-6 w-full text-center md:text-left">
+        <div className="space-y-4 md:space-y-6 w-full text-center md:text-left ">
           <div className="space-y-3 md:space-y-4">
             <div className="flex items-center gap-2">
               <p className="text-base sm:text-lg">Hey I&apos;m Satya</p>

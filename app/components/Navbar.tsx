@@ -4,11 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
-import { Phone } from "react-feather";
-
-const KachingButton = dynamic(() => import("./KachingButton"), { ssr: false });
+import { Phone, Linkedin, ExternalLink, Instagram } from "react-feather";
+import KachingButton from "./KachingButton";
 
 // Add animation variants
 const menuVariants = {
@@ -99,7 +97,7 @@ const Navbar = () => {
         transition={{ type: "tween", duration: 0.3 }}
         className="fixed top-0 left-0 right-0 z-[100] py-[20px]"
       >
-        <div className="mx-auto max-w-7xl px-4 lg:px-0">
+        <div className="mx-auto max-w-7xl px-5 lg:px-20 md:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link
@@ -144,8 +142,9 @@ const Navbar = () => {
                 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 style={{ borderRadius: "6px" }}
+                className="hidden md:block"
               >
-                <KachingButton>
+                <KachingButton >
                   <Phone size={16} />
                   Let&apos;s talk
                 </KachingButton>
@@ -221,69 +220,14 @@ const Navbar = () => {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="fixed top-0 right-0 h-full z-50 bg-white shadow-2xl w-full md:w-[70%] lg:w-1/2 px-20"
+            className="fixed top-0 right-0 h-full z-50 bg-white shadow-2xl w-full md:w-[70%] lg:w-1/2 px-8 lg:px-12 md:px-11"
           >
-            <div className="flex flex-col h-full py-6 md:py-8 lg:py-12 xl:py-16 pt-20 md:pt-24">
-              {/* Top Section - Two Columns */}
-              <div className="flex-1">
-                <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12 lg:gap-24 mt-12 md:mt-16">
-                  {/* Left Column - Social Media */}
-                  <div>
-                    <motion.div
-                      custom={0}
-                      variants={itemVariants}
-                      initial="closed"
-                      animate="open"
-                      exit="closed"
-                    >
-                      <h3 className="text-gray-400 text-xs md:text-sm mb-4 md:mb-6">
-                        Social media
-                      </h3>
-                      <div className="space-y-2 md:space-y-3">
-                        {[
-                          {
-                            name: "LinkedIn",
-                            url: "https://www.linkedin.com/in/satyaprakash-ray-9308aa1a1/",
-                          },
-                          {
-                            name: "Behance",
-                            url: "https://www.behance.net/satyaprakashray",
-                          },
-                          {
-                            name: "Dribbble",
-                            url: "https://dribbble.com/satyaprakash_ray",
-                          },
-                          {
-                            name: "Instagram",
-                            url: "https://www.instagram.com/pixraydesigns",
-                          },
-                        ].map((social, i) => (
-                          <motion.div
-                            key={social.name}
-                            custom={i + 1}
-                            variants={itemVariants}
-                            initial="closed"
-                            animate="open"
-                            exit="closed"
-                          >
-                            <Link
-                              href={social.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-block text-slate-800 hover:text-slate-600 active:text-[#0019FF] transition-colors text-xs md:text-sm relative group"
-                              onClick={() => setIsOpen(false)}
-                            >
-                              {social.name}
-                              <span className="absolute bottom-0 left-0 w-0 h-px bg-slate-400 group-hover:bg-slate-400 group-active:bg-[#0019FF] transition-all duration-300 ease-out group-hover:w-full group-active:w-full"></span>
-                            </Link>
-                          </motion.div>
-                        ))}
-                      </div>
-                    </motion.div>
-                  </div>
-
-                  {/* Right Column - Main Navigation */}
-                  <div>
+            <div className="flex flex-col h-full py-4 md:py-10 lg:py-10 xl:py-10 pt-10 md:pt-10">
+              {/* Top Section - Main Navigation */}
+              <div className="flex-1 md:flex-1">
+                <div className="mt-0 md:mt-16">
+                  {/* Main Navigation */}
+                  <div className="h-fit md:h-auto">
                     <motion.div
                       custom={5}
                       variants={itemVariants}
@@ -452,23 +396,60 @@ const Navbar = () => {
                 </div>
               </div>
 
-              {/* Bottom Section - Contact Info */}
-              <div className="mt-6 md:mt-8 border-t border-gray-200 pt-6 md:pt-8">
+              {/* Mobile: Gap between sections */}
+              <div className="block md:hidden h-3"></div>
+
+              {/* Bottom Section - Social Media and Contact Info */}
+              <div className="mt-0 md:mt-6 lg:mt-8 border-t border-gray-200 pt-6 md:pt-8 pb-4">
+                {/* Contact Info and Button */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 md:gap-6">
+                  {/* Social Media Icons */}
                   <motion.div
                     custom={12}
                     variants={itemVariants}
                     initial="closed"
                     animate="open"
                     exit="closed"
-                    className="space-y-1 md:space-y-2"
                   >
-                    <h3 className="text-gray-400 text-xs md:text-sm">
-                      Get in touch
+                    <h3 className="text-gray-400 text-xs md:text-sm mb-3">
+                      Social media
                     </h3>
-                    <p className="text-base md:text-lg lg:text-xl text-slate-800">
-                      satyaprakashray999@gmail.com
-                    </p>
+                    <div className="flex gap-4">
+                      {[
+                        {
+                          name: "LinkedIn",
+                          url: "https://www.linkedin.com/in/satyaprakash-ray-9308aa1a1/",
+                          icon: <Linkedin size={20} />
+                        },
+                        {
+                          name: "Behance",
+                          url: "https://www.behance.net/satyaprakashray",
+                          icon: <ExternalLink size={20} />
+                        },
+                        {
+                          name: "Dribbble",
+                          url: "https://dribbble.com/satyaprakash_ray",
+                          icon: <ExternalLink size={20} />
+                        },
+                        {
+                          name: "Instagram",
+                          url: "https://www.instagram.com/pixraydesigns",
+                          icon: <Instagram size={20} />
+                        },
+                      ].map((social) => (
+                        <Link
+                          key={social.name}
+                          href={social.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-slate-600 hover:text-slate-800 active:text-[#0019FF] transition-colors p-2 rounded-lg hover:bg-gray-50"
+                          onClick={() => setIsOpen(false)}
+                          title={social.name}
+                        >
+                          {social.icon}
+                        </Link>
+                      ))}
+                    </div>
                   </motion.div>
 
                   <motion.div

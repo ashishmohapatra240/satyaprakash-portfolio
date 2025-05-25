@@ -4,7 +4,7 @@ import NextProjects from "@/app/components/NextProjects";
 export default function SpringDesignProject() {
   return (
     <main className="bg-white">
-      <section className="py-12">
+      <section className="py-12 mx-auto max-w-7xl px-5 lg:px-20 md:px-8">
         <div className="mx-auto">
           {/* Project Category */}
           <div className="text-indigo-600 text-base font-bold tracking-wider mt-24">

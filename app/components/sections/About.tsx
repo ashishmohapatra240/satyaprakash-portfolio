@@ -7,13 +7,15 @@ import { motion } from "framer-motion";
 const PROJECTS = [
   {
     title: "Designing the next-gen fraud detection system",
-    description: "TeamX",
+    description: "A comprehensive fraud detection system for TeamX that helps protect millions of transactions.",
+    company: "TeamX",
     image: "/images/projects/team-x.png",
     href: "/projects/team-x",
   },
   {
     title: "Branding and royalty system for global pizza brand",
-    description: "Pizza Hut Indonesia",
+    description: "Redesigning the loyalty program experience for Pizza Hut Indonesia's customers.",
+    company: "Pizza Hut Indonesia",
     image: "/images/projects/hut-rewards.png",
     href: "/projects/pizza-hut",
   },
@@ -24,7 +26,8 @@ const PROJECTS = [
   // },
   {
     title: "Spring Design System",
-    description: "Team",
+    description: "Creating a scalable and consistent design system that powers multiple products.",
+    company: "Team",
     image: "/images/projects/spring.png",
     href: "/projects/spring-design",
   },
@@ -83,17 +86,32 @@ export default function About() {
         </div> */}
 
         {/* Projects Grid - Constrained */}
-        <div className=" pb-24">
+        <div className="pb-24 pt-20 max-w-7xl px-5 lg:px-20 md:px-6">
+          {/* Projects Heading */}
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto"
+            className="text-left mb-16 md:mb-24"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl sm:text-7xl font-medium text-dark">
+              Crafting experience<br />
+              Creating Impact <span className="text-gray-400">that<br />
+                fuels me</span> 🥏
+            </h2>
+          </motion.div>
+
+          <motion.div
+            className="max-w-4xl mx-auto"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             variants={staggerContainer}
           >
-            {/* Left Column */}
-            <div className="space-y-6 sm:space-y-8">
-              {PROJECTS.slice(0, 2).map((project, index) => (
+            {/* Single Column - All Projects Stacked */}
+            <div className="space-y-0">
+              {PROJECTS.map((project, index) => (
                 <motion.div
                   key={index}
                   variants={{
@@ -106,36 +124,6 @@ export default function About() {
                         delay: index * 0.1,
                       },
                     },
-                  }}
-                  whileHover={{
-                    scale: 1.02,
-                    transition: { duration: 0.2 },
-                  }}
-                >
-                  <ProjectCard {...project} />
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Right Column */}
-            <div className="space-y-6 sm:space-y-8 mt-6 sm:mt-16 lg:mt-32">
-              {PROJECTS.slice(2, 3).map((project, index) => (
-                <motion.div
-                  key={index + 2}
-                  variants={{
-                    hidden: { opacity: 0, y: 30 },
-                    visible: {
-                      opacity: 1,
-                      y: 0,
-                      transition: {
-                        duration: 0.6,
-                        delay: (index + 2) * 0.1,
-                      },
-                    },
-                  }}
-                  whileHover={{
-                    scale: 1.02,
-                    transition: { duration: 0.2 },
                   }}
                 >
                   <ProjectCard {...project} />

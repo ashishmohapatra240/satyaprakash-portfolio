@@ -2,10 +2,10 @@ import Image from "next/image";
 
 const Scribbling = () => {
   return (
-    <main className="min-h-screen max-w-7xl mx-auto px-4 lg:px-0">
+    <main className="min-h-screen mx-auto max-w-7xl px-5 lg:px-20 md:px-6">
       {/* Hero Section */}
       <div className="flex flex-col">
-        <div className="pt-20 md:pt-32 mb-8">
+        <div className="pt-20 md:pt-32 mb-20">
           <h2 className="text-base sm:text-lg text-[#1E293B] font-normal">
             Finding stillness in every stroke
           </h2>
