@@ -99,7 +99,7 @@ export default function About() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-5xl sm:text-7xl font-medium text-dark">
+            <h2 className="text-5xl sm:text-7xl font-normal text-dark">
               featured Work
               {/* <br />
               Creating Impact{" "}
