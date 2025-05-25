@@ -13,10 +13,10 @@ export default function Footer() {
             <br />
             outbursting idea ??
           </h2>
-          <p className="text-white">Lets chat over a cup of coffee</p>
+          <p className="text-white">Let&apos;s chat over a cup of coffee</p>
           <div className="flex flex-row gap-4">
-            <ButtonWhite href="https://calendly.com/satyaprakashray999/30min">
-              Lets talk
+            <ButtonWhite href="mailto:satyaprakashray999@gmail.com">
+              Let&apos;s talk
             </ButtonWhite>
           </div>
 
