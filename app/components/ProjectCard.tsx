@@ -102,19 +102,18 @@ export default function ProjectCard({
 
   const handleClick = async (e: React.MouseEvent) => {
     if (isSecureProject) {
-      await controls.start("shake");
-    } else if (isMobile) {
-      // Prevent default behavior and navigate directly on mobile
       e.preventDefault();
-      window.location.href = href;
+      await controls.start("shake");
     }
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    setMousePosition({
-      x: e.clientX,
-      y: e.clientY,
-    });
+    if (!isMobile) {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    }
   };
 
   const handleMouseEnter = () => {
@@ -124,7 +123,15 @@ export default function ProjectCard({
   };
 
   const handleMouseLeave = () => {
-    setIsHovered(false);
+    if (!isMobile) {
+      setIsHovered(false);
+    }
+  };
+
+  const handleTouchStart = () => {
+    if (isMobile && !isSecureProject) {
+      window.location.href = href;
+    }
   };
 
   const ListItem = () => (
@@ -192,6 +199,7 @@ export default function ProjectCard({
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onTouchStart={handleTouchStart}
     >
       <ListItem />
     </div>
@@ -206,7 +214,7 @@ export default function ProjectCard({
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      onClick={handleClick}
+      onTouchStart={handleTouchStart}
     >
       <ListItem />
     </Link>
