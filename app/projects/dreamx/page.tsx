@@ -28,7 +28,7 @@ export default function DreamXProject() {
                             className="w-full rounded-lg"
                         /> */}
             <Image
-              src="/images/projects/dreamx/1.png"
+              src="/images/projects/DreamX/1.png"
               alt="DreamX Hero Image"
               width={1000}
               height={475}
@@ -144,7 +144,7 @@ export default function DreamXProject() {
               </div>
             </section>
             <Image
-              src="/images/projects/dreamx/2.png"
+              src="/images/projects/DreamX/2.png"
               alt="DreamX Platform Overview"
               width={1000}
               height={600}
@@ -248,14 +248,14 @@ export default function DreamXProject() {
               {/* First row - 2 images */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <Image
-                  src="/images/projects/dreamx/3.png"
+                  src="/images/projects/DreamX/3.png"
                   alt="DreamX Process Image 1"
                   width={600}
                   height={400}
                   className="w-full h-full object-cover rounded-lg"
                 />
                 <Image
-                  src="/images/projects/dreamx/4.png"
+                  src="/images/projects/DreamX/4.png"
                   alt="DreamX Process Image 2"
                   width={600}
                   height={400}
@@ -325,21 +325,21 @@ export default function DreamXProject() {
             <div className="space-y-8">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <Image
-                  src="/images/projects/dreamx/6.png"
+                  src="/images/projects/DreamX/6.png"
                   alt="DreamX Design 1"
                   width={400}
                   height={300}
                   className="w-full h-full object-cover rounded-lg"
                 />
                 <Image
-                  src="/images/projects/dreamx/7.png"
+                  src="/images/projects/DreamX/7.png"
                   alt="DreamX Design 2"
                   width={400}
                   height={300}
                   className="w-full h-full object-cover rounded-lg"
                 />
                 <Image
-                  src="/images/projects/dreamx/8.png"
+                  src="/images/projects/DreamX/8.png"
                   alt="DreamX Design 3"
                   width={400}
                   height={300}
@@ -348,7 +348,7 @@ export default function DreamXProject() {
               </div>
 
               <Image
-                src="/images/projects/dreamx/9.png"
+                src="/images/projects/DreamX/9.png"
                 alt="DreamX Final Design"
                 width={1000}
                 height={600}
