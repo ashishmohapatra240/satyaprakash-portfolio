@@ -58,7 +58,7 @@ const staggerContainer = {
 
 export default function Projects() {
   return (
-    <main className="pt-16 pb-0 mx-auto max-w-7xl px-5 lg:px-20 md:px-8">
+    <main className="pt-16 pb-0 max-w-7xl px-5 lg:px-20 md:px-8">
       {/* Hero Section */}
       <motion.section
         initial="initial"
