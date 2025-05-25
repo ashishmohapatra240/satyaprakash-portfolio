@@ -4,7 +4,7 @@ import NextProjects from "@/app/components/NextProjects";
 export default function teamXProject() {
   return (
     <main className="bg-white">
-      <section className="py-12 max-w-7xl px-5 lg:px-20 md:px-8">
+      <section className="py-12 mx-auto max-w-7xl px-5 lg:px-20 md:px-8">
         <div className="mx-auto ">
           {/* Project Category */}
           <div className="text-blue-600 text-base font-bold tracking-wider mt-8 sm:mt-12 md:mt-24">
