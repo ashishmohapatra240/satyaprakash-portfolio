@@ -9,23 +9,15 @@ const projects = [
     company: "Team X",
     image: "/images/new-projects/thumbnails/TeamX.png",
     href: "/projects/team-x",
-    year: "2023",
+    year: "2024",
   },
   {
-    title: "Creating a better interactive homepage",
-    description: "Redesigning ESPN's homepage to create a more engaging and personalized sports experience.",
-    company: "ESPN",
-    image: "/images/new-projects/thumbnails/ESPN.png",
-    href: "#",
-    year: "2023",
-  },
-  {
-    title: "Optimising the design system and home page experience for DreamPay",
-    description: "Creating an intuitive and engaging interface for DreamX that makes dream interpretation accessible while maintaining a sense of wonder and personal connection.",
+    title: "From Chaos to Consistency: A Scalable Design System",
+    description: "Crafting a delightful and intuitive experience for DreamX that brings everyday payments to life—seamless, personal, and built with clarity in every click.",
     company: "DreamX",
     image: "/images/new-projects/thumbnails/DreamX.png",
     href: "/projects/dreamx",
-    year: "2024",
+    year: "2023",
   },
   {
     title: "Building a royalty system for a global pizza brand",
@@ -33,7 +25,7 @@ const projects = [
     company: "Pizza Hut Indonesia",
     image: "/images/new-projects/thumbnails/PH.png",
     href: "/projects/pizza-hut",
-    year: "2022",
+    year: "2023",
   },
   {
     title: "Spring Design system",
@@ -41,15 +33,7 @@ const projects = [
     company: "Internal",
     image: "/images/new-projects/thumbnails/SD.png",
     href: "/projects/spring-design",
-    year: "2021",
-  },
-  {
-    title: "DreamX",
-    description: "Creating a scalable and consistent design system that powers multiple products.",
-    company: "Internal",
-    image: "/images/new-projects/thumbnails/SD.png",
-    href: "/projects/spring-design",
-    year: "2021",
+    year: "2023",
   },
 ];
 
@@ -69,7 +53,7 @@ const staggerContainer = {
 
 export default function Projects() {
   return (
-    <main className="pt-16 pb-16 mx-auto max-w-7xl px-5 lg:px-20 md:px-8">
+    <main className="pt-16 pb-32 mx-auto max-w-7xl px-5 lg:px-20 md:px-8">
       {/* Hero Section */}
       <motion.section
         initial="initial"
@@ -80,10 +64,8 @@ export default function Projects() {
       >
         <div className="w-full">
           <motion.div variants={fadeInUp} className="max-w-4xl">
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-normal text-slate-800 leading-tight">
-              Crafting experience<br />
-              Creating Impact <span className="text-gray-400">that<br />
-                fuels me</span> 🥏
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-dark leading-tight">
+              Featured Work
             </h1>
           </motion.div>
         </div>
@@ -110,6 +92,7 @@ export default function Projects() {
                 image={project.image}
                 href={project.href}
                 year={project.year}
+                isLast={index === projects.length - 1}
               />
             </motion.div>
           ))}

@@ -9,47 +9,38 @@ const PROJECTS = [
     title: "Designing the next-gen fraud detection system",
     description:
       "A comprehensive fraud detection system for TeamX that helps protect millions of transactions.",
-    company: "TeamX",
-    image: "/images/projects/team-x.png",
+    company: "Team X",
+    image: "/images/new-projects/thumbnails/TeamX.png",
     href: "/projects/team-x",
     year: "2024",
   },
   {
-    title: "Branding and royalty system for global pizza brand",
+    title: "Optimising the design system and home page experience for DreamPay",
+    description:
+      "Creating an intuitive and engaging interface for DreamX that makes dream interpretation accessible while maintaining a sense of wonder and personal connection.",
+    company: "DreamX",
+    image: "/images/new-projects/thumbnails/DreamX.png",
+    href: "/projects/dreamx",
+    year: "2023",
+  },
+  {
+    title: "Building a royalty system for a global pizza brand",
     description:
       "Redesigning the loyalty program experience for Pizza Hut Indonesia's customers.",
     company: "Pizza Hut Indonesia",
-    image: "/images/projects/hut-rewards.png",
+    image: "/images/new-projects/thumbnails/PH.png",
     href: "/projects/pizza-hut",
     year: "2023",
   },
-  // {
-  //   title: "Mara design system",
-  //   description: "Marathon Digital Holdings",
-  //   image: "/images/projects/meta-design.png",
-  // },
   {
     title: "Spring Design System",
     description:
       "Creating a scalable and consistent design system that powers multiple products.",
-    company: "Team",
-    image: "/images/projects/spring.png",
+    company: "Internal",
+    image: "/images/new-projects/thumbnails/SD.png",
     href: "/projects/spring-design",
     year: "2023",
   },
-  {
-    title: "DeamX",
-    description: "From Chaos to Consistency: A Scalable Design System",
-    company: "Team",
-    image: "/images/projects/spring.png",
-    href: "/projects/spring-design",
-    year: "2023",
-  },
-  // {
-  //   title: "Crafting better note taking experience",
-  //   description: "anonymous",
-  //   image: "/images/projects/note-up.png",
-  // },
 ];
 
 // Animation variants
@@ -102,22 +93,22 @@ export default function About() {
         <div className="pb-24 pt-20 max-w-7xl px-5 lg:px-20 md:px-6">
           {/* Projects Heading */}
           <motion.div
-            className="text-left mb-16 md:mb-24"
+            className="text-left mb-6 md:mb-10"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl sm:text-7xl font-medium text-dark">
-              Crafting experience
-              <br />
+            <h2 className="text-5xl sm:text-7xl font-medium text-dark">
+              featured Work
+              {/* <br />
               Creating Impact{" "}
               <span className="text-gray-400">
                 that
                 <br />
                 fuels me
               </span>{" "}
-              🥏
+              🥏 */}
             </h2>
           </motion.div>
 
