@@ -21,14 +21,14 @@ export const DESIGN_ACTIVITIES = [
     description: "Molding and flowing",
     image: "/images/design/motion.png",
     bgColor: "bg-[#FF9F6A]",
-    link: "/motion"
+    link: "/3d-motion-more"
   },
   {
     title: "Sketching",
     description: "Scribbling imperfections",
     image: "/images/design/sketch.png",
     bgColor: "bg-[#8B7FE8]",
-    link: "/sketching"
+    link: "/scribbling"
   },
 ];
 
