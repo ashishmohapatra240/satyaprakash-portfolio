@@ -4,11 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
 import { Phone } from "react-feather";
-
-const KachingButton = dynamic(() => import("./KachingButton"), { ssr: false });
+import KachingButton from "./KachingButton";
 
 // Add animation variants
 const menuVariants = {
@@ -99,7 +97,7 @@ const Navbar = () => {
         transition={{ type: "tween", duration: 0.3 }}
         className="fixed top-0 left-0 right-0 z-[100] py-[20px]"
       >
-        <div className="mx-auto max-w-7xl px-4 lg:px-0">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8 md:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link

@@ -30,7 +30,7 @@ export const DESIGN_ACTIVITIES = [
 
 export default function Design() {
   return (
-    <section className="min-h-screen py-20 flex items-center">
+    <section className="min-h-screen py-20 items-center">
       <div className="max-w-7xl px-4 lg:px-0">
         <div className="text-left space-y-4 mb-16">
           <h2 className="text-4xl sm:text-7xl font-medium text-[#0E0F16]">
