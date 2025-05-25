@@ -42,7 +42,7 @@ const Scribbling = () => {
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-100 to-blue-50 rounded-3xl opacity-0 blur-xl"></div>
               <div className="relative">
                 <Image
-                  src="/images/design/scribbling/1.png"
+                  src="/images/design/Scribbling/1.png"
                   alt="Mentoring session"
                   width={600}
                   height={400}
@@ -76,7 +76,7 @@ const Scribbling = () => {
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-50 to-blue-100 rounded-3xl opacity-0 blur-xl"></div>
               <div className="relative">
                 <Image
-                  src="/images/design/scribbling/2.png"
+                  src="/images/design/Scribbling/2.png"
                   alt="Design teaching"
                   width={600}
                   height={400}
@@ -92,7 +92,7 @@ const Scribbling = () => {
             <div className="absolute -inset-2 bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50 rounded-3xl opacity-0 blur-xl"></div>
             <div className="relative">
               <Image
-                src="/images/design/scribbling/5.png"
+                src="/images/design/Scribbling/5.png"
                 alt="Group photo"
                 width={1440}
                 height={720}
@@ -107,7 +107,7 @@ const Scribbling = () => {
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-100 to-blue-50 rounded-3xl opacity-0 blur-xl"></div>
               <div className="relative">
                 <Image
-                  src="/images/design/scribbling/4.png"
+                  src="/images/design/Scribbling/4.png"
                   alt="Workshop help"
                   width={600}
                   height={400}
@@ -119,7 +119,7 @@ const Scribbling = () => {
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-50 to-blue-100 rounded-3xl opacity-0 blur-xl"></div>
               <div className="relative">
                 <Image
-                  src="/images/design/scribbling/3.png"
+                  src="/images/design/Scribbling/3.png"
                   alt="Design session"
                   width={600}
                   height={400}
