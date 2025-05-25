@@ -10,31 +10,25 @@ export const metadata: Metadata = {
   authors: [{ name: "Satyaprakash Ray" }],
   creator: "Satyaprakash Ray",
   publisher: "Satyaprakash Ray",
-  metadataBase: new URL('https://satyaprakash-portfolio.vercel.app'),
+  metadataBase: new URL('https://www.satyaprakashray.com/'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: "Satyaprakash - Product Designer",
     description: "Building products & design systems. Experienced product designer specializing in fraud detection systems, design systems, and user experience design.",
-    url: 'https://satyaprakash-portfolio.vercel.app',
+    url: 'https://www.satyaprakashray.com/',
     siteName: 'Satyaprakash Portfolio',
     images: [
       {
-        url: '/images/design/OG/Image - logo.png',
+        url: '/images/design/OG/OG.png',
         width: 1200,
         height: 630,
         alt: 'Satyaprakash - Product Designer Logo',
       },
-      {
-        url: '/api/og',
-        width: 1200,
-        height: 630,
-        alt: 'Satyaprakash - Product Designer',
-      },
+
     ],
-    locale: 'en_US',
-    type: 'website',
+
   },
   twitter: {
     card: 'summary_large_image',
@@ -54,9 +48,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code', // Replace with actual verification code
-  },
+
 };
 
 export default function RootLayout({
