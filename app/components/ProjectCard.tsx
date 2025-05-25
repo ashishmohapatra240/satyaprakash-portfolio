@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { motion, useAnimation } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 interface ProjectCardProps {
@@ -22,58 +22,26 @@ export default function ProjectCard({
   year,
   isLast = false,
 }: ProjectCardProps) {
-  const isSecureProject =
-    company === "Marathon Digital Holdings" || company === "anonymous";
-  const controls = useAnimation();
-  const cardRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isMobile, setIsMobile] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    setIsMounted(true);
     const checkMobile = () => {
-      const mediaQuery = window.matchMedia("(max-width: 768px)");
+      const mediaQuery = window.matchMedia("(max-width: 767px)"); // Below md breakpoint
       setIsMobile(mediaQuery.matches);
     };
 
     checkMobile();
 
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const mediaQuery = window.matchMedia("(max-width: 767px)");
     mediaQuery.addEventListener("change", checkMobile);
 
     return () => mediaQuery.removeEventListener("change", checkMobile);
   }, []);
-
-  // Global mouse move handler to track position and detect when mouse leaves card area
-  useEffect(() => {
-    const handleGlobalMouseMove = (e: MouseEvent) => {
-      if (isHovered && cardRef.current) {
-        const rect = cardRef.current.getBoundingClientRect();
-        const isInsideCard =
-          e.clientX >= rect.left &&
-          e.clientX <= rect.right &&
-          e.clientY >= rect.top &&
-          e.clientY <= rect.bottom;
-
-        if (!isInsideCard) {
-          setIsHovered(false);
-        } else {
-          setMousePosition({
-            x: e.clientX,
-            y: e.clientY,
-          });
-        }
-      }
-    };
-
-    if (isHovered) {
-      document.addEventListener("mousemove", handleGlobalMouseMove);
-    }
-
-    return () => {
-      document.removeEventListener("mousemove", handleGlobalMouseMove);
-    };
-  }, [isHovered]);
 
   // Function to get company color
   const getCompanyColor = (companyName: string) => {
@@ -90,25 +58,20 @@ export default function ProjectCard({
     }
   };
 
-  const shakeAnimation = {
-    shake: {
-      x: [0, -10, 10, -8, 8, -6, 6, -4, 4, -2, 2, 0],
-      transition: {
-        duration: 0.4,
-        ease: "easeInOut",
-      },
-    },
+  const handleMouseEnter = () => {
+    if (isMounted && !isMobile) {
+      setIsHovered(true);
+    }
   };
 
-  const handleClick = async (e: React.MouseEvent) => {
-    if (isSecureProject) {
-      e.preventDefault();
-      await controls.start("shake");
+  const handleMouseLeave = () => {
+    if (isMounted && !isMobile) {
+      setIsHovered(false);
     }
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isMobile) {
+    if (isMounted && !isMobile) {
       setMousePosition({
         x: e.clientX,
         y: e.clientY,
@@ -116,107 +79,122 @@ export default function ProjectCard({
     }
   };
 
-  const handleMouseEnter = () => {
-    if (!isSecureProject && !isMobile) {
-      setIsHovered(true);
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (!isMobile) {
-      setIsHovered(false);
-    }
-  };
-
-  const handleTouchStart = () => {
-    if (isMobile && !isSecureProject) {
-      window.location.href = href;
-    }
-  };
-
-  const ListItem = () => (
-    <motion.div
-      ref={cardRef}
-      className="relative py-12"
-      variants={shakeAnimation}
-      animate={controls}
-      onClick={handleClick}
-    >
-      <div className="flex flex-col space-y-2">
-        {/* Company/Year */}
-        <div className="flex items-center justify-between">
-          <span className={`text-sm ${getCompanyColor(company)} font-medium`}>
-            {company}
-          </span>
-          {year && <span className="text-sm text-gray-500">{year}</span>}
-        </div>
-
-        {/* Project Title */}
-        <h3
-          className={`text-2xl md:text-3xl lg:text-4xl font-normal transition-colors duration-300 ${
-            isHovered && !isMobile ? "text-[#0019FF]" : "text-slate-800"
-          }`}
-        >
-          {title}
-        </h3>
-
-        {/* Project Description */}
-        <p className="text-lg text-gray-600 max-w-3xl leading-relaxed">
-          {description}
-        </p>
-      </div>
-
+  return (
+    <>
       {/* Floating Thumbnail - only show if not mobile */}
-      {isHovered && !isSecureProject && !isMobile && (
-        <div
-          className="fixed pointer-events-none z-50"
-          style={{
-            left: mousePosition.x,
-            top: mousePosition.y,
-          }}
-        >
-          <div className="relative w-64 h-40 rounded-lg overflow-hidden shadow-2xl">
-            <Image
-              src={image}
-              alt={title}
-              fill
-              className="object-cover"
-              sizes="256px"
-            />
-          </div>
-        </div>
-      )}
-    </motion.div>
-  );
+      <AnimatePresence>
+        {isMounted && isHovered && !isMobile && (
+          <motion.div
+            className="fixed z-50 pointer-events-none"
+            style={{
+              left: `${mousePosition.x}px`,
+              top: `${mousePosition.y}px`,
+            }}
+            initial={{
+              x: 40,
+              scale: 0.4,
+              opacity: 0,
+              rotate: -6,
+            }}
+            animate={{
+              x: 0,
+              scale: 1,
+              opacity: 1,
+              rotate: -6,
+            }}
+            exit={{
+              x: 100,
+              scale: 0.4,
+              opacity: 0,
+              rotate: -6,
+            }}
+            transition={{
+              duration: 0.4,
+              ease: "easeInOut",
+            }}
+          >
+            <div className="relative w-64 h-40 rounded-lg overflow-hidden shadow-2xl">
+              <Image
+                src={image}
+                alt={title}
+                fill
+                className="object-cover"
+                sizes="256px"
+              />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-  return isSecureProject ? (
-    <div
-      className={`${
-        !isLast ? "border-b-2 border-slate-200 hover:border-slate-300" : ""
-      } transition-all duration-300 ${
-        isHovered && !isMobile ? "bg-gray-100" : "bg-transparent"
-      }`}
-      onMouseMove={handleMouseMove}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onTouchStart={handleTouchStart}
-    >
-      <ListItem />
-    </div>
-  ) : (
-    <Link
-      href={href}
-      className={`block ${
-        !isLast ? "border-b-2 border-slate-200 hover:border-slate-300" : ""
-      } transition-all duration-300 ${
-        isHovered && !isMobile ? "bg-gray-100" : "bg-transparent"
-      }`}
-      onMouseMove={handleMouseMove}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onTouchStart={handleTouchStart}
-    >
-      <ListItem />
-    </Link>
+      <motion.div
+        ref={cardRef}
+        className={`${!isLast ? "border-b-2 border-slate-200" : ""
+          }`}
+        transition={{
+          duration: 0.4,
+          ease: "easeInOut"
+        }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onMouseMove={handleMouseMove}
+      >
+        <Link href={href} className="block">
+          <motion.div
+            className="relative py-12"
+            animate={
+              isMounted && isHovered && !isMobile
+                ? { scale: 1.01 }
+                : { scale: 1 }
+            }
+            transition={{
+              duration: 0.4,
+              ease: "easeInOut"
+            }}
+          >
+            <div className="flex flex-col space-y-2">
+              {/* Company/Year */}
+              <div className="flex items-center justify-between">
+                <span className={`text-sm ${getCompanyColor(company)} font-medium`}>
+                  {company}
+                </span>
+                {year && <span className="text-sm text-gray-500">{year}</span>}
+              </div>
+
+              {/* Project Title */}
+              <motion.h3
+                className="text-2xl md:text-3xl lg:text-4xl font-normal"
+                animate={
+                  isMounted && isHovered && !isMobile
+                    ? { color: "#0019FF" }
+                    : { color: "#1e293b" } // slate-800
+                }
+                transition={{
+                  duration: 0.4,
+                  ease: "easeInOut"
+                }}
+              >
+                {title}
+              </motion.h3>
+
+              {/* Project Description */}
+              <motion.p
+                className="text-lg text-gray-600 max-w-3xl leading-relaxed"
+                animate={
+                  isMounted && isHovered && !isMobile
+                    ? { color: "#374151" } // gray-700 - slightly darker on hover
+                    : { color: "#4b5563" } // gray-600
+                }
+                transition={{
+                  duration: 0.4,
+                  ease: "easeInOut"
+                }}
+              >
+                {description}
+              </motion.p>
+            </div>
+          </motion.div>
+        </Link>
+      </motion.div>
+    </>
   );
 }
