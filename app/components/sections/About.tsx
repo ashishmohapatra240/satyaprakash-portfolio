@@ -7,17 +7,21 @@ import { motion } from "framer-motion";
 const PROJECTS = [
   {
     title: "Designing the next-gen fraud detection system",
-    description: "A comprehensive fraud detection system for TeamX that helps protect millions of transactions.",
+    description:
+      "A comprehensive fraud detection system for TeamX that helps protect millions of transactions.",
     company: "TeamX",
     image: "/images/projects/team-x.png",
     href: "/projects/team-x",
+    year: "2024",
   },
   {
     title: "Branding and royalty system for global pizza brand",
-    description: "Redesigning the loyalty program experience for Pizza Hut Indonesia's customers.",
+    description:
+      "Redesigning the loyalty program experience for Pizza Hut Indonesia's customers.",
     company: "Pizza Hut Indonesia",
     image: "/images/projects/hut-rewards.png",
     href: "/projects/pizza-hut",
+    year: "2023",
   },
   // {
   //   title: "Mara design system",
@@ -26,12 +30,21 @@ const PROJECTS = [
   // },
   {
     title: "Spring Design System",
-    description: "Creating a scalable and consistent design system that powers multiple products.",
+    description:
+      "Creating a scalable and consistent design system that powers multiple products.",
     company: "Team",
     image: "/images/projects/spring.png",
     href: "/projects/spring-design",
+    year: "2023",
   },
-
+  {
+    title: "DeamX",
+    description: "From Chaos to Consistency: A Scalable Design System",
+    company: "Team",
+    image: "/images/projects/spring.png",
+    href: "/projects/spring-design",
+    year: "2023",
+  },
   // {
   //   title: "Crafting better note taking experience",
   //   description: "anonymous",
@@ -96,14 +109,20 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl sm:text-7xl font-medium text-dark">
-              Crafting experience<br />
-              Creating Impact <span className="text-gray-400">that<br />
-                fuels me</span> 🥏
+              Crafting experience
+              <br />
+              Creating Impact{" "}
+              <span className="text-gray-400">
+                that
+                <br />
+                fuels me
+              </span>{" "}
+              🥏
             </h2>
           </motion.div>
 
           <motion.div
-            className="max-w-4xl mx-auto"
+            className="max-w-7xl mx-auto divide-y-2 divide-slate-200"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
@@ -126,7 +145,10 @@ export default function About() {
                     },
                   }}
                 >
-                  <ProjectCard {...project} />
+                  <ProjectCard
+                    {...project}
+                    isLast={index === PROJECTS.length - 1}
+                  />
                 </motion.div>
               ))}
             </div>

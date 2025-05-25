@@ -8,6 +8,7 @@ interface ProjectCardProps {
   image: string;
   href?: string;
   year?: string;
+  isLast?: boolean;
 }
 
 export default function ProjectCard({
@@ -16,8 +17,10 @@ export default function ProjectCard({
   company,
   href = "#",
   year,
+  isLast = false,
 }: ProjectCardProps) {
-  const isSecureProject = company === "Marathon Digital Holdings" || company === "anonymous";
+  const isSecureProject =
+    company === "Marathon Digital Holdings" || company === "anonymous";
   const controls = useAnimation();
 
   const shakeAnimation = {
@@ -38,7 +41,7 @@ export default function ProjectCard({
 
   const ListItem = () => (
     <motion.div
-      className="relative py-6 border-b border-gray-200 last:border-b-0 cursor-pointer"
+      className="relative py-12"
       variants={shakeAnimation}
       animate={controls}
       onClick={handleClick}
@@ -64,9 +67,20 @@ export default function ProjectCard({
   );
 
   return isSecureProject ? (
-    <ListItem />
+    <div
+      className={`${
+        !isLast ? "border-b-2 border-slate-200 hover:border-slate-300" : ""
+      } transition-colors`}
+    >
+      <ListItem />
+    </div>
   ) : (
-    <Link href={href} className="block">
+    <Link
+      href={href}
+      className={`block ${
+        !isLast ? "border-b-2 border-slate-200 hover:border-slate-300" : ""
+      } transition-colors`}
+    >
       <ListItem />
     </Link>
   );
