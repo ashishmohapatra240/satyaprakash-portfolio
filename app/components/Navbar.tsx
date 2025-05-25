@@ -144,7 +144,7 @@ const Navbar = () => {
                 style={{ borderRadius: "6px" }}
                 className="hidden md:block"
               >
-                <KachingButton >
+                <KachingButton>
                   <Phone size={16} />
                   Let&apos;s talk
                 </KachingButton>
