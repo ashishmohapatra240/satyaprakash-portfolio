@@ -10,7 +10,7 @@ export default function NextProjects() {
   );
 
   return (
-    <section className="bg-gray-50 py-20">
+    <section className="bg-gray-50 py-20 max-w-7xl mx-auto px-4 lg:px-0">
       <div className="mx-auto ">
         <h2 className="text-2xl font-medium text-dark mb-8">
           Check out more projects

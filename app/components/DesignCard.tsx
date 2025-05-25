@@ -14,7 +14,7 @@ const DesignCard = ({
     <motion.div
       whileHover={{ scale: 0.97 }}
       transition={{ duration: 0.3 }}
-      className={`${bgColor} rounded-2xl p-6 text-white relative overflow-hidden flex flex-col justify-between h-80 max-w-80 w-full cursor-pointer`}
+      className={`${bgColor} rounded-2xl p-6 text-white relative overflow-hidden flex flex-col justify-between h-80 w-full cursor-pointer`}
     >
       <div className="absolute inset-0">
         <motion.div

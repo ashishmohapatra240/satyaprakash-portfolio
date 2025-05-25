@@ -35,7 +35,7 @@ export default function Design() {
         <div className="text-left space-y-4 mb-16">
           <h2 className="text-4xl sm:text-7xl font-medium text-[#0E0F16]">
             design is just more
-            <br className="hidden sm:block" /> design realm
+            <br className="hidden sm:block" /> than pixels
           </h2>
           {/* <p className="text-gray text-lg sm:text-xl">
             Just awesome stuff away from figma
