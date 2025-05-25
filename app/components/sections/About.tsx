@@ -15,9 +15,9 @@ const PROJECTS = [
     year: "2024",
   },
   {
-    title: "Optimising the design system and home page experience for DreamPay",
+    title: "From chaos to clarity: DreamX's payment experience",
     description:
-      "Creating an intuitive and engaging interface for DreamX that makes dream interpretation accessible while maintaining a sense of wonder and personal connection.",
+      "Crafting a delightful and intuitive experience for DreamX that brings everyday payments to life—seamless, personal, and built with clarity in every click.",
     company: "DreamX",
     image: "/images/new-projects/thumbnails/DreamX.png",
     href: "/projects/dreamx",
