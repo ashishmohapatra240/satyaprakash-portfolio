@@ -41,12 +41,15 @@ const ThreeDMotionandMore = () => {
             <div className="relative">
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-100 to-blue-50 rounded-3xl opacity-0 blur-xl"></div>
               <div className="relative">
-                <Image
-                  src="/images/design/3d-motion.png"
-                  alt="3D Motion design"
+                <video
+                  src="/images/design/3D/1.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="rounded-2xl object-cover shadow-lg w-full h-full"
                   width={600}
                   height={400}
-                  className="rounded-2xl object-cover shadow-lg"
                 />
               </div>
             </div>
@@ -75,13 +78,15 @@ const ThreeDMotionandMore = () => {
             <div className="relative">
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-50 to-blue-100 rounded-3xl opacity-0 blur-xl"></div>
               <div className="relative">
-                <Image
-                  src="/images/design/motion.png"
-                  alt="Motion design"
+                <video
+                  src="/images/design/3D/2.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                   width={600}
                   height={400}
-                  className="rounded-2xl object-cover shadow-lg"
-                  style={{ width: "600px", height: "400px" }}
+                  className="rounded-2xl object-cover shadow-lg w-full h-full"
                 />
               </div>
             </div>
@@ -92,7 +97,7 @@ const ThreeDMotionandMore = () => {
             <div className="absolute -inset-2 bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50 rounded-3xl opacity-0 blur-xl"></div>
             <div className="relative">
               <Image
-                src="/images/design/sketch.png"
+                src="/images/design/3D/IMG.png"
                 alt="Design sketches"
                 width={1440}
                 height={720}
@@ -106,24 +111,30 @@ const ThreeDMotionandMore = () => {
             <div className="relative">
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-100 to-blue-50 rounded-3xl opacity-0 blur-xl"></div>
               <div className="relative">
-                <Image
-                  src="/images/design/sketching.png"
-                  alt="Sketching process"
+                <video
+                  src="/images/design/3D/3.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                   width={600}
                   height={400}
-                  className="rounded-2xl object-cover w-full aspect-[4/3] shadow-lg"
+                  className="rounded-2xl object-cover w-full h-full shadow-lg"
                 />
               </div>
             </div>
             <div className="relative">
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-50 to-blue-100 rounded-3xl opacity-0 blur-xl"></div>
               <div className="relative">
-                <Image
-                  src="/images/design/mentor.png"
-                  alt="Design process"
+                <video
+                  src="/images/design/3D/4.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                   width={600}
                   height={400}
-                  className="rounded-2xl object-cover w-full aspect-[4/3] shadow-lg"
+                  className="rounded-2xl object-cover w-full h-full shadow-lg"
                 />
               </div>
             </div>
