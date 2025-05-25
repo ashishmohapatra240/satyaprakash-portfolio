@@ -9,9 +9,9 @@ export default function Hero() {
   });
 
   const { RiveComponent: RiveComponent2 } = useRive({
-    src: "/Top.riv",
+    src: "/Top-FInal2.riv",
     autoplay: true,
-    // stateMachines: "Default",
+    stateMachines: "State Machine 1",
   });
 
   return (
@@ -20,9 +20,9 @@ export default function Hero() {
         {/* Left content */}
         <div className="space-y-4 md:space-y-6 w-full text-center md:text-left ">
           <div className="space-y-3 md:space-y-4">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center justify-center sm:justify-start gap-2">
               <p className="text-base sm:text-lg">Hey I&apos;m Satya</p>
-              <div className="w-8 h-8">
+              <div className="w-32 h-32">
                 <RiveComponent2 />
               </div>
             </div>
