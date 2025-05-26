@@ -38,7 +38,7 @@ export default function Design() {
       <div className="max-w-7xl px-3 lg:px-20 md:px-6">
         <div className="text-left space-y-4 mb-16">
           <h2 className="text-4xl sm:text-7xl font-normal text-dark">
-            design is just more
+            Design is just more
             <br className="hidden sm:block" /> than pixels
           </h2>
           {/* <p className="text-gray text-lg sm:text-xl">

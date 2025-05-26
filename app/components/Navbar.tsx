@@ -102,9 +102,8 @@ const Navbar = () => {
             {/* Logo */}
             <Link
               href="/"
-              className={`flex-shrink-0 relative ${
-                isOpen ? "pointer-events-none" : ""
-              }`}
+              className={`flex-shrink-0 relative ${isOpen ? "pointer-events-none" : ""
+                }`}
             >
               <motion.div
                 animate={{
@@ -251,19 +250,17 @@ const Navbar = () => {
                           <Link
                             href="/projects"
                             onClick={() => setIsOpen(false)}
-                            className={`inline-block text-2xl md:text-3xl lg:text-4xl font-normal transition-colors duration-300 relative group ${
-                              pathname === "/projects"
-                                ? "text-[#0019FF]"
-                                : "text-slate-800 hover:text-slate-600 active:text-[#0019FF]"
-                            }`}
+                            className={`inline-block text-2xl md:text-3xl lg:text-4xl font-normal transition-colors duration-300 relative group ${pathname === "/projects"
+                              ? "text-[#0019FF]"
+                              : "text-slate-800 hover:text-slate-600 active:text-[#0019FF]"
+                              }`}
                           >
                             Projects
                             <span
-                              className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${
-                                pathname === "/projects"
-                                  ? "w-full bg-[#0019FF]"
-                                  : "w-0 bg-slate-400 group-hover:bg-slate-400 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full"
-                              }`}
+                              className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === "/projects"
+                                ? "w-full bg-[#0019FF]"
+                                : "w-0 bg-slate-400 group-hover:bg-slate-400 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full"
+                                }`}
                             ></span>
                           </Link>
                         </motion.div>
@@ -277,7 +274,7 @@ const Navbar = () => {
                           exit="closed"
                         >
                           <Link
-                            href="/Satya-Resume.pdf"
+                            href="/Satyaprakash_Ray_Product_Designer.pdf"
                             target="_blank"
                             onClick={() => setIsOpen(false)}
                             className="inline-block text-2xl md:text-3xl lg:text-4xl font-normal text-slate-800 hover:text-slate-600 active:text-[#0019FF] transition-colors duration-300 relative group"
@@ -299,19 +296,17 @@ const Navbar = () => {
                             <Link
                               href="/about"
                               onClick={() => setIsOpen(false)}
-                              className={`inline-block text-2xl md:text-3xl lg:text-4xl font-normal transition-colors duration-300 relative group ${
-                                pathname === "/about"
-                                  ? "text-[#0019FF]"
-                                  : "text-slate-800 hover:text-slate-600 active:text-[#0019FF]"
-                              }`}
+                              className={`inline-block text-2xl md:text-3xl lg:text-4xl font-normal transition-colors duration-300 relative group ${pathname === "/about"
+                                ? "text-[#0019FF]"
+                                : "text-slate-800 hover:text-slate-600 active:text-[#0019FF]"
+                                }`}
                             >
                               About me
                               <span
-                                className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${
-                                  pathname === "/about"
-                                    ? "w-full bg-[#0019FF]"
-                                    : "w-0 bg-slate-400 group-hover:bg-slate-400 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full"
-                                }`}
+                                className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === "/about"
+                                  ? "w-full bg-[#0019FF]"
+                                  : "w-0 bg-slate-400 group-hover:bg-slate-400 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full"
+                                  }`}
                               ></span>
                             </Link>
                           </motion.div>
@@ -328,20 +323,18 @@ const Navbar = () => {
                               <Link
                                 href="/mentoring"
                                 onClick={() => setIsOpen(false)}
-                                className={`inline-block font-medium transition-colors duration-300 relative group ${
-                                  pathname === "/mentoring"
-                                    ? "text-[#0019FF]"
-                                    : "text-slate-600 hover:text-slate-800 active:text-[#0019FF]"
-                                }`}
+                                className={`inline-block font-medium transition-colors duration-300 relative group ${pathname === "/mentoring"
+                                  ? "text-[#0019FF]"
+                                  : "text-slate-600 hover:text-slate-800 active:text-[#0019FF]"
+                                  }`}
                                 style={{ fontSize: "16px" }}
                               >
                                 Mentoring
                                 <span
-                                  className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${
-                                    pathname === "/mentoring"
-                                      ? "w-full bg-[#0019FF]"
-                                      : "w-0 bg-slate-300 group-hover:bg-slate-300 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full"
-                                  }`}
+                                  className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === "/mentoring"
+                                    ? "w-full bg-[#0019FF]"
+                                    : "w-0 bg-slate-300 group-hover:bg-slate-300 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full"
+                                    }`}
                                 ></span>
                               </Link>
                             </motion.div>
@@ -355,20 +348,18 @@ const Navbar = () => {
                               <Link
                                 href="/scribbling"
                                 onClick={() => setIsOpen(false)}
-                                className={`inline-block font-medium transition-colors duration-300 relative group ${
-                                  pathname === "/scribbling"
-                                    ? "text-[#0019FF]"
-                                    : "text-slate-600 hover:text-slate-800 active:text-[#0019FF]"
-                                }`}
+                                className={`inline-block font-medium transition-colors duration-300 relative group ${pathname === "/scribbling"
+                                  ? "text-[#0019FF]"
+                                  : "text-slate-600 hover:text-slate-800 active:text-[#0019FF]"
+                                  }`}
                                 style={{ fontSize: "16px" }}
                               >
                                 Scribbling
                                 <span
-                                  className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${
-                                    pathname === "/scribbling"
-                                      ? "w-full bg-[#0019FF]"
-                                      : "w-0 bg-slate-300 group-hover:bg-slate-300 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full"
-                                  }`}
+                                  className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === "/scribbling"
+                                    ? "w-full bg-[#0019FF]"
+                                    : "w-0 bg-slate-300 group-hover:bg-slate-300 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full"
+                                    }`}
                                 ></span>
                               </Link>
                             </motion.div>
@@ -382,20 +373,18 @@ const Navbar = () => {
                               <Link
                                 href="/3d-motion-more"
                                 onClick={() => setIsOpen(false)}
-                                className={`inline-block font-medium transition-colors duration-300 relative group ${
-                                  pathname === "/3d-motion-more"
-                                    ? "text-[#0019FF]"
-                                    : "text-slate-600 hover:text-slate-800 active:text-[#0019FF]"
-                                }`}
+                                className={`inline-block font-medium transition-colors duration-300 relative group ${pathname === "/3d-motion-more"
+                                  ? "text-[#0019FF]"
+                                  : "text-slate-600 hover:text-slate-800 active:text-[#0019FF]"
+                                  }`}
                                 style={{ fontSize: "16px" }}
                               >
                                 3D, Motion & more
                                 <span
-                                  className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${
-                                    pathname === "/3d-motion-more"
-                                      ? "w-full bg-[#0019FF]"
-                                      : "w-0 bg-slate-300 group-hover:bg-slate-300 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full"
-                                  }`}
+                                  className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === "/3d-motion-more"
+                                    ? "w-full bg-[#0019FF]"
+                                    : "w-0 bg-slate-300 group-hover:bg-slate-300 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full"
+                                    }`}
                                 ></span>
                               </Link>
                             </motion.div>
