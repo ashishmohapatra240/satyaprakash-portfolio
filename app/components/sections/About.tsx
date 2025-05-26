@@ -100,7 +100,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-5xl sm:text-7xl font-normal text-dark">
-              Featured Work
+              Featured work
               {/* <br />
               Creating Impact{" "}
               <span className="text-gray-400">

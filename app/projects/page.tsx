@@ -65,7 +65,7 @@ export default function Projects() {
         <div className="w-full">
           <motion.div variants={fadeInUp} className="max-w-4xl">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-dark leading-tight">
-              Featured Work
+              Featured work
             </h1>
           </motion.div>
         </div>
