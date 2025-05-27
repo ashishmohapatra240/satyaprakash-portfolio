@@ -387,41 +387,6 @@ export default function DreamXProject() {
             </section>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-          <div className="space-y-6 lg:max-w-full lg:w-2/3">
-            <p className="text-slate-800 text-lg sm:text-xl leading-relaxed">
-              After thorough research, I identified several key challenges:
-            </p>
-            <div className="space-y-5">
-              <div className="flex gap-3">
-                <div className="flex-1 space-y-1">
-                  <h3 className="text-slate-800 text-lg sm:text-xl font-bold leading-7">
-                    User Trust
-                  </h3>
-                  <p className="text-slate-800 text-lg sm:text-xl leading-7">
-                    Building trust in AI-powered dream interpretation while
-                    maintaining the personal nature of dreams
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-3">
-                <div className="flex-1 space-y-1">
-                  <h3 className="text-slate-800 text-lg sm:text-xl font-bold leading-7">
-                    Complex Information
-                  </h3>
-                  <p className="text-slate-800 text-lg sm:text-xl leading-7">
-                    Presenting detailed dream interpretations in an easily
-                    digestible format
-                  </p>
-                </div>
-              </div>
-              <p className="text-slate-800 text-lg sm:text-xl leading-7">
-                The goal was to create a platform that feels both magical and
-                trustworthy, while being easy to use.
-              </p>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* Next new-projects */}
