@@ -118,7 +118,7 @@ const Navbar = () => {
                 style={{ borderRadius: "6px" }}
               >
                 <Image
-                  src="/images/logo.png"
+                  src="/satyaprakash-portfolio/images/logo.png"
                   alt="Logo"
                   width={32}
                   height={32}

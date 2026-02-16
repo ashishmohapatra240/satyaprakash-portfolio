@@ -6,25 +6,25 @@ const TESTIMONIALS = [
     text: "From concept to execution, everything was flawless. Our brand has never looked better!",
     author: "Jerome Bell",
     role: "Design Manager, Proximity",
-    avatar: "/images/testimonials/jerome.png",
+    avatar: "/satyaprakash-portfolio/images/testimonials/jerome.png",
   },
   {
     text: "Brilliant creativity and attention to detail. Every project exceeded our expectations!",
     author: "Jacob Jones",
     role: "Lead Designer, Studio",
-    avatar: "/images/testimonials/jacob.png",
+    avatar: "/satyaprakash-portfolio/images/testimonials/jacob.png",
   },
   {
     text: "A pleasure to work with! Exceptional design skills and a great understanding of our vision.",
     author: "Eleanor Pena",
     role: "Art Director, Artwave",
-    avatar: "/images/testimonials/eleanor.png",
+    avatar: "/satyaprakash-portfolio/images/testimonials/eleanor.png",
   },
   {
     text: "Professional, reliable, and incredibly talented. The results truly brought our vision to life!",
     author: "Courtney Henry",
     role: "Creative Director, Designco",
-    avatar: "/images/testimonials/courtney.png",
+    avatar: "/satyaprakash-portfolio/images/testimonials/courtney.png",
   },
 ];
 

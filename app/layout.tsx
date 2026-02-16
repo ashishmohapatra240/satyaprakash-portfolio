@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: 'Satyaprakash Portfolio',
     images: [
       {
-        url: '/images/design/OG/OG.png',
+        url: '/satyaprakash-portfolio/images/design/OG/OG.png',
         width: 1200,
         height: 630,
         alt: 'Satyaprakash - Product Designer Logo',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Satyaprakash - Product Designer",
     description: "Building products & design systems. Experienced product designer specializing in fraud detection systems, design systems, and user experience design.",
-    images: ['/images/design/OG/Image - logo.png'],
+    images: ['/satyaprakash-portfolio/images/design/OG/Image - logo.png'],
     creator: '@satyaprakashray',
   },
   robots: {

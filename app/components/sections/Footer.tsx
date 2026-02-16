@@ -59,7 +59,7 @@ export default function Footer() {
               rel="noopener noreferrer"
             >
               <Image
-                src="/icons/dribbble-icon.svg"
+                src="/satyaprakash-portfolio/icons/dribbble-icon.svg"
                 alt="Dribbble"
                 width={24}
                 height={24}
