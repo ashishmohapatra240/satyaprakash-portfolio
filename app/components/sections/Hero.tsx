@@ -41,7 +41,7 @@ export default function Hero() {
         <div className="w-full md:w-1/3 flex flex-col items-center">
           <div className="rounded-3xl relative flex items-center justify-center">
             <Image
-              src="/images/hero.png"
+              src="/satyaprakash-portfolio/images/hero.png"
               alt="Mobile preview"
               width={300}
               height={600}

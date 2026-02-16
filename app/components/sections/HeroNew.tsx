@@ -4,10 +4,10 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const avatars = [
-  "/images/testimonials/jerome.png",
-  "/images/testimonials/jacob.png",
-  "/images/testimonials/eleanor.png",
-  "/images/testimonials/courtney.png",
+  "/satyaprakash-portfolio/images/testimonials/jerome.png",
+  "/satyaprakash-portfolio/images/testimonials/jacob.png",
+  "/satyaprakash-portfolio/images/testimonials/eleanor.png",
+  "/satyaprakash-portfolio/images/testimonials/courtney.png",
 ];
 
 export default function HeroNew() {

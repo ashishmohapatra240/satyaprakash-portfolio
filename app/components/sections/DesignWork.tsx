@@ -8,13 +8,13 @@ const CASE_STUDIES = [
   {
     company: "TeamX",
     title: "Slashing Fraud Case Resolution by 60%",
-    image: "/images/new-projects/thumbnails/TeamX.png",
+    image: "/satyaprakash-portfolio/images/new-projects/thumbnails/TeamX.png",
     href: "/projects/team-x",
   },
   {
     company: "Bestosys",
     title: "Improving workflow of Dentists",
-    image: "/images/new-projects/thumbnails/PH.png",
+    image: "/satyaprakash-portfolio/images/new-projects/thumbnails/PH.png",
     href: "/projects/pizza-hut",
   },
 ];

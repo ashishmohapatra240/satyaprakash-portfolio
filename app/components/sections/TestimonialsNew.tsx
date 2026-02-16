@@ -8,19 +8,19 @@ const TESTIMONIALS = [
     text: "Satya brings a rare combination of strategic thinking and pixel-perfect execution. His work on our design system transformed how our entire team operates.",
     author: "Kirtana Krishnan",
     role: "Design Manager, Proximity",
-    avatar: "/images/testimonials/jerome.png",
+    avatar: "/satyaprakash-portfolio/images/testimonials/jerome.png",
   },
   {
     text: "From concept to execution, everything was flawless. Our brand has never looked better!",
     author: "Jerome Bell",
     role: "Design Manager, Proximity",
-    avatar: "/images/testimonials/jacob.png",
+    avatar: "/satyaprakash-portfolio/images/testimonials/jacob.png",
   },
   {
     text: "Brilliant creativity and attention to detail. Every project exceeded our expectations!",
     author: "Jacob Jones",
     role: "Lead Designer, Studio",
-    avatar: "/images/testimonials/eleanor.png",
+    avatar: "/satyaprakash-portfolio/images/testimonials/eleanor.png",
   },
 ];
 

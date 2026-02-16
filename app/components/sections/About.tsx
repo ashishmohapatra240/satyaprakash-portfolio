@@ -10,7 +10,7 @@ const PROJECTS = [
     description:
       "A comprehensive fraud detection system for TeamX that helps protect millions of transactions.",
     company: "Team X",
-    image: "/images/new-projects/thumbnails/TeamX.png",
+    image: "/satyaprakash-portfolio/images/new-projects/thumbnails/TeamX.png",
     href: "/projects/team-x",
     year: "2024",
   },
@@ -19,7 +19,7 @@ const PROJECTS = [
     description:
       "Crafting a delightful and intuitive experience for DreamX that brings everyday payments to life—seamless, personal, and built with clarity in every click.",
     company: "DreamX",
-    image: "/images/new-projects/thumbnails/DreamX.png",
+    image: "/satyaprakash-portfolio/images/new-projects/thumbnails/DreamX.png",
     href: "/projects/dreamx",
     year: "2023",
   },
@@ -28,7 +28,7 @@ const PROJECTS = [
     description:
       "Redesigning the loyalty program experience for Pizza Hut Indonesia's customers.",
     company: "Pizza Hut Indonesia",
-    image: "/images/new-projects/thumbnails/PH.png",
+    image: "/satyaprakash-portfolio/images/new-projects/thumbnails/PH.png",
     href: "/projects/pizza-hut",
     year: "2023",
   },
@@ -37,7 +37,7 @@ const PROJECTS = [
     description:
       "Creating a scalable and consistent design system that powers multiple products.",
     company: "Internal",
-    image: "/images/new-projects/thumbnails/SD.png",
+    image: "/satyaprakash-portfolio/images/new-projects/thumbnails/SD.png",
     href: "/projects/spring-design",
     year: "2023",
   },

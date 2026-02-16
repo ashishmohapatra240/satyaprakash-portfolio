@@ -7,37 +7,37 @@ import { motion } from "framer-motion";
 const SCRIBBLE_CARDS = [
   {
     title: "Shoot & hoop",
-    image: "/images/design/mentor.png",
+    image: "/satyaprakash-portfolio/images/design/mentor.png",
     href: "/scribbling",
     color: "bg-[#FF6B6B]",
   },
   {
     title: "Color theory",
-    image: "/images/design/motion.png",
+    image: "/satyaprakash-portfolio/images/design/motion.png",
     href: "/scribbling",
     color: "bg-[#4ECDC4]",
   },
   {
     title: "Wild strokes",
-    image: "/images/design/sketch.png",
+    image: "/satyaprakash-portfolio/images/design/sketch.png",
     href: "/scribbling",
     color: "bg-[#FFE66D]",
   },
   {
     title: "Perspective",
-    image: "/images/design/mentor.png",
+    image: "/satyaprakash-portfolio/images/design/mentor.png",
     href: "/scribbling",
     color: "bg-[#A78BFA]",
   },
   {
     title: "Urban sketch",
-    image: "/images/design/motion.png",
+    image: "/satyaprakash-portfolio/images/design/motion.png",
     href: "/scribbling",
     color: "bg-[#F97316]",
   },
   {
     title: "Abstract play",
-    image: "/images/design/sketch.png",
+    image: "/satyaprakash-portfolio/images/design/sketch.png",
     href: "/scribbling",
     color: "bg-[#6366F1]",
   },
