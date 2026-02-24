@@ -3,6 +3,8 @@ import { productSans } from "./fonts";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/sections/Footer";
+import SmoothScroll from "./components/SmoothScroll";
+import BackgroundMusic from "./components/BackgroundMusic";
 export const metadata: Metadata = {
   title: "Satyaprakash - Product Designer",
   description: "Building products & design systems. Experienced product designer specializing in fraud detection systems, design systems, and user experience design.",
@@ -58,10 +60,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={productSans.className}>
+      <head>
+        <link
+          rel="preload"
+          as="audio"
+          href="/images/ES_Tat Twam Asi - Valante.mp3"
+          type="audio/mpeg"
+        />
+      </head>
       <body className={`antialiased ${productSans.variable} font-sans`}>
-        <Navbar />
-        {children}
-        <Footer />
+        <SmoothScroll>
+          <Navbar />
+          {children}
+          <Footer />
+          <BackgroundMusic />
+        </SmoothScroll>
       </body>
     </html>
   );

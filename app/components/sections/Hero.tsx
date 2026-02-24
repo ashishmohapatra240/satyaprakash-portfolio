@@ -1,66 +1,108 @@
 "use client";
+
 import clsx from "clsx";
-import { useRive } from "@rive-app/react-canvas";
+import Image from "next/image";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 export default function Hero() {
-  const { RiveComponent } = useRive({
-    src: "/HeroAnimation.riv",
-    autoplay: true,
-  });
+  const avatarRef = useRef<HTMLDivElement>(null);
+  const greetingRef = useRef<HTMLParagraphElement>(null);
+  const line1Ref = useRef<HTMLSpanElement>(null);
+  const line2Ref = useRef<HTMLSpanElement>(null);
+  const subRef = useRef<HTMLParagraphElement>(null);
+  const btnRef = useRef<HTMLDivElement>(null);
 
-  const { RiveComponent: RiveComponent2 } = useRive({
-    src: "/Top-FInal2.riv",
-    autoplay: true,
-    stateMachines: "State Machine 1",
-  });
+  useEffect(() => {
+    const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+
+    // Avatar — scale up from slightly small, fade in
+    tl.to(avatarRef.current, {
+      scale: 1,
+      opacity: 1,
+      duration: 0.9,
+    })
+
+    // Greeting — letter-feel: blur + slide up
+    .to(greetingRef.current, {
+      y: 0,
+      opacity: 1,
+      filter: "blur(0px)",
+      duration: 0.65,
+    }, "-=0.45")
+
+    // Heading lines — curtain reveal (slides up from overflow:hidden parent)
+    .to([line1Ref.current, line2Ref.current], {
+      y: "0%",
+      stagger: 0.11,
+      duration: 1.1,
+    }, "-=0.35")
+
+    // Sub text — fade + slide
+    .to(subRef.current, {
+      y: 0,
+      opacity: 1,
+      filter: "blur(0px)",
+      duration: 0.75,
+      ease: "power3.out",
+    }, "-=0.55")
+
+    // Button gradient — fade up last
+    .to(btnRef.current, {
+      y: 0,
+      opacity: 1,
+      duration: 0.9,
+      ease: "power3.out",
+    }, "-=0.5");
+  }, []);
 
   return (
     <section className={clsx("min-h-screen flex flex-col relative", "max-w-7xl px-5 lg:px-20 md:px-6")}>
-      <div className="flex-1 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 pt-20 md:pt-0">
-        {/* Left content */}
-        <div className="space-y-4 md:space-y-6 w-full text-center md:text-left ">
-          <div className="space-y-3 md:space-y-4">
-            <div className="flex items-center justify-center sm:justify-start gap-2">
-              <p className="text-base sm:text-lg">Hey I&apos;m Satya</p>
-              <div className="w-32 h-32">
-                <RiveComponent2 />
-              </div>
+      <div className="flex-1 flex flex-col items-center justify-center" style={{ paddingTop: "20vh" }}>
+        <div className="space-y-6 w-full text-center">
+
+          {/* Avatar + greeting */}
+          <div className="flex flex-col items-center gap-3">
+            <div ref={avatarRef} className="w-20 h-20 aspect-square rounded-full overflow-hidden" style={{ opacity: 0, transform: "scale(0.6)" }}>
+              <Image
+                src="/images/Hero-avatar.png"
+                alt="Satya"
+                width={80}
+                height={80}
+                className="w-full h-full object-cover"
+                priority
+              />
             </div>
-
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal leading-tight text-dark mx-auto md:mx-0 max-w-[90%] md:max-w-none font-sans">
-              building products &<br />
-              design systems
-            </h1>
+            <p ref={greetingRef} className="text-base text-slate-700" style={{ opacity: 0, transform: "translateY(14px)", filter: "blur(4px)" }}>
+              Hey!! I&apos;m Satya (sa-tya)
+            </p>
           </div>
-        </div>
 
-        {/* Right Section - Empty div to maintain layout */}
-        {/* <div className="w-full md:w-1/3"></div> */}
+          {/* Main heading — each line in overflow:hidden for curtain effect */}
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-normal leading-none text-dark mx-auto max-w-[90%] md:max-w-none font-sans">
+            <span style={{ display: "block", overflow: "hidden", paddingBottom: "0.05em" }}>
+              <span ref={line1Ref} style={{ display: "block", transform: "translateY(108%)" }}>Busy detailing solutions</span>
+            </span>
+            <span style={{ display: "block", overflow: "hidden", paddingBottom: "0.05em" }}>
+              <span ref={line2Ref} style={{ display: "block", transform: "translateY(108%)" }}>for complex problems.</span>
+            </span>
+          </h1>
 
-        {/* Original Right Section (Commented out)
-        <div className="w-full md:w-1/3 flex flex-col items-center">
-          <div className="rounded-3xl relative flex items-center justify-center">
+          {/* Secondary text */}
+          <p ref={subRef} className="text-base text-slate-500 leading-relaxed mx-auto max-w-lg" style={{ opacity: 0, transform: "translateY(22px)", filter: "blur(3px)" }}>
+            Me ?? A designer driven by curiousity, and Problems. Currently designing at Supanote AI. Previously at Proximity works
+          </p>
+
+          {/* Button gradient image */}
+          <div ref={btnRef} className="flex justify-center pt-[2.5rem]" style={{ opacity: 0, transform: "translateY(28px)" }}>
             <Image
-              src="/images/hero.png"
-              alt="Mobile preview"
-              width={300}
-              height={600}
-              className="w-[200px] sm:w-[250px] md:w-[280px] lg:w-[300px] h-auto"
+              src="/images/Button gradient.png"
+              alt="Button gradient"
+              width={3573}
+              height={395}
+              className="w-full max-w-[1200px] h-auto"
               priority
             />
-          </div>
-
-          <p className="text-gray text-base sm:text-lg text-center mt-4 md:mt-6">
-            Getting lost in realm of design is what i ❤️
-          </p>
-        </div>
-        */}
-      </div>
-
-      <div className="relative mt-20">
-        <div className="absolute bottom-0 md:right-0 items-center justify-center text-sm text-gray-500 -z-10">
-          <div className="w-56 h-56 md:w-96 md:h-96">
-            <RiveComponent />
           </div>
         </div>
       </div>

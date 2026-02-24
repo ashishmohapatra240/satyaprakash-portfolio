@@ -6,9 +6,9 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { Phone, Linkedin, Instagram, Dribbble } from "react-feather";
-import KachingButton from "./KachingButton";
+import { Equal, X } from "lucide-react";
+import GradientButtonBlue from "./GradientButtonBlue";
 
-// Add animation variants
 const menuVariants = {
   open: {
     x: 0,
@@ -50,155 +50,209 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isScrollingDown, setIsScrollingDown] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [indiaTime, setIndiaTime] = useState("--:--:--");
+  const [isPageDark, setIsPageDark] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      setIndiaTime(
+        now.toLocaleTimeString("en-IN", {
+          timeZone: "Asia/Kolkata",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: false,
+        })
+      );
+    };
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-
-      // Check if scrolled past threshold
       setIsScrolled(scrollPosition > 50);
-
-      // Check scroll direction
       if (scrollPosition > lastScrollY && scrollPosition > 100) {
-        // Scrolling down
         setIsScrollingDown(true);
       } else {
-        // Scrolling up
         setIsScrollingDown(false);
       }
-
       setLastScrollY(scrollPosition);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  // Prevent body scroll when panel is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
     }
-
-    // Cleanup on unmount
     return () => {
       document.body.style.overflow = "unset";
     };
   }, [isOpen]);
 
+  // Watch for page-dark class toggled by GlowSection
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setIsPageDark(document.documentElement.classList.contains("page-dark"));
+    });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
+      {/* Main navbar — clock & logo. Drops below drawer when open. */}
       <motion.nav
         initial={{ y: 0, opacity: 1 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: "tween", duration: 0.3 }}
-        className="fixed top-0 left-0 right-0 z-[100] py-[20px]"
+        className={`fixed top-0 left-0 right-0 py-[20px] ${isOpen ? "z-[45]" : "z-[100]"}`}
       >
         <div className="mx-auto max-w-7xl px-5 lg:px-20 md:px-8">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo */}
-            <Link
-              href="/"
-              className={`flex-shrink-0 relative ${isOpen ? "pointer-events-none" : ""
-                }`}
-            >
+          <div className="flex items-center h-16">
+
+            {/* Left frame: logo + name + profession */}
+            <div className="flex-1 flex items-center gap-3">
+              <Link href="/" className={isOpen ? "pointer-events-none" : ""}>
+                <motion.div
+                  animate={{
+                    opacity: isOpen ? 0 : isScrollingDown ? 0 : 1,
+                    y: isScrollingDown && !isOpen ? -20 : 0,
+                  }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                >
+                  <Image
+                    src="/images/logo.png"
+                    alt="Logo"
+                    width={32}
+                    height={32}
+                    className="w-8 h-8"
+                  />
+                </motion.div>
+              </Link>
+
               <motion.div
                 animate={{
-                  backgroundColor:
-                    isScrolled && !isOpen
-                      ? "rgba(255, 255, 255, 0)"
-                      : "rgba(255, 255, 255, 0)",
                   opacity: isOpen ? 0 : isScrollingDown ? 0 : 1,
-                  y: isScrollingDown && !isOpen ? -60 : 0,
+                  y: isScrollingDown && !isOpen ? -20 : 0,
                 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                style={{ borderRadius: "6px" }}
+                className="flex flex-col leading-snug"
               >
-                <Image
-                  src="/images/logo.png"
-                  alt="Logo"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8"
-                />
-              </motion.div>
-            </Link>
-
-            {/* Right Side - Button and Hamburger */}
-            <div className="flex items-center gap-8">
-              {/* KachingButton - visible when panel is closed */}
-              <motion.div
-                animate={{
-                  backgroundColor:
-                    isScrolled && !isOpen
-                      ? "rgba(255, 255, 255, 1)"
-                      : "rgba(255, 255, 255, 0)",
-                  opacity: isOpen ? 0 : isScrollingDown ? 0 : 1,
-                  y: isScrollingDown && !isOpen ? -60 : 0,
-                  pointerEvents: isOpen ? "none" : "auto",
-                }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                style={{ borderRadius: "6px" }}
-                className="hidden md:block"
-              >
-                <KachingButton href="mailto:satyaprakashray999@gmail.com">
-                  <Phone size={16} />
-                  Let&apos;s talk
-                </KachingButton>
-              </motion.div>
-
-              {/* Menu Button */}
-              <motion.button
-                onClick={() => setIsOpen(!isOpen)}
-                className="relative inline-flex items-center justify-center w-10 h-10 text-gray-800 hover:text-gray-600 transition-colors z-[100]"
-                whileTap={{ scale: 0.95 }}
-                animate={{
-                  backgroundColor:
-                    isScrolled && !isOpen
-                      ? "rgba(255, 255, 255, 1)"
-                      : "rgba(255, 255, 255, 0)",
-                }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                style={{ borderRadius: "6px" }}
-              >
-                <span className="sr-only">
-                  {isOpen ? "Close menu" : "Open menu"}
+                <span className="text-xs font-medium text-slate-800 leading-tight">
+                  Satyaprakash Ray
                 </span>
-                <div className="w-6 h-6 relative flex items-center justify-center">
-                  <motion.span
-                    animate={
-                      isOpen ? { rotate: 45, y: 0 } : { rotate: 0, y: -6 }
-                    }
-                    transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                    className="absolute w-6 h-0.5 bg-black transform origin-center"
-                  />
-                  <motion.span
-                    animate={
-                      isOpen
-                        ? { opacity: 0, scale: 0 }
-                        : { opacity: 1, scale: 1 }
-                    }
-                    transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                    className="absolute w-6 h-0.5 bg-black"
-                  />
-                  <motion.span
-                    animate={
-                      isOpen ? { rotate: -45, y: 0 } : { rotate: 0, y: 6 }
-                    }
-                    transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                    className="absolute w-6 h-0.5 bg-black transform origin-center"
-                  />
-                </div>
-              </motion.button>
+                <span className="text-[10px] text-slate-500 leading-tight">
+                  Product Designer
+                </span>
+              </motion.div>
             </div>
+
+            {/* Middle frame: IST clock */}
+            <div className="flex-1 flex justify-center">
+              <motion.div
+                animate={{
+                  opacity: isScrollingDown && !isOpen ? 0 : 1,
+                  y: isScrollingDown && !isOpen ? -20 : 0,
+                }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              >
+                <span className="text-xs font-mono tabular-nums text-slate-600 tracking-tight">
+                  {indiaTime} IST
+                </span>
+              </motion.div>
+            </div>
+
+            {/* Right frame: empty spacer to keep 3-column balance */}
+            <div className="flex-1" />
+
           </div>
         </div>
       </motion.nav>
 
-      {/* Overlay Background */}
+      {/*
+        Toggle button — lives outside the nav so it has its own z-index
+        and is never buried under the drawer. Always sits at z-[200].
+        Mirrors the nav's padding/max-width so it visually aligns with
+        the right frame.
+      */}
+      <div className="fixed top-0 left-0 right-0 z-[200] py-[20px] pointer-events-none">
+        <div className="mx-auto max-w-7xl px-5 lg:px-20 md:px-8">
+          <div className="flex items-center justify-end h-16">
+            <motion.button
+              onClick={() => setIsOpen(!isOpen)}
+              className={`pointer-events-auto inline-flex items-center justify-center w-10 h-10 transition-colors ${
+                isPageDark && !isOpen ? "text-white hover:text-white/70" : "text-slate-800 hover:text-slate-600"
+              }`}
+              whileTap={{ scale: 0.92 }}
+              animate={{
+                backgroundColor:
+                  isScrolled && !isOpen
+                    ? "rgba(255,255,255,0.1)"
+                    : "rgba(255,255,255,0)",
+                backdropFilter:
+                  isScrolled && !isOpen
+                    ? "blur(24px) saturate(180%)"
+                    : "blur(0px) saturate(100%)",
+                WebkitBackdropFilter:
+                  isScrolled && !isOpen
+                    ? "blur(24px) saturate(180%)"
+                    : "blur(0px) saturate(100%)",
+                borderColor:
+                  isScrolled && !isOpen
+                    ? "rgba(255,255,255,0.35)"
+                    : "rgba(255,255,255,0)",
+                boxShadow:
+                  isScrolled && !isOpen
+                    ? "0 4px 24px rgba(0,0,0,0.08), inset 0 1.5px 0 rgba(255,255,255,0.55), inset 0 -1px 0 rgba(0,0,0,0.06)"
+                    : "0 0px 0px rgba(0,0,0,0), inset 0 0px 0 rgba(255,255,255,0), inset 0 0px 0 rgba(0,0,0,0)",
+              }}
+              transition={{ duration: 0.35, ease: "easeInOut" }}
+              style={{ borderRadius: "12px", borderWidth: "1px", borderStyle: "solid" }}
+            >
+              <span className="sr-only">
+                {isOpen ? "Close menu" : "Open menu"}
+              </span>
+              <AnimatePresence mode="wait">
+                {!isOpen ? (
+                  <motion.div
+                    key="equal"
+                    initial={{ opacity: 0, rotate: 45, scale: 0.7 }}
+                    animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                    exit={{ opacity: 0, rotate: -45, scale: 0.7 }}
+                    transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                  >
+                    <Equal size={22} strokeWidth={1.75} />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="x"
+                    initial={{ opacity: 0, rotate: -45, scale: 0.7 }}
+                    animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                    exit={{ opacity: 0, rotate: 45, scale: 0.7 }}
+                    transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                  >
+                    <X size={22} strokeWidth={1.75} />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.button>
+          </div>
+        </div>
+      </div>
+
+      {/* Overlay */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -226,7 +280,6 @@ const Navbar = () => {
               {/* Top Section - Main Navigation */}
               <div className="flex-1 md:flex-1">
                 <div className="mt-0 md:mt-16">
-                  {/* Main Navigation */}
                   <div className="h-fit md:h-auto">
                     <motion.div
                       custom={5}
@@ -235,10 +288,7 @@ const Navbar = () => {
                       animate="open"
                       exit="closed"
                     >
-                      <h3 className="text-gray-400 text-xs md:text-sm mb-4 md:mb-6">
-                        Menu
-                      </h3>
-                      <div className="space-y-3 md:space-y-4">
+                      <div className="space-y-6 md:space-y-8">
                         {/* Projects */}
                         <motion.div
                           custom={6}
@@ -250,17 +300,19 @@ const Navbar = () => {
                           <Link
                             href="/projects"
                             onClick={() => setIsOpen(false)}
-                            className={`inline-block text-2xl md:text-3xl lg:text-4xl font-normal transition-colors duration-300 relative group ${pathname === "/projects"
-                              ? "text-[#0019FF]"
-                              : "text-slate-800 hover:text-slate-600 active:text-[#0019FF]"
-                              }`}
+                            className={`inline-block text-2xl md:text-3xl lg:text-4xl font-normal transition-colors duration-300 relative group ${
+                              pathname === "/projects"
+                                ? "text-[#0019FF]"
+                                : "text-slate-800 hover:text-[#0019FF] active:text-[#0019FF]"
+                            }`}
                           >
                             Projects
                             <span
-                              className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === "/projects"
-                                ? "w-full bg-[#0019FF]"
-                                : "w-0 bg-slate-400 group-hover:bg-slate-400 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full"
-                                }`}
+                              className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${
+                                pathname === "/projects"
+                                  ? "w-full bg-[#0019FF]"
+                                  : "w-0 bg-[#0019FF] group-hover:bg-[#0019FF] group-active:bg-[#0019FF] group-hover:w-full group-active:w-full"
+                              }`}
                             ></span>
                           </Link>
                         </motion.div>
@@ -277,10 +329,10 @@ const Navbar = () => {
                             href="/Satyaprakash_Ray_Product_Designer.pdf"
                             target="_blank"
                             onClick={() => setIsOpen(false)}
-                            className="inline-block text-2xl md:text-3xl lg:text-4xl font-normal text-slate-800 hover:text-slate-600 active:text-[#0019FF] transition-colors duration-300 relative group"
+                            className="inline-block text-2xl md:text-3xl lg:text-4xl font-normal text-slate-800 hover:text-[#0019FF] active:text-[#0019FF] transition-colors duration-300 relative group"
                           >
                             Resume
-                            <span className="absolute bottom-0 left-0 w-0 h-px bg-slate-400 group-hover:bg-slate-400 group-active:bg-[#0019FF] transition-all duration-300 ease-out group-hover:w-full group-active:w-full"></span>
+                            <span className="absolute bottom-0 left-0 w-0 h-px bg-[#0019FF] group-hover:bg-[#0019FF] group-active:bg-[#0019FF] transition-all duration-300 ease-out group-hover:w-full group-active:w-full"></span>
                           </Link>
                         </motion.div>
 
@@ -296,23 +348,25 @@ const Navbar = () => {
                             <Link
                               href="/about"
                               onClick={() => setIsOpen(false)}
-                              className={`inline-block text-2xl md:text-3xl lg:text-4xl font-normal transition-colors duration-300 relative group ${pathname === "/about"
-                                ? "text-[#0019FF]"
-                                : "text-slate-800 hover:text-slate-600 active:text-[#0019FF]"
-                                }`}
+                              className={`inline-block text-2xl md:text-3xl lg:text-4xl font-normal transition-colors duration-300 relative group ${
+                                pathname === "/about"
+                                  ? "text-[#0019FF]"
+                                  : "text-slate-800 hover:text-[#0019FF] active:text-[#0019FF]"
+                              }`}
                             >
                               About me
                               <span
-                                className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === "/about"
-                                  ? "w-full bg-[#0019FF]"
-                                  : "w-0 bg-slate-400 group-hover:bg-slate-400 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full"
-                                  }`}
+                                className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${
+                                  pathname === "/about"
+                                    ? "w-full bg-[#0019FF]"
+                                    : "w-0 bg-[#0019FF] group-hover:bg-[#0019FF] group-active:bg-[#0019FF] group-hover:w-full group-active:w-full"
+                                }`}
                               ></span>
                             </Link>
                           </motion.div>
 
                           {/* Sub-navigation items */}
-                          <div className="mt-2 md:mt-3 space-y-1 md:space-y-2">
+                          <div className="mt-4 md:mt-5 space-y-4 md:space-y-5">
                             <motion.div
                               custom={9}
                               variants={itemVariants}
@@ -323,18 +377,20 @@ const Navbar = () => {
                               <Link
                                 href="/mentoring"
                                 onClick={() => setIsOpen(false)}
-                                className={`inline-block font-medium transition-colors duration-300 relative group ${pathname === "/mentoring"
-                                  ? "text-[#0019FF]"
-                                  : "text-slate-600 hover:text-slate-800 active:text-[#0019FF]"
-                                  }`}
+                                className={`inline-block font-medium transition-colors duration-300 relative group ${
+                                  pathname === "/mentoring"
+                                    ? "text-[#0019FF]"
+                                    : "text-slate-600 hover:text-[#0019FF] active:text-[#0019FF]"
+                                }`}
                                 style={{ fontSize: "16px" }}
                               >
                                 Mentoring
                                 <span
-                                  className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === "/mentoring"
-                                    ? "w-full bg-[#0019FF]"
-                                    : "w-0 bg-slate-300 group-hover:bg-slate-300 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full"
-                                    }`}
+                                  className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${
+                                    pathname === "/mentoring"
+                                      ? "w-full bg-[#0019FF]"
+                                      : "w-0 bg-[#0019FF] group-hover:bg-[#0019FF] group-active:bg-[#0019FF] group-hover:w-full group-active:w-full"
+                                  }`}
                                 ></span>
                               </Link>
                             </motion.div>
@@ -348,18 +404,20 @@ const Navbar = () => {
                               <Link
                                 href="/scribbling"
                                 onClick={() => setIsOpen(false)}
-                                className={`inline-block font-medium transition-colors duration-300 relative group ${pathname === "/scribbling"
-                                  ? "text-[#0019FF]"
-                                  : "text-slate-600 hover:text-slate-800 active:text-[#0019FF]"
-                                  }`}
+                                className={`inline-block font-medium transition-colors duration-300 relative group ${
+                                  pathname === "/scribbling"
+                                    ? "text-[#0019FF]"
+                                    : "text-slate-600 hover:text-[#0019FF] active:text-[#0019FF]"
+                                }`}
                                 style={{ fontSize: "16px" }}
                               >
                                 Scribbling
                                 <span
-                                  className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === "/scribbling"
-                                    ? "w-full bg-[#0019FF]"
-                                    : "w-0 bg-slate-300 group-hover:bg-slate-300 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full"
-                                    }`}
+                                  className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${
+                                    pathname === "/scribbling"
+                                      ? "w-full bg-[#0019FF]"
+                                      : "w-0 bg-[#0019FF] group-hover:bg-[#0019FF] group-active:bg-[#0019FF] group-hover:w-full group-active:w-full"
+                                  }`}
                                 ></span>
                               </Link>
                             </motion.div>
@@ -373,18 +431,20 @@ const Navbar = () => {
                               <Link
                                 href="/3d-motion-more"
                                 onClick={() => setIsOpen(false)}
-                                className={`inline-block font-medium transition-colors duration-300 relative group ${pathname === "/3d-motion-more"
-                                  ? "text-[#0019FF]"
-                                  : "text-slate-600 hover:text-slate-800 active:text-[#0019FF]"
-                                  }`}
+                                className={`inline-block font-medium transition-colors duration-300 relative group ${
+                                  pathname === "/3d-motion-more"
+                                    ? "text-[#0019FF]"
+                                    : "text-slate-600 hover:text-[#0019FF] active:text-[#0019FF]"
+                                }`}
                                 style={{ fontSize: "16px" }}
                               >
                                 3D, Motion & more
                                 <span
-                                  className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${pathname === "/3d-motion-more"
-                                    ? "w-full bg-[#0019FF]"
-                                    : "w-0 bg-slate-300 group-hover:bg-slate-300 group-active:bg-[#0019FF] group-hover:w-full group-active:w-full"
-                                    }`}
+                                  className={`absolute bottom-0 left-0 h-px transition-all duration-300 ease-out ${
+                                    pathname === "/3d-motion-more"
+                                      ? "w-full bg-[#0019FF]"
+                                      : "w-0 bg-[#0019FF] group-hover:bg-[#0019FF] group-active:bg-[#0019FF] group-hover:w-full group-active:w-full"
+                                  }`}
                                 ></span>
                               </Link>
                             </motion.div>
@@ -401,9 +461,7 @@ const Navbar = () => {
 
               {/* Bottom Section - Social Media and Contact Info */}
               <div className="mt-0 md:mt-6 lg:mt-8 border-t border-gray-200 pt-6 md:pt-8 pb-4">
-                {/* Contact Info and Button */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 md:gap-6">
-                  {/* Social Media Icons */}
                   <motion.div
                     custom={12}
                     variants={itemVariants}
@@ -411,9 +469,6 @@ const Navbar = () => {
                     animate="open"
                     exit="closed"
                   >
-                    <h3 className="text-gray-400 text-xs md:text-sm mb-3">
-                      Social media
-                    </h3>
                     <div className="flex gap-4">
                       {[
                         {
@@ -468,10 +523,10 @@ const Navbar = () => {
                     animate="open"
                     exit="closed"
                   >
-                    <KachingButton href="mailto:satyaprakashray999@gmail.com">
+                    <GradientButtonBlue href="mailto:satyaprakashray999@gmail.com">
                       <Phone size={16} />
                       Let&apos;s talk
-                    </KachingButton>
+                    </GradientButtonBlue>
                   </motion.div>
                 </div>
               </div>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,4 +11,9 @@
 
 body {
   font-family: var(--font-product-sans);
+}
+
+@keyframes gallery-ticker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }

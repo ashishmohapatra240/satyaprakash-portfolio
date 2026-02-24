@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import ProjectCard from "../ProjectCard";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
 const PROJECTS = [
   {
@@ -43,55 +43,41 @@ const PROJECTS = [
   },
 ];
 
-// Animation variants
+function ScrollRevealCard({ children }: { children: React.ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null);
 
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  // Slide up: 80px below → 0 as card enters; stays at 0 once in view
+  const rawY = useTransform(scrollYProgress, [0, 0.4, 1], [80, 0, 0]);
+  // Fade in: invisible → fully visible as card enters; stays visible
+  const rawOpacity = useTransform(scrollYProgress, [0, 0.35, 1], [0, 1, 1]);
+
+  // Spring smoothing for fluid, non-mechanical feel
+  const y = useSpring(rawY, { stiffness: 80, damping: 25 });
+  const opacity = useSpring(rawOpacity, { stiffness: 80, damping: 25 });
+
+  return (
+    <div ref={ref}>
+      <motion.div style={{ y, opacity }}>
+        {children}
+      </motion.div>
+    </div>
+  );
+}
 
 export default function About() {
-  const projectsRef = useRef(null);
   const sectionRef = useRef(null);
 
   return (
     <section className="relative w-full overflow-hidden" ref={sectionRef}>
-      {/* White section */}
-      <div className="bg-white relative" ref={projectsRef}>
-        {/* Top Content - Constrained */}
-        {/* <div className="pt-16 sm:pt-24 pb-32 ">
-          <motion.div
-            className="text-center space-y-6"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-responsive-2xl lg:text-responsive-3xl 2xl:text-responsive-4xl font-medium text-[#0E0F16] mt-8 sm:mt-16 leading-tight">
-            <h2 className="text-responsive-2xl lg:text-responsive-3xl 2xl:text-responsive-4xl font-medium text-[#0E0F16] mt-8 sm:mt-16 leading-tight">
-              Crafting experience
-              <br className="hidden sm:block" />
-              Creating Impact
-            </h2>
-            <p className="text-gray text-responsive-base lg:text-responsive-lg">
-              that matters...
-            </p>
-          </motion.div>
-        </div> */}
-
-        {/* Marquee - Full Width
-        <div className="w-full pb-32">
-          <Marquee />
-        </div> */}
-
-        {/* Projects Grid - Constrained */}
+      <div className="bg-white relative">
+        {/* Projects Grid */}
         <div className="pb-24 pt-20 max-w-7xl px-5 lg:px-20 md:px-6">
-          {/* Projects Heading */}
+          {/* Heading — keeps whileInView (fires once, correct for a heading) */}
           <motion.div
             className="text-left mb-6 md:mb-10"
             initial={{ opacity: 0, y: 30 }}
@@ -101,49 +87,22 @@ export default function About() {
           >
             <h2 className="text-5xl sm:text-7xl font-normal text-dark">
               Featured work
-              {/* <br />
-              Creating Impact{" "}
-              <span className="text-gray-400">
-                that
-                <br />
-                fuels me
-              </span>{" "}
-              🥏 */}
             </h2>
           </motion.div>
 
-          <motion.div
-            className="max-w-7xl mx-auto divide-y-2 divide-slate-200"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            variants={staggerContainer}
-          >
-            {/* Single Column - All Projects Stacked */}
+          {/* Cards — scroll-linked slide-up */}
+          <div className="max-w-7xl mx-auto divide-y-2 divide-slate-200">
             <div className="space-y-0">
               {PROJECTS.map((project, index) => (
-                <motion.div
-                  key={index}
-                  variants={{
-                    hidden: { opacity: 0, y: 30 },
-                    visible: {
-                      opacity: 1,
-                      y: 0,
-                      transition: {
-                        duration: 0.6,
-                        delay: index * 0.1,
-                      },
-                    },
-                  }}
-                >
+                <ScrollRevealCard key={index}>
                   <ProjectCard
                     {...project}
                     isLast={index === PROJECTS.length - 1}
                   />
-                </motion.div>
+                </ScrollRevealCard>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
