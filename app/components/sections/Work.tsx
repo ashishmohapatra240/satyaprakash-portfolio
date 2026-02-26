@@ -1,8 +1,9 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef, useEffect } from "react";
+import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 import ProjectCard02 from "../ProjectCard02";
+import { playMechanicalClick } from "@/app/utils/mechanicalClick";
 
 const WORK_PROJECTS = [
   {
@@ -51,10 +52,36 @@ function StickyCardWrapper({
   index: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
+  const prevYRef = useRef(0);
+  const thresholdsRef = useRef<number[]>([]);
 
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "start start"],
+  });
+
+  // Global scrollY for pixel-accurate click thresholds
+  const { scrollY } = useScroll();
+
+  useEffect(() => {
+    if (!ref.current) return;
+    // Animation starts when the card's top edge hits the viewport bottom
+    const startPx =
+      ref.current.getBoundingClientRect().top + window.scrollY - window.innerHeight;
+    thresholdsRef.current = [50, 100, 150, 200, 250, 300, 350, 400].map(
+      (n) => startPx + n
+    );
+    prevYRef.current = window.scrollY;
+  }, []);
+
+  useMotionValueEvent(scrollY, "change", (y) => {
+    const prev = prevYRef.current;
+    for (const t of thresholdsRef.current) {
+      if ((prev < t && y >= t) || (prev > t && y <= t)) {
+        playMechanicalClick();
+      }
+    }
+    prevYRef.current = y;
   });
 
   // Flip up from backward tilt → flat

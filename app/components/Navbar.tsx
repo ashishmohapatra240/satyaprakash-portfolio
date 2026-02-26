@@ -114,9 +114,9 @@ const Navbar = () => {
     <>
       {/* Main navbar — clock & logo. Drops below drawer when open. */}
       <motion.nav
-        initial={{ y: 0, opacity: 1 }}
+        initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ type: "tween", duration: 0.3 }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
         className={`fixed top-0 left-0 right-0 py-[20px] ${isOpen ? "z-[45]" : "z-[100]"}`}
       >
         <div className="mx-auto max-w-7xl px-5 lg:px-20 md:px-8">
@@ -124,39 +124,32 @@ const Navbar = () => {
 
             {/* Left frame: logo + name + profession */}
             <div className="flex-1 flex items-center gap-3">
-              <Link href="/" className={isOpen ? "pointer-events-none" : ""}>
-                <motion.div
-                  animate={{
-                    opacity: isOpen ? 0 : isScrollingDown ? 0 : 1,
-                    y: isScrollingDown && !isOpen ? -20 : 0,
-                  }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
-                >
-                  <Image
-                    src="/images/logo.png"
-                    alt="Logo"
-                    width={32}
-                    height={32}
-                    className="w-8 h-8"
-                  />
-                </motion.div>
-              </Link>
-
-              <motion.div
+              <motion.a
+                href="/"
                 animate={{
                   opacity: isOpen ? 0 : isScrollingDown ? 0 : 1,
                   y: isScrollingDown && !isOpen ? -20 : 0,
+                  pointerEvents: isOpen ? "none" : "auto",
                 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="flex flex-col leading-snug"
+                className="flex items-center gap-3"
               >
-                <span className="text-xs font-medium text-slate-800 leading-tight">
-                  Satyaprakash Ray
-                </span>
-                <span className="text-[10px] text-slate-500 leading-tight">
-                  Product Designer
-                </span>
-              </motion.div>
+                <Image
+                  src="/images/logo.png"
+                  alt="Logo"
+                  width={32}
+                  height={32}
+                  className="w-8 h-8"
+                />
+                <div className="flex flex-col leading-snug">
+                  <span className="text-xs font-medium text-slate-800 leading-tight">
+                    Satyaprakash Ray
+                  </span>
+                  <span className="text-[10px] text-slate-500 leading-tight">
+                    Product Designer
+                  </span>
+                </div>
+              </motion.a>
             </div>
 
             {/* Middle frame: IST clock */}
@@ -187,7 +180,12 @@ const Navbar = () => {
         Mirrors the nav's padding/max-width so it visually aligns with
         the right frame.
       */}
-      <div className="fixed top-0 left-0 right-0 z-[200] py-[20px] pointer-events-none">
+      <motion.div
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.25 }}
+        className="fixed top-0 left-0 right-0 z-[200] py-[20px] pointer-events-none"
+      >
         <div className="mx-auto max-w-7xl px-5 lg:px-20 md:px-8">
           <div className="flex items-center justify-end h-16">
             <motion.button
@@ -250,7 +248,7 @@ const Navbar = () => {
             </motion.button>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Overlay */}
       <AnimatePresence>

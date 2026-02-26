@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { productSans } from "./fonts";
 import "./globals.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Nav02";
 import Footer from "./components/sections/Footer";
 import SmoothScroll from "./components/SmoothScroll";
 import BackgroundMusic from "./components/BackgroundMusic";
+import LoadingProvider from "./components/LoadingProvider";
 export const metadata: Metadata = {
   title: "Satyaprakash - Product Designer",
   description: "Building products & design systems. Experienced product designer specializing in fraud detection systems, design systems, and user experience design.",
@@ -70,9 +71,11 @@ export default function RootLayout({
       </head>
       <body className={`antialiased ${productSans.variable} font-sans`}>
         <SmoothScroll>
-          <Navbar />
-          {children}
-          <Footer />
+          <LoadingProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </LoadingProvider>
           <BackgroundMusic />
         </SmoothScroll>
       </body>

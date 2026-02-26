@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { warmupAudioCtx } from "@/app/utils/mechanicalClick";
 
 export default function BackgroundMusic() {
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -24,45 +25,52 @@ export default function BackgroundMusic() {
       return audio!.play().then(() => {
         startedRef.current = true;
         setIsPlaying(true);
+        cleanup(); // remove gesture listeners once playing
       });
     }
 
-    // ── First-gesture fallback ──────────────────────────────────────────────
-    // Removed once audio starts successfully.
-    function onFirstGesture() {
-      if (startedRef.current) return;
+    function cleanup() {
+      window.removeEventListener("click",       onFirstGesture, true);
       window.removeEventListener("pointerdown", onFirstGesture, true);
-      window.removeEventListener("keydown", onFirstGesture, true);
-
-      if (audio!.readyState >= 3) {
-        // Browser has enough data — play immediately
-        play().catch(() => {});
-      } else {
-        // Wait until the browser has buffered enough to play without stalling
-        audio!.addEventListener("canplay", () => play().catch(() => {}), { once: true });
-      }
+      window.removeEventListener("touchstart",  onFirstGesture, true);
+      window.removeEventListener("keydown",     onFirstGesture, true);
     }
 
-    // ── Try immediate autoplay ──────────────────────────────────────────────
-    // Works if the browser already trusts the origin (e.g. after first-ever visit).
-    // Falls back to gesture listener if blocked.
-    play().catch(() => {
-      window.addEventListener("pointerdown", onFirstGesture, true);
-      window.addEventListener("keydown", onFirstGesture, true);
-    });
+    // ── First-gesture fallback ──────────────────────────────────────────────
+    // Registered BEFORE the autoplay attempt to eliminate the race condition
+    // where a user gesture fires during the async gap of play().catch().
+    function onFirstGesture() {
+      if (startedRef.current) return;
+      cleanup();
+      // Pre-warm the mechanical click AudioContext while we have the gesture,
+      // so click sounds in the Work section fire with zero delay.
+      warmupAudioCtx();
+      // Browser allows play() called directly inside a user gesture handler
+      // regardless of buffer state — no readyState check needed.
+      audio!.play().then(() => {
+        startedRef.current = true;
+        setIsPlaying(true);
+      }).catch(() => {});
+    }
+
+    window.addEventListener("click",       onFirstGesture, true);
+    window.addEventListener("pointerdown", onFirstGesture, true);
+    window.addEventListener("touchstart",  onFirstGesture, true);
+    window.addEventListener("keydown",     onFirstGesture, true);
+
+    // No immediate autoplay — music only starts on explicit user gesture
+    // (the LoadingScreen click triggers the listeners registered above).
 
     // ── Tab visibility ──────────────────────────────────────────────────────
     function handleVisibility() {
       if (!startedRef.current) return;
 
       if (document.visibilityState === "hidden") {
-        // Pause whenever user leaves the tab
         audio!.pause();
         setIsPlaying(false);
       } else if (document.visibilityState === "visible") {
-        // Resume on return — but only if the user hasn't manually paused
         if (!userPausedRef.current) {
-          play().catch(() => {});
+          audio!.play().then(() => setIsPlaying(true)).catch(() => {});
         }
       }
     }
@@ -70,8 +78,7 @@ export default function BackgroundMusic() {
     document.addEventListener("visibilitychange", handleVisibility);
 
     return () => {
-      window.removeEventListener("pointerdown", onFirstGesture, true);
-      window.removeEventListener("keydown", onFirstGesture, true);
+      cleanup();
       document.removeEventListener("visibilitychange", handleVisibility);
     };
   }, []);

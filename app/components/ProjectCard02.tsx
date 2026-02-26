@@ -8,6 +8,7 @@ interface ProjectCard02Props {
   image: string;
   href: string;
   bgColor: string;
+  height?: string;
 }
 
 export default function ProjectCard02({
@@ -15,13 +16,14 @@ export default function ProjectCard02({
   company,
   href,
   bgColor,
+  height = "60vh",
 }: ProjectCard02Props) {
   return (
     <Link href={href} className="block w-full">
       <div
         className="relative w-full"
         style={{
-          height: "60vh",
+          height,
           backgroundColor: bgColor,
           borderRadius: "28px",
           boxShadow: "inset 0 3.8px 45.55px 0 rgba(255, 255, 255, 0.7), 0 8px 32px rgba(0, 0, 0, 0.25)",
@@ -32,7 +34,7 @@ export default function ProjectCard02({
           <p className="text-white/60 text-sm font-medium tracking-wide mb-1">
             {company}
           </p>
-          <h3 className="text-white text-2xl md:text-3xl font-normal leading-snug">
+          <h3 className="text-white text-[18px] font-normal leading-snug">
             {title}
           </h3>
         </div>

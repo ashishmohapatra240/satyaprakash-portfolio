@@ -1,22 +1,23 @@
-import Hero from "./components/sections/Hero";
+import Hero02 from "./components/sections/Hero02";
 import GlowSection from "./components/sections/GlowSection";
-import Work from "./components/sections/Work";
+import Work from "./components/sections/Work02";
 import Gallery from "./components/sections/Gallery";
-import TextReveal from "./components/sections/TextReveal";
+import HomeAbout from "./components/sections/HomeAbout";
 import Design from "./components/sections/Design";
 import ParallaxSection from "./components/ParallaxSection";
 
 export default function Home() {
   return (
-    <main className="max-w-7xl mx-auto px-4 lg:px-0">
+    <main className="max-w-7xl mx-auto px-5 md:px-8 lg:px-20">
       <ParallaxSection speed={0.06}>
-        <Hero />
+        <Hero02 />
       </ParallaxSection>
       {/* <GlowSection /> */}
       {/* <div style={{ height: "50vh" }} /> */}
+      <div style={{ height: "40vh" }} />
       <Work />
       <Gallery />
-      <TextReveal />
+      <HomeAbout />
       {/* <ParallaxSection speed={0.14}>
         <Design />
       </ParallaxSection> */}
