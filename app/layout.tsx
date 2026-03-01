@@ -61,14 +61,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={productSans.className}>
-      <head>
-        <link
-          rel="preload"
-          as="audio"
-          href="/images/ES_Tat Twam Asi - Valante.mp3"
-          type="audio/mpeg"
-        />
-      </head>
+      <head />
       <body className={`antialiased ${productSans.variable} font-sans`}>
         <SmoothScroll>
           <LoadingProvider>

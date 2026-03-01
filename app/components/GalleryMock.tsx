@@ -6,12 +6,18 @@ interface GalleryMockProps {
   bgColor?: string;
   image?: string;
   video?: string;
+  width?: number;
+  height?: number;
+  borderRadius?: number;
 }
 
 export default function GalleryMock({
   bgColor = "#e5e7eb",
   image,
   video,
+  width = 320,
+  height = 240,
+  borderRadius = 24,
 }: GalleryMockProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -24,9 +30,9 @@ export default function GalleryMock({
   return (
     <div
       style={{
-        width: 320,
-        height: 240,
-        borderRadius: 24,
+        width,
+        height,
+        borderRadius,
         overflow: "hidden",
         backgroundColor: bgColor,
         flexShrink: 0,

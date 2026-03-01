@@ -45,8 +45,7 @@ export default function LoadingScreen({ onDismiss }: { onDismiss: () => void }) 
             initial={{ opacity: 0, filter: "blur(28px)", y: 16 }}
             animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
             transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1], delay: 0.25 }}
-            className="text-lg font-normal text-center text-[#1a1a2e] mt-8 leading-tight max-w-[640px] px-6"
-            style={{ fontFamily: "var(--font-product-sans)" }}
+            className="text-lg font-sans font-normal text-center text-[#1a1a2e] mt-8 leading-tight max-w-[640px] px-6"
           >
             This space is a personal<br />reflection, it evolves as i do
           </motion.h1>
@@ -57,7 +56,6 @@ export default function LoadingScreen({ onDismiss }: { onDismiss: () => void }) 
             animate={{ opacity: 0.35 }}
             transition={{ duration: 1, ease: "easeOut", delay: 1.4 }}
             className="text-xs text-[#1a1a2e] text-center mt-10 leading-relaxed"
-            style={{ fontFamily: "var(--font-product-sans)" }}
           >
             click anywhere<br />to get started
           </motion.p>

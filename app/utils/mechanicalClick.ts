@@ -2,6 +2,7 @@ let audioCtx: AudioContext | null = null;
 
 function getCtx(): AudioContext {
   if (!audioCtx)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
   return audioCtx;
 }
@@ -12,7 +13,7 @@ export function warmupAudioCtx() {
   try {
     const ctx = getCtx();
     if (ctx.state === "suspended") ctx.resume();
-  } catch (_) {}
+  } catch { /* ignored */ }
 }
 
 function fire(ctx: AudioContext, volume: number) {
@@ -54,5 +55,5 @@ export function playMechanicalClick(volume = 0.45) {
     } else {
       fire(ctx, volume);
     }
-  } catch (_) {}
+  } catch { /* ignored */ }
 }

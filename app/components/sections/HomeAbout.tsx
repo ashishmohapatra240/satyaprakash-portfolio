@@ -4,11 +4,28 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import GradientButtonBlack from "../GradientButtonBlack";
 
-const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 28 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-10% 0px -10% 0px" },
-  transition: { duration: 0.85, ease: [0.16, 1, 0.3, 1] as const, delay },
+/* Awwwards-style reveal: blur-to-sharp + scale + slide up */
+const reveal = (delay = 0) => ({
+  initial: { opacity: 0, y: 32, scale: 0.97, filter: "blur(6px)" },
+  whileInView: { opacity: 1, y: 0, scale: 1, filter: "blur(0px)" },
+  viewport: { once: true, margin: "-12% 0px -12% 0px" },
+  transition: {
+    duration: 1.0,
+    ease: [0.22, 1, 0.36, 1] as const,
+    delay,
+  },
+});
+
+/* Lighter variant for background images — longer, more float */
+const floatIn = (delay = 0) => ({
+  initial: { opacity: 0, y: 40, scale: 0.94 },
+  whileInView: { opacity: 1, y: 0, scale: 1 },
+  viewport: { once: true, margin: "-8% 0px -8% 0px" },
+  transition: {
+    duration: 1.3,
+    ease: [0.16, 1, 0.3, 1] as const,
+    delay,
+  },
 });
 
 export default function HomeAbout() {
@@ -16,10 +33,12 @@ export default function HomeAbout() {
     <section className="relative w-full flex flex-col items-center" style={{ paddingTop: "120px", paddingBottom: "120px" }}>
 
       {/* Image group — both images stacked, heading sandwiched between them */}
-      <div className="relative w-full max-w-[1060px]" style={{ aspectRatio: "1060 / 615" }}>
+      <div
+        className="relative w-[150%] -mx-[25%] aspect-[1060/900] md:w-full md:mx-0 md:max-w-[1060px] md:aspect-[1060/615]"
+      >
 
-        {/* bg-elements.png — behind heading */}
-        <motion.div {...fadeUp(0.3)} className="absolute inset-0">
+        {/* bg-elements.png — behind heading, floats in */}
+        <motion.div {...floatIn(0.25)} className="absolute inset-0">
           <Image
             src="/images/Me/bg-elements.png"
             alt=""
@@ -31,23 +50,23 @@ export default function HomeAbout() {
 
         {/* Heading — overlapping between the two images */}
         <motion.div
-          {...fadeUp(0.0)}
+          {...reveal(0.0)}
           className="absolute inset-x-0 text-center"
           style={{ top: "8%", zIndex: 5 }}
         >
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-400 mb-5">
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-slate-400 mb-5">
             About Me
           </p>
           <h2
-            className="text-[#1a1a2e] leading-[1.15]"
-            style={{ fontSize: "clamp(28px, 3.6vw, 52px)", fontFamily: "var(--font-product-sans)", fontWeight: 500 }}
+            className="text-[#1a1a2e] leading-[1.1] font-normal font-sans"
+            style={{ fontSize: "clamp(32px, 4vw, 60px)" }}
           >
             I am an explorer, not<br />only as a designer,<br />but also as a hooman.
           </h2>
         </motion.div>
 
-        {/* bg-elements-nw.png — above heading */}
-        <motion.div {...fadeUp(0.45)} className="absolute inset-0 z-10 pointer-events-none">
+        {/* bg-elements-nw.png — above heading, floats in later */}
+        <motion.div {...floatIn(0.4)} className="absolute inset-0 z-10 pointer-events-none">
           <Image
             src="/images/Me/bg-elements-nw.png"
             alt=""
@@ -61,12 +80,12 @@ export default function HomeAbout() {
 
       {/* CTA — 24px below the image */}
       <motion.div
-        {...fadeUp(0.2)}
+        {...reveal(0.15)}
         className="text-center"
         style={{ marginTop: 24, zIndex: 15 }}
       >
         <GradientButtonBlack href="/about">
-          Know more about me
+          Know more
         </GradientButtonBlack>
       </motion.div>
 

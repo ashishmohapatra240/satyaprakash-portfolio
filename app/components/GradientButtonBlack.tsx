@@ -1,18 +1,19 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 interface GradientButtonBlackProps {
   children?: React.ReactNode;
   href?: string;
 }
 
-export default function GradientButtonBlack({ children, href }: GradientButtonBlackProps) {
+export default function GradientButtonBlack({ children, href = "/" }: GradientButtonBlackProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <button
-      onClick={() => href && window.open(href, "_blank")}
+    <Link
+      href={href}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-white font-semibold text-base whitespace-nowrap"
@@ -25,6 +26,6 @@ export default function GradientButtonBlack({ children, href }: GradientButtonBl
       }}
     >
       {children}
-    </button>
+    </Link>
   );
 }

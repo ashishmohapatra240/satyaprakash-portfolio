@@ -1,5 +1,57 @@
 import Image from "next/image";
 import Nextprojects from "@/app/components/NextProjects";
+import InfiniteCanvas, {
+  CanvasItem,
+} from "@/app/components/canvas/InfiniteCanvas";
+
+const pizzaHutScreens: CanvasItem[] = [
+  {
+    id: "screen-1",
+    src: "/images/new-projects/pizza-hut/7-1.png",
+    alt: "Pizza Hut - Rewards Home",
+    x: 0,
+    y: 0,
+    width: 400,
+    height: 300,
+  },
+  {
+    id: "screen-2",
+    src: "/images/new-projects/pizza-hut/7-2.png",
+    alt: "Pizza Hut - Points Overview",
+    x: 440,
+    y: 0,
+    width: 400,
+    height: 300,
+  },
+  {
+    id: "screen-3",
+    src: "/images/new-projects/pizza-hut/7-3.png",
+    alt: "Pizza Hut - Redeem Rewards",
+    x: 880,
+    y: 0,
+    width: 400,
+    height: 300,
+  },
+  {
+    id: "screen-4",
+    src: "/images/new-projects/pizza-hut/5.png",
+    alt: "Pizza Hut - Full Design",
+    x: 0,
+    y: 340,
+    width: 1280,
+    height: 600,
+  },
+  {
+    id: "screen-5",
+    src: "/images/new-projects/pizza-hut/2.png",
+    alt: "Pizza Hut - Exploration",
+    x: 0,
+    y: 980,
+    width: 1280,
+    height: 600,
+  },
+];
+
 export default function PizzaHutProject() {
   return (
     <main className="bg-white">
@@ -61,6 +113,86 @@ export default function PizzaHutProject() {
           />
           {/* Content Sections */}
           <div className="space-y-16 sm:space-y-24">
+            {/* What we heard from the team Section */}
+            <section className="mt-12 sm:mt-24">
+              <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+                <div className="space-y-8 lg:w-2/3">
+                  <div className="space-y-2">
+                    <div className="text-rose-700 text-base font-bold tracking-wider">
+                      Whay User say
+                    </div>
+                    <h2 className="text-slate-800 text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight">
+                      What we heard from the team
+                    </h2>
+                  </div>
+                  <p className="text-slate-800 text-lg sm:text-xl leading-relaxed">
+                    When discussing with the team, after using the application, they
+                    shared about what they think and hear from users.
+                  </p>
+
+                  {/* From the team */}
+                  <div className="space-y-4">
+                    <p className="text-slate-800 text-lg sm:text-xl">
+                      From the <span className="font-bold">team</span>
+                    </p>
+                    <div className="flex flex-wrap gap-3">
+                      <div className="border border-gray-200 rounded-lg px-4 py-3 max-w-[280px]">
+                        <p className="text-slate-700 text-sm sm:text-base">
+                          They are not using the points to buy pizzas
+                        </p>
+                      </div>
+                      <div className="border border-gray-200 rounded-lg px-4 py-3 max-w-[280px]">
+                        <p className="text-slate-700 text-sm sm:text-base">
+                          They are not aware of there is a royalty system.
+                        </p>
+                      </div>
+                      <div className="border border-gray-200 rounded-lg px-4 py-3 max-w-[280px]">
+                        <p className="text-slate-700 text-sm sm:text-base">
+                          There are so many freebies they can get, but they don&apos;t
+                          use it well.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* From the Users */}
+                  <div className="space-y-4">
+                    <p className="text-slate-800 text-lg sm:text-xl">
+                      From the <span className="font-bold">Users</span>
+                    </p>
+                    <div className="flex flex-wrap gap-3">
+                      <div className="border border-gray-200 rounded-lg px-4 py-3 max-w-[280px]">
+                        <p className="text-slate-700 text-sm sm:text-base">
+                          Wait! why is there a royalty system...and what benefits will
+                          i get
+                        </p>
+                      </div>
+                      <div className="border border-gray-200 rounded-lg px-4 py-3 max-w-[280px]">
+                        <p className="text-slate-700 text-sm sm:text-base">
+                          How will this help me...is there anything free ??
+                        </p>
+                      </div>
+                      <div className="border border-gray-200 rounded-lg px-4 py-3 max-w-[280px]">
+                        <p className="text-slate-700 text-sm sm:text-base">
+                          What is these slices for ??
+                        </p>
+                      </div>
+                      <div className="border border-gray-200 rounded-lg px-4 py-3 max-w-[280px]">
+                        <p className="text-slate-700 text-sm sm:text-base">
+                          I use grabfood, can i still get these offers??
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Placeholder image area */}
+                <div className="hidden lg:block lg:w-1/3">
+                  <div className="w-full h-80 bg-gray-100 rounded-lg"></div>
+                </div>
+              </div>
+            </section>
+
             {/* Analysis Section */}
             <section className="mt-12 sm:mt-24">
               <div className="space-y-6">
@@ -336,6 +468,24 @@ export default function PizzaHutProject() {
                 className="w-full h-full object-cover rounded-lg"
               />
             </div>
+
+            {/* Explore Screens Canvas */}
+            <section className="relative py-16">
+              <div className="text-rose-700 text-base font-bold tracking-wider">
+                ALL SCREENS
+              </div>
+              <h2 className="text-slate-800 text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight mt-2">
+                Explore the designs
+              </h2>
+              <p className="text-slate-800 text-lg mt-4 mb-8">
+                Pan and zoom to explore all the screens.
+              </p>
+              <InfiniteCanvas
+                canvasHeight="80vh"
+                initialZoom={0.35}
+                items={pizzaHutScreens}
+              />
+            </section>
 
             {/* Impact & Takeaways Section */}
             <section>

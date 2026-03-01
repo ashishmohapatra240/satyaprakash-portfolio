@@ -7,6 +7,7 @@ import { warmupAudioCtx } from "@/app/utils/mechanicalClick";
 export default function BackgroundMusic() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Tracks whether the user explicitly clicked pause — the only thing that
   // should prevent auto-resume on tab return.
@@ -15,19 +16,17 @@ export default function BackgroundMusic() {
   const startedRef = useRef(false);
 
   useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
+
+  useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
+    // No music on mobile
+    if (window.innerWidth < 768) return;
 
     audio.currentTime = 0;
     audio.volume = 0.35;
-
-    function play() {
-      return audio!.play().then(() => {
-        startedRef.current = true;
-        setIsPlaying(true);
-        cleanup(); // remove gesture listeners once playing
-      });
-    }
 
     function cleanup() {
       window.removeEventListener("click",       onFirstGesture, true);
@@ -100,6 +99,8 @@ export default function BackgroundMusic() {
     }
   }
 
+  if (isMobile) return null;
+
   return (
     <>
       <audio
@@ -112,7 +113,7 @@ export default function BackgroundMusic() {
       <motion.button
         onClick={toggle}
         title={isPlaying ? "Pause music" : "Play music"}
-        className="fixed bottom-6 left-6 z-[300] flex items-center justify-center w-10 h-10 rounded-xl border border-slate-200/60 bg-white/70 backdrop-blur-md text-slate-600 hover:text-slate-900 hover:bg-white/90 transition-colors shadow-sm"
+        className="hidden md:flex fixed bottom-6 left-6 z-[300] items-center justify-center w-10 h-10 rounded-xl overflow-hidden border border-slate-200/60 bg-white/70 backdrop-blur-md text-slate-600 hover:text-slate-900 hover:bg-white/90 transition-colors shadow-sm"
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
